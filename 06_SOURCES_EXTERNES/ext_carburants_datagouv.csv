@@ -1,0 +1,501 @@
+col_id_station,col_region,col_departement,col_commune,col_carburant,col_prix,col_date_releve,col_latitude,col_longitude,col_marque,col_services
+S_016,Grand Est,Pays de la Loire,Strasbourg,8.19,1.87,2024-03-26 00:00:00,47.027765,-1.263879,6.04,1.35
+S_005,Hauts-de-France,Pays de la Loire,Toulouse,4.44,1.735,2024-09-16 00:00:00,48.261168,2.686509,8.16,2.34
+S_038,Provence-Alpes-Côte d'Azur,Grand Est,Montpellier,4.12,1.888,2024-10-29 00:00:00,49.537765,-0.737196,2.06,5.87
+S_024,Occitanie,Occitanie,Lyon,4.57,1.823,2024-09-13 00:00:00,50.156435,1.746205,5.88,4.31
+S_084,Normandie,Auvergne-Rhône-Alpes,Paris,8.4,1.96,2024-06-25 00:00:00,52.4743,3.480025,2.22,3.24
+S_035,Bretagne,Pays de la Loire,Toulouse,8.18,1.831,2024-10-10 00:00:00,49.976559,5.335399,4.26,5.51
+S_021,Normandie,Hauts-de-France,Bordeaux,1.21,1.946,2024-09-25 00:00:00,44.9962,4.344387,2.3,8.24
+S_051,Bretagne,Grand Est,Nantes,4.66,1.714,2024-07-09 00:00:00,50.792829,2.376049,3.38,1.22
+S_068,Île-de-France,Normandie,Montpellier,7.93,1.821,2024-01-12 00:00:00,52.827595,4.924876,4.7,2.72
+S_041,Provence-Alpes-Côte d'Azur,Grand Est,Nice,5.33,1.845,2024-07-11 00:00:00,47.142763,-0.09941,1.99,4.3
+S_016,Bretagne,Hauts-de-France,Strasbourg,5.81,1.88,2024-02-26 00:00:00,45.827411,5.557605,3.93,7.77
+S_017,Île-de-France,Normandie,Paris,3.77,1.965,2024-08-03 00:00:00,48.343702,4.970304,5.48,6.2
+S_079,Hauts-de-France,Île-de-France,Paris,8.05,1.876,2024-08-05 00:00:00,49.571596,0.119898,8.35,3.04
+S_032,Grand Est,Normandie,Toulouse,1.68,1.904,2024-12-24 00:00:00,47.679511,2.158581,8.11,8.31
+S_030,Pays de la Loire,Hauts-de-France,Strasbourg,1.96,1.988,2024-02-22 00:00:00,51.759186,5.193088,4.44,7.11
+S_089,Auvergne-Rhône-Alpes,Île-de-France,Montpellier,6.22,1.921,2024-06-27 00:00:00,51.549644,-0.80256,3.85,5.09
+S_033,Normandie,Normandie,Montpellier,1.84,1.985,2024-10-18 00:00:00,52.183393,3.087831,3.88,6.65
+S_008,Normandie,Occitanie,Bordeaux,1.83,1.951,2024-02-16 00:00:00,45.497611,1.744135,1.54,2.54
+S_032,Île-de-France,Provence-Alpes-Côte d'Azur,Bordeaux,7.72,1.895,2024-03-30 00:00:00,47.75222,1.085317,4.52,2.47
+S_076,Nouvelle-Aquitaine,Occitanie,Toulouse,5.82,1.684,2024-10-24 00:00:00,48.105757,1.257304,2.92,7.63
+S_027,Grand Est,Grand Est,Lille,5.33,1.929,2024-09-06 00:00:00,52.032457,3.023407,3.41,4.48
+S_033,Auvergne-Rhône-Alpes,Occitanie,Marseille,8.39,1.84,2024-03-23 00:00:00,46.552027,-0.558579,3.21,2.77
+S_064,Occitanie,Nouvelle-Aquitaine,Lyon,2.46,1.81,2024-12-14 00:00:00,50.822509,0.812028,2.43,4.74
+S_095,Hauts-de-France,Occitanie,Toulouse,6.12,1.709,2024-07-30 00:00:00,52.410772,-1.206786,5.94,7.61
+S_058,Pays de la Loire,Île-de-France,Bordeaux,4.02,1.874,2024-03-10 00:00:00,45.160007,-1.04959,5.74,3.8
+S_038,Bretagne,Auvergne-Rhône-Alpes,Nantes,4.8,1.757,2024-05-13 00:00:00,45.527321,4.483622,1.45,6.2
+S_024,Normandie,Bretagne,Strasbourg,4.71,1.853,2024-11-29 00:00:00,47.303514,0.476945,7.77,1.43
+S_015,Occitanie,Provence-Alpes-Côte d'Azur,Nice,4.97,1.863,2024-07-27 00:00:00,46.971063,1.309485,5.6,2.42
+S_031,Nouvelle-Aquitaine,Nouvelle-Aquitaine,Lyon,5.52,1.942,2024-12-11 00:00:00,49.419647,1.095844,7.93,4.42
+S_061,Provence-Alpes-Côte d'Azur,Bretagne,Montpellier,5.2,1.733,2024-06-14 00:00:00,46.333322,6.124747,7.83,7.37
+S_005,Nouvelle-Aquitaine,Bretagne,Marseille,7.16,1.964,2024-08-04 00:00:00,48.628181,5.995728,4.67,2.69
+S_032,Hauts-de-France,Hauts-de-France,Nice,1.95,1.843,2024-11-05 00:00:00,46.89424,3.348613,3.94,5.97
+S_084,Auvergne-Rhône-Alpes,Nouvelle-Aquitaine,Nantes,3.07,1.782,2024-07-04 00:00:00,50.307532,4.606281,7.65,6.46
+S_087,Île-de-France,Provence-Alpes-Côte d'Azur,Nice,5.86,1.797,2024-06-13 00:00:00,49.672768,6.343501,6.36,8.42
+S_014,Île-de-France,Provence-Alpes-Côte d'Azur,Nantes,1.67,1.881,2024-08-16 00:00:00,49.582223,1.442387,3.03,6.29
+S_084,Pays de la Loire,Normandie,Bordeaux,5.75,1.81,2024-08-30 00:00:00,51.960524,0.985592,7.79,6.21
+S_092,Bretagne,Bretagne,Strasbourg,6.27,1.734,2024-07-04 00:00:00,48.854455,3.067612,3.5,3.16
+S_100,Île-de-France,Île-de-France,Bordeaux,6.86,1.98,2024-09-30 00:00:00,52.039985,1.637987,7.39,5.43
+S_071,Hauts-de-France,Occitanie,Paris,3.98,1.681,2024-07-25 00:00:00,45.183268,2.344961,8.48,2.32
+S_039,Auvergne-Rhône-Alpes,Grand Est,Lyon,6.64,1.707,2024-09-15 00:00:00,48.602324,-0.90025,8.27,8.16
+S_016,Pays de la Loire,Hauts-de-France,Bordeaux,4.37,1.892,2024-02-02 00:00:00,52.206259,2.776856,3.21,6.83
+S_024,Provence-Alpes-Côte d'Azur,Grand Est,Strasbourg,3.58,1.925,2024-05-05 00:00:00,48.363448,2.188765,3.44,1.47
+S_041,Grand Est,Nouvelle-Aquitaine,Nantes,8.48,1.961,2024-03-25 00:00:00,45.848045,6.076313,5.3,3.81
+S_067,Normandie,Pays de la Loire,Strasbourg,8.19,1.743,2024-10-16 00:00:00,46.68901,-0.970285,4.82,8.31
+S_015,Occitanie,Grand Est,Nantes,5.15,1.906,2024-02-14 00:00:00,51.351938,3.904124,7.94,6.74
+S_080,Auvergne-Rhône-Alpes,Provence-Alpes-Côte d'Azur,Lille,4.72,1.713,2024-08-16 00:00:00,51.845084,5.065161,6.02,6.87
+S_072,Grand Est,Bretagne,Marseille,7.6,1.766,2024-11-13 00:00:00,51.070958,2.561864,3.45,1.67
+S_075,Provence-Alpes-Côte d'Azur,Bretagne,Strasbourg,3.69,1.96,2024-05-25 00:00:00,51.940581,1.440272,1.91,7.42
+S_031,Provence-Alpes-Côte d'Azur,Hauts-de-France,Marseille,3.0,1.798,2024-03-01 00:00:00,45.164229,-1.645332,4.82,4.72
+S_072,Nouvelle-Aquitaine,Normandie,Nantes,7.8,1.964,2024-08-14 00:00:00,47.918231,3.113693,7.05,5.52
+S_052,Hauts-de-France,Bretagne,Strasbourg,3.37,1.792,2024-03-27 00:00:00,45.606518,1.933372,2.38,7.72
+S_040,Auvergne-Rhône-Alpes,Occitanie,Marseille,1.88,1.78,2024-10-25 00:00:00,49.168669,3.429513,3.27,6.97
+S_022,Bretagne,Nouvelle-Aquitaine,Nantes,7.56,1.748,2024-11-20 00:00:00,51.850307,-1.628312,6.85,1.39
+S_098,Hauts-de-France,Provence-Alpes-Côte d'Azur,Lille,1.78,1.691,2024-06-28 00:00:00,49.119636,1.303841,4.94,4.13
+S_051,Normandie,Pays de la Loire,Toulouse,2.73,1.933,2024-08-30 00:00:00,50.303973,3.424607,2.23,2.41
+S_002,Occitanie,Auvergne-Rhône-Alpes,Montpellier,4.56,1.738,2024-03-27 00:00:00,51.278151,2.111783,1.97,5.43
+S_018,Normandie,Normandie,Paris,3.38,1.809,2024-03-29 00:00:00,51.605657,-0.013637,7.86,4.66
+S_032,Hauts-de-France,Normandie,Marseille,7.09,1.794,2024-10-26 00:00:00,51.36026,3.290579,1.6,8.2
+S_095,Occitanie,Hauts-de-France,Strasbourg,3.71,1.938,2024-06-01 00:00:00,47.180082,0.125313,6.12,4.0
+S_034,Bretagne,Grand Est,Paris,5.41,1.875,2024-12-16 00:00:00,52.431542,-0.594241,5.29,7.38
+S_084,Île-de-France,Pays de la Loire,Strasbourg,7.46,1.953,2024-03-18 00:00:00,49.39824,0.401495,3.66,5.78
+S_097,Pays de la Loire,Bretagne,Paris,3.42,1.883,2024-07-30 00:00:00,44.998295,3.146388,5.79,6.03
+S_026,Grand Est,Bretagne,Paris,7.22,1.887,2024-04-22 00:00:00,45.17035,2.474518,2.9,6.1
+S_056,Hauts-de-France,Pays de la Loire,Marseille,6.68,1.932,2024-04-06 00:00:00,49.027544,0.240536,4.14,6.47
+S_087,Pays de la Loire,Hauts-de-France,Nice,8.13,1.905,2024-11-22 00:00:00,48.66001,4.658983,7.81,6.78
+S_090,Nouvelle-Aquitaine,Auvergne-Rhône-Alpes,Paris,7.71,1.978,2024-09-21 00:00:00,45.348298,2.03155,1.49,7.75
+S_004,Nouvelle-Aquitaine,Normandie,Bordeaux,4.07,1.812,2024-09-27 00:00:00,48.734796,4.216951,5.59,8.08
+S_078,Bretagne,Provence-Alpes-Côte d'Azur,Marseille,6.82,1.775,2024-03-24 00:00:00,47.205799,3.612711,6.72,5.31
+S_024,Grand Est,Auvergne-Rhône-Alpes,Montpellier,4.57,1.892,2024-08-14 00:00:00,49.228972,1.539391,5.56,4.27
+S_054,Auvergne-Rhône-Alpes,Auvergne-Rhône-Alpes,Strasbourg,1.75,1.699,2024-11-02 00:00:00,46.101952,0.232901,7.73,4.99
+S_022,Occitanie,Auvergne-Rhône-Alpes,Strasbourg,6.24,1.904,2024-02-05 00:00:00,49.122109,4.988028,1.78,1.21
+S_034,Auvergne-Rhône-Alpes,Île-de-France,Strasbourg,8.65,1.8,2024-03-04 00:00:00,45.944379,-1.445513,2.41,8.24
+S_039,Hauts-de-France,Pays de la Loire,Paris,8.68,1.884,2024-01-15 00:00:00,48.120516,1.666559,7.26,8.78
+S_077,Île-de-France,Nouvelle-Aquitaine,Marseille,6.59,1.89,2024-05-24 00:00:00,49.23043,2.094517,3.58,1.79
+S_094,Île-de-France,Île-de-France,Lyon,7.63,1.702,2024-10-18 00:00:00,47.801721,6.162095,7.94,4.37
+S_011,Provence-Alpes-Côte d'Azur,Occitanie,Toulouse,7.83,1.691,2024-09-23 00:00:00,46.642604,-0.809403,8.79,5.72
+S_095,Provence-Alpes-Côte d'Azur,Provence-Alpes-Côte d'Azur,Strasbourg,8.38,1.684,2024-12-05 00:00:00,51.827074,3.299006,7.59,5.98
+S_076,Occitanie,Bretagne,Nantes,2.29,1.84,2024-03-03 00:00:00,52.797906,3.124183,8.61,3.64
+S_070,Île-de-France,Auvergne-Rhône-Alpes,Lille,7.76,1.713,2024-12-13 00:00:00,50.499775,1.163609,6.48,1.74
+S_095,Occitanie,Nouvelle-Aquitaine,Bordeaux,4.76,1.746,2024-03-25 00:00:00,45.754302,4.01481,4.17,2.92
+S_002,Île-de-France,Occitanie,Lyon,2.51,1.918,2024-12-03 00:00:00,47.223988,3.327266,5.2,8.21
+S_079,Grand Est,Grand Est,Montpellier,4.71,1.818,2024-07-07 00:00:00,47.397555,2.973028,7.18,2.42
+S_080,Grand Est,Nouvelle-Aquitaine,Marseille,3.57,1.831,2024-05-01 00:00:00,52.511441,4.187589,5.05,7.49
+S_075,Normandie,Île-de-France,Lille,1.5,1.707,2024-01-04 00:00:00,51.706802,2.329853,5.5,5.62
+S_031,Auvergne-Rhône-Alpes,Occitanie,Lyon,7.34,1.817,2024-12-11 00:00:00,52.327957,0.115184,7.5,7.64
+S_078,Hauts-de-France,Nouvelle-Aquitaine,Nice,1.73,1.869,2024-07-07 00:00:00,45.202396,1.072875,6.24,2.97
+S_091,Hauts-de-France,Normandie,Bordeaux,7.75,1.769,2024-10-16 00:00:00,52.474894,-1.274054,4.88,3.46
+S_079,Grand Est,Nouvelle-Aquitaine,Lyon,3.32,1.852,2024-10-01 00:00:00,48.147893,5.620873,3.22,7.9
+S_013,Normandie,Île-de-France,Nantes,6.91,1.712,2024-03-26 00:00:00,52.662346,2.260957,8.74,6.23
+S_093,Nouvelle-Aquitaine,Auvergne-Rhône-Alpes,Paris,3.29,1.72,2024-10-06 00:00:00,46.223765,4.951409,4.86,3.3
+S_070,Pays de la Loire,Île-de-France,Marseille,2.92,1.937,2024-01-17 00:00:00,46.830075,5.872261,5.96,4.8
+S_054,Grand Est,Pays de la Loire,Strasbourg,3.91,1.8,2024-02-16 00:00:00,47.825205,2.162055,6.17,7.58
+S_016,Bretagne,Nouvelle-Aquitaine,Montpellier,6.87,1.894,2024-06-29 00:00:00,51.416259,2.839368,6.53,8.65
+S_070,Occitanie,Provence-Alpes-Côte d'Azur,Nantes,4.45,1.879,2024-01-11 00:00:00,50.211025,-1.505875,6.32,8.72
+S_019,Normandie,Pays de la Loire,Montpellier,2.25,1.862,2024-04-04 00:00:00,49.216726,1.458561,5.49,8.53
+S_090,Bretagne,Hauts-de-France,Lille,3.86,1.702,2024-11-18 00:00:00,49.175253,0.324326,8.44,6.26
+S_049,Île-de-France,Provence-Alpes-Côte d'Azur,Nice,1.58,1.796,2024-09-11 00:00:00,48.902139,4.663831,7.73,8.37
+S_091,Nouvelle-Aquitaine,Nouvelle-Aquitaine,Lille,7.62,1.924,2024-12-24 00:00:00,49.328023,0.956147,7.29,8.16
+S_023,Auvergne-Rhône-Alpes,Pays de la Loire,Toulouse,7.01,1.843,2024-02-24 00:00:00,46.088294,-0.656435,6.24,7.57
+S_043,Auvergne-Rhône-Alpes,Grand Est,Montpellier,1.41,1.819,2024-05-08 00:00:00,51.498676,6.170286,3.88,1.27
+S_070,Normandie,Provence-Alpes-Côte d'Azur,Marseille,7.2,1.947,2024-12-21 00:00:00,51.112815,2.284353,7.33,6.17
+S_074,Pays de la Loire,Pays de la Loire,Lyon,3.93,1.89,2024-04-06 00:00:00,46.810615,4.727563,2.72,5.95
+S_043,Nouvelle-Aquitaine,Hauts-de-France,Lille,7.5,1.866,2024-01-04 00:00:00,45.148306,2.735407,6.52,8.05
+S_082,Normandie,Île-de-France,Nantes,6.24,1.704,2024-01-07 00:00:00,47.454845,-0.806601,6.6,1.45
+S_033,Occitanie,Bretagne,Lyon,8.03,1.723,2024-03-02 00:00:00,48.279682,4.912271,5.6,6.55
+S_073,Hauts-de-France,Bretagne,Marseille,3.61,1.782,2024-10-29 00:00:00,51.465363,4.730442,5.15,8.42
+S_033,Occitanie,Occitanie,Nantes,7.71,1.853,2024-06-06 00:00:00,46.30399,-0.661284,5.49,6.74
+S_088,Auvergne-Rhône-Alpes,Bretagne,Lyon,4.84,1.886,2024-02-06 00:00:00,49.818628,0.132361,4.13,1.54
+S_009,Île-de-France,Occitanie,Montpellier,1.94,1.978,2024-12-25 00:00:00,51.424028,-1.17707,4.4,2.06
+S_033,Hauts-de-France,Grand Est,Lyon,2.92,1.844,2024-04-05 00:00:00,46.002726,-1.558286,5.67,3.83
+S_033,Hauts-de-France,Hauts-de-France,Bordeaux,2.11,1.964,2024-12-04 00:00:00,50.021589,4.180925,6.42,3.92
+S_026,Occitanie,Provence-Alpes-Côte d'Azur,Nice,3.15,1.945,2024-09-16 00:00:00,51.803225,1.424893,8.33,6.92
+S_078,Pays de la Loire,Nouvelle-Aquitaine,Lille,8.09,1.892,2024-09-07 00:00:00,52.398936,1.264121,8.51,2.34
+S_094,Auvergne-Rhône-Alpes,Occitanie,Montpellier,4.53,1.797,2024-11-20 00:00:00,46.580862,-0.402156,3.77,8.57
+S_083,Pays de la Loire,Île-de-France,Paris,2.54,1.902,2024-06-13 00:00:00,48.637852,2.609342,6.51,8.03
+S_008,Île-de-France,Grand Est,Bordeaux,6.11,1.892,2024-07-25 00:00:00,50.522288,2.871212,4.35,7.63
+S_053,Auvergne-Rhône-Alpes,Pays de la Loire,Paris,7.07,1.778,2024-07-27 00:00:00,51.199532,3.159277,7.18,5.72
+S_044,Pays de la Loire,Provence-Alpes-Côte d'Azur,Lille,2.99,1.765,2024-04-18 00:00:00,46.616669,6.00956,2.76,3.16
+S_046,Nouvelle-Aquitaine,Pays de la Loire,Strasbourg,4.23,1.77,2024-10-09 00:00:00,50.016514,1.033487,2.06,1.73
+S_098,Occitanie,Provence-Alpes-Côte d'Azur,Nantes,7.71,1.714,2024-09-02 00:00:00,47.181407,3.795588,7.19,8.38
+S_084,Provence-Alpes-Côte d'Azur,Auvergne-Rhône-Alpes,Nantes,8.75,1.681,2024-05-20 00:00:00,46.246252,-0.071472,5.44,8.21
+S_032,Hauts-de-France,Bretagne,Montpellier,6.27,1.827,2024-08-04 00:00:00,46.526531,1.345373,8.44,4.44
+S_086,Pays de la Loire,Grand Est,Strasbourg,3.44,1.96,2024-04-15 00:00:00,49.043861,5.288316,1.88,1.72
+S_051,Grand Est,Bretagne,Strasbourg,1.29,1.907,2024-06-30 00:00:00,46.596822,1.721115,6.71,4.02
+S_029,Auvergne-Rhône-Alpes,Île-de-France,Paris,3.34,1.803,2024-10-09 00:00:00,46.430897,1.084498,4.58,6.26
+S_011,Provence-Alpes-Côte d'Azur,Provence-Alpes-Côte d'Azur,Bordeaux,5.34,1.889,2024-09-25 00:00:00,50.284393,-1.04462,2.06,4.68
+S_050,Nouvelle-Aquitaine,Normandie,Montpellier,8.51,1.986,2024-04-10 00:00:00,48.137306,4.412922,8.52,3.86
+S_034,Île-de-France,Pays de la Loire,Strasbourg,5.84,1.804,2024-10-30 00:00:00,49.983589,3.948935,6.12,8.23
+S_091,Bretagne,Auvergne-Rhône-Alpes,Montpellier,2.7,1.825,2024-05-20 00:00:00,47.115858,3.907304,7.99,6.19
+S_083,Normandie,Pays de la Loire,Nice,1.28,1.844,2024-07-07 00:00:00,45.976072,2.113846,6.76,6.0
+S_065,Nouvelle-Aquitaine,Nouvelle-Aquitaine,Montpellier,5.34,1.849,2024-01-03 00:00:00,52.207886,5.047041,2.07,6.31
+S_030,Occitanie,Auvergne-Rhône-Alpes,Nice,4.66,1.688,2024-04-04 00:00:00,51.16348,0.520774,3.34,5.92
+S_010,Provence-Alpes-Côte d'Azur,Auvergne-Rhône-Alpes,Lille,5.63,1.8,2024-07-31 00:00:00,47.076446,4.940378,8.32,7.12
+S_083,Provence-Alpes-Côte d'Azur,Provence-Alpes-Côte d'Azur,Toulouse,6.27,1.764,2024-08-03 00:00:00,45.467219,4.712781,2.54,3.98
+S_014,Occitanie,Normandie,Montpellier,6.4,1.781,2024-03-04 00:00:00,51.709099,1.606551,5.97,7.9
+S_087,Grand Est,Auvergne-Rhône-Alpes,Lyon,2.14,1.918,2024-09-23 00:00:00,48.557839,1.853057,6.35,6.3
+S_085,Hauts-de-France,Île-de-France,Toulouse,8.58,1.687,2024-09-26 00:00:00,49.862529,6.083454,7.78,6.95
+S_012,Île-de-France,Pays de la Loire,Montpellier,4.73,1.853,2024-12-24 00:00:00,49.522765,1.918864,6.57,6.62
+S_056,Bretagne,Nouvelle-Aquitaine,Bordeaux,7.93,1.914,2024-08-07 00:00:00,52.201662,1.937951,5.95,1.95
+S_062,Grand Est,Bretagne,Nantes,6.87,1.842,2024-01-07 00:00:00,51.861413,6.301001,7.29,2.66
+S_038,Pays de la Loire,Normandie,Nantes,4.93,1.894,2024-04-14 00:00:00,45.084366,3.550895,3.05,1.56
+S_046,Hauts-de-France,Bretagne,Toulouse,1.21,1.963,2024-09-02 00:00:00,44.964433,0.964268,5.91,3.49
+S_007,Nouvelle-Aquitaine,Occitanie,Nantes,7.25,1.766,2024-06-19 00:00:00,47.246955,4.765689,6.3,8.5
+S_080,Occitanie,Auvergne-Rhône-Alpes,Bordeaux,2.15,1.729,2024-08-21 00:00:00,50.192589,0.192488,3.63,1.55
+S_055,Hauts-de-France,Grand Est,Nantes,4.12,1.903,2024-02-18 00:00:00,47.379024,0.438104,6.68,7.01
+S_069,Auvergne-Rhône-Alpes,Île-de-France,Paris,7.76,1.818,2024-05-10 00:00:00,45.594262,2.689013,3.77,7.95
+S_079,Bretagne,Occitanie,Toulouse,3.47,1.968,2024-05-27 00:00:00,49.122329,1.015325,4.98,4.39
+S_023,Île-de-France,Normandie,Lille,4.58,1.905,2024-04-01 00:00:00,47.724833,1.643674,2.42,4.79
+S_074,Occitanie,Nouvelle-Aquitaine,Toulouse,4.11,1.771,2024-04-24 00:00:00,48.162958,1.124074,3.68,5.64
+S_074,Normandie,Bretagne,Lille,4.64,1.73,2024-02-28 00:00:00,46.72995,5.119172,8.63,4.49
+S_051,Occitanie,Bretagne,Strasbourg,3.8,1.83,2024-11-03 00:00:00,51.604092,4.88022,8.53,4.12
+S_069,Nouvelle-Aquitaine,Île-de-France,Lille,1.64,1.907,2024-10-11 00:00:00,48.630302,-0.1387,2.58,1.28
+S_008,Occitanie,Nouvelle-Aquitaine,Toulouse,5.23,1.704,2024-03-28 00:00:00,50.982007,0.272905,6.84,7.07
+S_039,Auvergne-Rhône-Alpes,Nouvelle-Aquitaine,Strasbourg,8.31,1.717,2024-11-27 00:00:00,49.296324,0.062879,2.39,3.49
+S_085,Pays de la Loire,Nouvelle-Aquitaine,Marseille,5.84,1.775,2024-01-18 00:00:00,46.228495,-0.757988,8.58,5.49
+S_025,Pays de la Loire,Occitanie,Nice,5.26,1.742,2024-11-20 00:00:00,47.266017,-0.268693,7.73,5.85
+S_080,Provence-Alpes-Côte d'Azur,Grand Est,Lyon,1.27,1.837,2024-10-04 00:00:00,44.925689,2.805096,3.13,1.75
+S_004,Bretagne,Bretagne,Paris,2.55,1.811,2024-04-01 00:00:00,47.407291,1.299891,5.06,2.01
+S_031,Grand Est,Occitanie,Marseille,6.79,1.806,2024-05-04 00:00:00,50.19796,5.019639,6.05,4.29
+S_066,Auvergne-Rhône-Alpes,Bretagne,Strasbourg,5.76,1.974,2024-10-16 00:00:00,45.643852,5.654212,6.56,2.99
+S_042,Île-de-France,Grand Est,Lille,3.11,1.767,2024-10-02 00:00:00,47.389096,2.165436,8.66,7.01
+S_007,Auvergne-Rhône-Alpes,Normandie,Lyon,7.95,1.789,2024-09-20 00:00:00,45.383297,-1.646677,2.55,4.14
+S_064,Pays de la Loire,Provence-Alpes-Côte d'Azur,Nantes,3.87,1.9,2024-07-20 00:00:00,46.435472,1.949077,4.64,5.37
+S_004,Auvergne-Rhône-Alpes,Nouvelle-Aquitaine,Marseille,6.9,1.86,2024-07-20 00:00:00,50.507343,-0.619705,8.59,3.99
+S_039,Bretagne,Auvergne-Rhône-Alpes,Lille,7.11,1.935,2024-07-07 00:00:00,49.54036,3.436947,3.63,2.33
+S_016,Normandie,Auvergne-Rhône-Alpes,Toulouse,2.02,1.804,2024-06-15 00:00:00,47.625128,0.641169,2.53,8.47
+S_016,Bretagne,Provence-Alpes-Côte d'Azur,Lyon,4.75,1.844,2024-10-07 00:00:00,46.116087,0.474651,4.2,7.05
+S_092,Auvergne-Rhône-Alpes,Île-de-France,Nantes,4.85,1.985,2024-10-10 00:00:00,47.972254,1.202476,6.93,3.97
+S_081,Hauts-de-France,Normandie,Lyon,5.81,1.767,2024-01-07 00:00:00,51.484998,0.488583,6.54,5.44
+S_022,Pays de la Loire,Nouvelle-Aquitaine,Paris,4.06,1.986,2024-12-22 00:00:00,46.762434,5.510316,7.08,4.34
+S_056,Île-de-France,Bretagne,Lille,5.72,1.939,2024-12-06 00:00:00,47.564444,3.349887,1.5,4.38
+S_083,Grand Est,Provence-Alpes-Côte d'Azur,Toulouse,8.15,1.796,2024-04-18 00:00:00,46.054016,2.288572,4.21,2.51
+S_028,Auvergne-Rhône-Alpes,Hauts-de-France,Nice,6.94,1.986,2024-07-16 00:00:00,47.583843,2.520903,5.03,3.36
+S_033,Bretagne,Nouvelle-Aquitaine,Nantes,6.53,1.859,2024-11-23 00:00:00,45.805734,4.490617,3.5,4.97
+S_007,Occitanie,Île-de-France,Strasbourg,7.49,1.877,2024-05-31 00:00:00,51.246401,0.349298,3.22,2.22
+S_067,Pays de la Loire,Grand Est,Marseille,5.53,1.85,2024-05-05 00:00:00,47.019686,-0.452986,2.35,3.49
+S_095,Bretagne,Auvergne-Rhône-Alpes,Lyon,7.12,1.747,2024-11-04 00:00:00,51.677643,3.304168,5.5,6.19
+S_060,Provence-Alpes-Côte d'Azur,Nouvelle-Aquitaine,Bordeaux,3.82,1.716,2024-12-15 00:00:00,52.660837,4.732214,5.33,4.45
+S_012,Pays de la Loire,Nouvelle-Aquitaine,Lille,7.52,1.854,2024-11-30 00:00:00,45.045158,-0.565663,3.39,4.21
+S_022,Grand Est,Hauts-de-France,Paris,7.23,1.938,2024-08-18 00:00:00,48.470094,5.40253,6.03,2.05
+S_005,Normandie,Auvergne-Rhône-Alpes,Bordeaux,4.99,1.909,2024-11-18 00:00:00,44.981634,4.646668,1.85,1.98
+S_029,Pays de la Loire,Grand Est,Paris,6.61,1.702,2024-06-09 00:00:00,45.77298,2.659906,5.88,5.6
+S_021,Hauts-de-France,Grand Est,Lyon,7.58,1.967,2024-04-27 00:00:00,51.901457,4.585056,3.48,3.24
+S_026,Nouvelle-Aquitaine,Pays de la Loire,Bordeaux,6.91,1.964,2024-10-14 00:00:00,45.877754,2.291151,6.54,6.2
+S_050,Nouvelle-Aquitaine,Pays de la Loire,Nice,4.23,1.738,2024-12-21 00:00:00,51.692663,0.794116,2.23,6.26
+S_094,Hauts-de-France,Grand Est,Paris,5.12,1.864,2024-01-27 00:00:00,48.019144,5.064929,5.83,1.56
+S_064,Hauts-de-France,Bretagne,Bordeaux,5.81,1.706,2024-09-26 00:00:00,52.455235,2.645452,5.19,2.74
+S_093,Hauts-de-France,Provence-Alpes-Côte d'Azur,Lille,4.28,1.845,2024-01-12 00:00:00,51.173091,5.171844,5.47,5.82
+S_029,Auvergne-Rhône-Alpes,Bretagne,Montpellier,6.6,1.833,2024-04-12 00:00:00,47.280229,6.179436,1.6,1.85
+S_085,Normandie,Bretagne,Montpellier,7.25,1.943,2024-02-03 00:00:00,46.079158,-1.589512,5.66,5.39
+S_018,Occitanie,Île-de-France,Toulouse,8.3,1.853,2024-01-17 00:00:00,46.743062,1.028212,8.54,5.41
+S_052,Normandie,Auvergne-Rhône-Alpes,Paris,2.55,1.815,2024-12-09 00:00:00,48.67267,4.20696,4.51,2.57
+S_043,Provence-Alpes-Côte d'Azur,Normandie,Nice,7.79,1.843,2024-05-24 00:00:00,50.391465,4.905173,4.31,5.16
+S_055,Hauts-de-France,Nouvelle-Aquitaine,Nice,3.77,1.776,2024-05-22 00:00:00,45.524118,4.139794,7.92,4.74
+S_034,Hauts-de-France,Auvergne-Rhône-Alpes,Nice,7.56,1.979,2024-01-18 00:00:00,46.473386,0.373579,6.41,6.09
+S_021,Nouvelle-Aquitaine,Nouvelle-Aquitaine,Lille,6.32,1.697,2024-05-19 00:00:00,51.6401,1.720117,6.14,4.77
+S_003,Normandie,Provence-Alpes-Côte d'Azur,Nice,5.0,1.731,2024-09-17 00:00:00,45.393432,4.693916,2.27,4.66
+S_093,Normandie,Île-de-France,Lyon,6.54,1.879,2024-12-04 00:00:00,46.558924,1.952923,7.7,1.36
+S_042,Nouvelle-Aquitaine,Nouvelle-Aquitaine,Nice,6.54,1.968,2024-11-23 00:00:00,51.758554,1.660359,4.68,7.19
+S_039,Pays de la Loire,Normandie,Nantes,4.96,1.73,2024-04-20 00:00:00,50.792175,1.469541,8.51,6.8
+S_028,Grand Est,Provence-Alpes-Côte d'Azur,Strasbourg,5.2,1.795,2024-08-14 00:00:00,48.401855,1.865917,3.44,8.5
+S_020,Occitanie,Grand Est,Paris,8.65,1.962,2024-10-08 00:00:00,46.179676,4.113877,5.3,8.8
+S_028,Grand Est,Occitanie,Bordeaux,6.78,1.769,2024-05-24 00:00:00,46.009322,3.602699,7.61,2.76
+S_035,Grand Est,Bretagne,Marseille,3.27,1.893,2024-01-18 00:00:00,45.811743,0.844346,7.72,7.12
+S_075,Auvergne-Rhône-Alpes,Provence-Alpes-Côte d'Azur,Lille,5.25,1.86,2024-02-25 00:00:00,48.553838,3.984654,7.65,8.06
+S_036,Grand Est,Nouvelle-Aquitaine,Nice,2.81,1.854,2024-10-14 00:00:00,45.92425,5.178638,7.43,3.69
+S_023,Bretagne,Nouvelle-Aquitaine,Marseille,6.88,1.763,2024-12-06 00:00:00,49.624453,2.611866,7.08,1.83
+S_017,Île-de-France,Nouvelle-Aquitaine,Toulouse,7.61,1.858,2024-04-03 00:00:00,45.158899,4.970324,5.32,1.57
+S_064,Auvergne-Rhône-Alpes,Île-de-France,Montpellier,5.25,1.988,2024-02-08 00:00:00,47.273424,1.9886,2.54,2.32
+S_005,Pays de la Loire,Provence-Alpes-Côte d'Azur,Toulouse,4.8,1.737,2024-12-26 00:00:00,51.11825,-1.556914,6.6,6.09
+S_090,Hauts-de-France,Occitanie,Montpellier,7.42,1.929,2024-07-16 00:00:00,50.561772,-0.189,1.29,7.38
+S_051,Normandie,Pays de la Loire,Lille,3.23,1.893,2024-09-14 00:00:00,51.525387,4.903834,3.46,2.68
+S_037,Auvergne-Rhône-Alpes,Pays de la Loire,Strasbourg,2.37,1.967,2024-02-25 00:00:00,48.409246,-0.484579,6.96,7.1
+S_060,Auvergne-Rhône-Alpes,Auvergne-Rhône-Alpes,Lille,6.58,1.891,2024-04-02 00:00:00,48.772149,3.513631,4.38,5.15
+S_035,Normandie,Auvergne-Rhône-Alpes,Lyon,7.53,1.878,2024-10-14 00:00:00,45.056667,0.976325,6.75,6.54
+S_078,Bretagne,Nouvelle-Aquitaine,Lille,4.34,1.836,2024-08-23 00:00:00,50.619114,5.192187,8.36,7.59
+S_015,Grand Est,Occitanie,Bordeaux,2.69,1.79,2024-05-26 00:00:00,52.295091,4.775819,7.61,6.96
+S_037,Hauts-de-France,Île-de-France,Montpellier,3.99,1.923,2024-06-06 00:00:00,48.99591,1.038169,1.41,2.42
+S_023,Auvergne-Rhône-Alpes,Pays de la Loire,Lille,4.07,1.768,2024-12-10 00:00:00,46.967593,0.011768,4.72,1.38
+S_047,Hauts-de-France,Bretagne,Marseille,1.72,1.747,2024-10-08 00:00:00,47.07241,1.41953,8.74,7.63
+S_035,Normandie,Normandie,Lyon,5.78,1.855,2024-01-15 00:00:00,50.230215,-0.655379,1.23,1.99
+S_071,Normandie,Nouvelle-Aquitaine,Nantes,5.36,1.764,2024-12-09 00:00:00,46.221368,5.079583,2.06,6.05
+S_088,Hauts-de-France,Auvergne-Rhône-Alpes,Lille,4.44,1.767,2024-02-01 00:00:00,48.907811,0.130058,6.82,3.2
+S_099,Normandie,Auvergne-Rhône-Alpes,Nantes,5.22,1.711,2024-11-22 00:00:00,45.687506,5.468656,1.47,3.56
+S_100,Grand Est,Normandie,Strasbourg,5.24,1.681,2024-07-27 00:00:00,49.536348,3.587402,6.58,4.82
+S_097,Bretagne,Grand Est,Marseille,6.03,1.79,2024-03-19 00:00:00,48.591962,4.292331,7.62,3.5
+S_080,Île-de-France,Provence-Alpes-Côte d'Azur,Bordeaux,5.98,1.904,2024-01-30 00:00:00,51.444457,-1.487367,2.89,1.59
+S_052,Bretagne,Auvergne-Rhône-Alpes,Montpellier,6.16,1.713,2024-02-20 00:00:00,50.009745,5.254454,7.52,5.25
+S_023,Hauts-de-France,Pays de la Loire,Nice,2.95,1.859,2024-06-22 00:00:00,51.306697,0.757591,4.32,4.43
+S_069,Occitanie,Grand Est,Strasbourg,1.73,1.819,2024-03-16 00:00:00,47.430198,5.675994,6.55,7.81
+S_025,Île-de-France,Nouvelle-Aquitaine,Nantes,6.31,1.785,2024-07-09 00:00:00,50.602177,5.550865,3.31,7.57
+S_084,Auvergne-Rhône-Alpes,Grand Est,Marseille,6.36,1.866,2024-08-23 00:00:00,51.704824,4.08823,2.9,6.76
+S_003,Normandie,Pays de la Loire,Paris,7.22,1.869,2024-05-06 00:00:00,47.64339,5.905258,5.65,3.0
+S_060,Pays de la Loire,Nouvelle-Aquitaine,Lyon,8.45,1.983,2024-02-15 00:00:00,48.495695,0.98906,5.86,8.27
+S_089,Hauts-de-France,Île-de-France,Nantes,4.75,1.872,2024-10-20 00:00:00,48.686798,1.015914,4.06,7.31
+S_058,Pays de la Loire,Bretagne,Nice,3.31,1.742,2024-01-25 00:00:00,47.309859,0.716504,5.75,3.57
+S_071,Pays de la Loire,Île-de-France,Bordeaux,2.66,1.726,2024-05-02 00:00:00,50.899786,4.104172,4.71,5.71
+S_002,Nouvelle-Aquitaine,Bretagne,Nantes,6.28,1.859,2024-05-13 00:00:00,48.402502,2.249092,5.13,2.31
+S_086,Nouvelle-Aquitaine,Pays de la Loire,Nice,7.69,1.746,2024-11-04 00:00:00,47.330177,0.061137,7.9,8.41
+S_060,Auvergne-Rhône-Alpes,Auvergne-Rhône-Alpes,Bordeaux,4.89,1.711,2024-01-12 00:00:00,48.671369,5.733697,3.72,5.57
+S_015,Occitanie,Hauts-de-France,Nantes,2.73,1.761,2024-08-09 00:00:00,50.638506,1.503043,6.77,3.91
+S_060,Hauts-de-France,Nouvelle-Aquitaine,Nice,2.03,1.931,2024-12-07 00:00:00,49.749149,1.881242,7.68,7.66
+S_040,Bretagne,Île-de-France,Nice,3.11,1.773,2024-11-13 00:00:00,51.5943,4.900822,7.18,7.67
+S_044,Nouvelle-Aquitaine,Grand Est,Nantes,7.03,1.794,2024-03-19 00:00:00,51.448955,2.406292,4.93,3.48
+S_033,Occitanie,Bretagne,Paris,8.31,1.871,2024-11-07 00:00:00,50.157048,0.03919,4.16,6.84
+S_033,Île-de-France,Île-de-France,Lille,1.25,1.942,2024-04-25 00:00:00,47.58274,4.453229,4.07,6.03
+S_017,Pays de la Loire,Bretagne,Lyon,1.24,1.96,2024-09-17 00:00:00,46.181408,2.410192,2.77,6.03
+S_035,Normandie,Grand Est,Nice,6.55,1.808,2024-11-02 00:00:00,47.222304,6.289401,8.11,8.38
+S_090,Île-de-France,Île-de-France,Montpellier,6.33,1.851,2024-05-29 00:00:00,46.509714,3.269747,6.66,4.97
+S_028,Grand Est,Auvergne-Rhône-Alpes,Lille,2.9,1.911,2024-06-19 00:00:00,52.78668,5.7788,4.17,2.56
+S_067,Auvergne-Rhône-Alpes,Pays de la Loire,Montpellier,1.59,1.805,2024-08-13 00:00:00,50.572109,2.479492,8.26,3.44
+S_082,Nouvelle-Aquitaine,Occitanie,Nice,6.85,1.947,2024-12-26 00:00:00,49.885984,-0.309514,5.91,3.49
+S_056,Auvergne-Rhône-Alpes,Nouvelle-Aquitaine,Montpellier,6.51,1.709,2024-03-17 00:00:00,52.475402,3.291053,6.27,3.7
+S_018,Normandie,Bretagne,Toulouse,4.75,1.774,2024-01-04 00:00:00,46.633719,3.830235,3.46,2.17
+S_070,Grand Est,Occitanie,Lyon,4.8,1.69,2024-06-21 00:00:00,50.826408,2.210079,2.74,1.36
+S_041,Pays de la Loire,Bretagne,Bordeaux,7.28,1.72,2024-03-14 00:00:00,45.043291,3.491488,3.91,7.06
+S_019,Normandie,Île-de-France,Bordeaux,7.13,1.831,2024-11-27 00:00:00,50.719638,3.713245,1.46,3.28
+S_090,Île-de-France,Auvergne-Rhône-Alpes,Marseille,6.25,1.978,2024-06-26 00:00:00,52.111937,2.222536,4.23,2.66
+S_078,Auvergne-Rhône-Alpes,Pays de la Loire,Marseille,5.61,1.912,2024-05-30 00:00:00,52.147614,6.225103,7.78,6.89
+S_028,Bretagne,Auvergne-Rhône-Alpes,Lyon,2.29,1.686,2024-10-01 00:00:00,52.614998,0.493847,8.48,6.42
+S_056,Normandie,Nouvelle-Aquitaine,Strasbourg,7.61,1.767,2024-08-15 00:00:00,49.903921,-0.835252,4.29,8.6
+S_095,Provence-Alpes-Côte d'Azur,Occitanie,Strasbourg,3.06,1.682,2024-10-27 00:00:00,50.729531,-0.420201,7.87,4.5
+S_090,Nouvelle-Aquitaine,Nouvelle-Aquitaine,Toulouse,4.16,1.966,2024-01-20 00:00:00,46.682682,5.255725,3.47,5.17
+S_030,Pays de la Loire,Occitanie,Nantes,5.17,1.745,2024-02-07 00:00:00,50.473043,-0.804703,7.01,1.37
+S_051,Normandie,Provence-Alpes-Côte d'Azur,Lyon,4.74,1.727,2024-05-06 00:00:00,46.102726,5.398773,7.19,6.01
+S_043,Pays de la Loire,Bretagne,Montpellier,4.94,1.914,2024-04-18 00:00:00,50.791171,6.179645,3.19,2.01
+S_045,Grand Est,Île-de-France,Lyon,2.33,1.902,2024-02-14 00:00:00,44.963547,-0.596694,5.42,4.76
+S_094,Normandie,Grand Est,Marseille,3.25,1.868,2024-01-21 00:00:00,45.142752,-0.432435,3.26,6.87
+S_015,Nouvelle-Aquitaine,Auvergne-Rhône-Alpes,Strasbourg,7.82,1.933,2024-01-12 00:00:00,52.477358,-0.926761,2.42,7.17
+S_053,Île-de-France,Île-de-France,Nantes,5.32,1.899,2024-09-18 00:00:00,48.466363,2.063189,4.57,8.71
+S_059,Grand Est,Provence-Alpes-Côte d'Azur,Bordeaux,5.48,1.891,2024-11-10 00:00:00,48.356099,5.813001,8.75,6.61
+S_038,Auvergne-Rhône-Alpes,Pays de la Loire,Toulouse,6.58,1.872,2024-06-15 00:00:00,47.716773,0.754136,1.88,5.44
+S_013,Auvergne-Rhône-Alpes,Bretagne,Toulouse,8.51,1.972,2024-03-24 00:00:00,49.172028,3.980343,2.14,5.3
+S_058,Auvergne-Rhône-Alpes,Normandie,Nantes,4.33,1.799,2024-09-15 00:00:00,48.446957,0.943385,4.81,6.37
+S_005,Normandie,Provence-Alpes-Côte d'Azur,Montpellier,3.04,1.718,2024-08-07 00:00:00,49.519745,5.711955,5.7,8.0
+S_030,Provence-Alpes-Côte d'Azur,Auvergne-Rhône-Alpes,Marseille,3.2,1.739,2024-04-22 00:00:00,50.086439,1.654022,2.52,1.9
+S_086,Île-de-France,Nouvelle-Aquitaine,Lille,4.06,1.954,2024-08-30 00:00:00,47.422773,2.494819,8.36,5.89
+S_078,Île-de-France,Grand Est,Bordeaux,5.31,1.864,2024-03-17 00:00:00,48.218033,1.45461,5.76,7.33
+S_087,Hauts-de-France,Grand Est,Nantes,4.77,1.77,2024-09-28 00:00:00,51.185204,-1.34265,8.0,6.07
+S_082,Provence-Alpes-Côte d'Azur,Grand Est,Nantes,2.37,1.977,2024-09-09 00:00:00,48.14782,-1.491826,5.33,2.07
+S_021,Île-de-France,Grand Est,Nice,5.75,1.889,2024-07-14 00:00:00,47.884397,2.825579,3.54,4.76
+S_050,Provence-Alpes-Côte d'Azur,Grand Est,Bordeaux,4.51,1.847,2024-10-30 00:00:00,47.792529,5.332093,3.83,3.84
+S_073,Île-de-France,Provence-Alpes-Côte d'Azur,Strasbourg,2.7,1.699,2024-04-27 00:00:00,50.02484,4.099705,4.6,2.17
+S_037,Île-de-France,Île-de-France,Marseille,5.41,1.906,2024-04-08 00:00:00,50.230303,6.073562,5.88,1.23
+S_037,Nouvelle-Aquitaine,Grand Est,Lille,2.58,1.79,2024-10-16 00:00:00,49.019333,0.03607,4.85,4.51
+S_034,Occitanie,Normandie,Montpellier,2.06,1.751,2024-11-16 00:00:00,46.15066,2.853621,8.04,6.36
+S_045,Provence-Alpes-Côte d'Azur,Pays de la Loire,Bordeaux,6.51,1.761,2024-08-31 00:00:00,47.515047,4.185451,3.92,7.16
+S_039,Grand Est,Hauts-de-France,Lyon,8.28,1.734,2024-02-11 00:00:00,48.683237,1.756657,6.49,7.45
+S_063,Provence-Alpes-Côte d'Azur,Bretagne,Paris,6.39,1.849,2024-12-01 00:00:00,46.192086,-0.134037,2.75,7.91
+S_061,Hauts-de-France,Pays de la Loire,Montpellier,5.29,1.728,2024-07-08 00:00:00,45.959079,0.004718,8.52,2.86
+S_062,Auvergne-Rhône-Alpes,Auvergne-Rhône-Alpes,Bordeaux,4.15,1.7,2024-10-16 00:00:00,52.182556,2.359749,2.69,6.33
+S_097,Normandie,Grand Est,Marseille,5.09,1.902,2024-08-18 00:00:00,46.452196,1.0268,5.51,3.05
+S_045,Île-de-France,Hauts-de-France,Nantes,3.07,1.723,2024-10-15 00:00:00,50.422696,0.081645,1.27,5.67
+S_039,Occitanie,Auvergne-Rhône-Alpes,Marseille,7.69,1.903,2024-05-03 00:00:00,47.220219,5.09162,5.76,2.6
+S_033,Provence-Alpes-Côte d'Azur,Auvergne-Rhône-Alpes,Toulouse,4.98,1.821,2024-09-04 00:00:00,46.321645,1.803082,8.21,5.92
+S_036,Normandie,Île-de-France,Paris,6.75,1.796,2024-06-27 00:00:00,49.592415,3.971836,6.09,8.55
+S_085,Grand Est,Normandie,Toulouse,8.37,1.978,2024-08-18 00:00:00,48.327796,1.673866,2.7,8.52
+S_074,Bretagne,Nouvelle-Aquitaine,Toulouse,2.11,1.769,2024-06-10 00:00:00,45.333594,1.112366,6.37,3.49
+S_042,Provence-Alpes-Côte d'Azur,Provence-Alpes-Côte d'Azur,Strasbourg,7.24,1.92,2024-03-26 00:00:00,45.156665,-0.07564,4.98,4.29
+S_057,Occitanie,Hauts-de-France,Toulouse,1.94,1.824,2024-06-05 00:00:00,47.98487,1.621151,1.29,8.7
+S_033,Grand Est,Occitanie,Marseille,3.87,1.834,2024-03-28 00:00:00,51.76033,0.334199,6.98,6.07
+S_021,Grand Est,Île-de-France,Toulouse,2.14,1.708,2024-06-16 00:00:00,49.393835,1.567188,2.83,3.49
+S_051,Nouvelle-Aquitaine,Hauts-de-France,Marseille,6.78,1.904,2024-09-13 00:00:00,50.481272,6.038735,3.0,1.4
+S_057,Hauts-de-France,Hauts-de-France,Nantes,4.03,1.707,2024-06-12 00:00:00,51.984356,3.056962,3.97,4.91
+S_092,Normandie,Hauts-de-France,Nantes,3.87,1.915,2024-06-05 00:00:00,51.407567,-0.034421,7.63,7.9
+S_012,Île-de-France,Hauts-de-France,Nice,4.1,1.947,2024-01-18 00:00:00,47.062262,4.032764,5.68,8.29
+S_099,Nouvelle-Aquitaine,Auvergne-Rhône-Alpes,Nice,1.64,1.786,2024-01-31 00:00:00,47.625923,-0.827116,3.53,3.31
+S_039,Nouvelle-Aquitaine,Pays de la Loire,Paris,5.56,1.719,2024-10-18 00:00:00,52.007818,3.270533,8.03,1.43
+S_095,Provence-Alpes-Côte d'Azur,Île-de-France,Strasbourg,5.37,1.738,2024-01-21 00:00:00,49.032743,0.102345,3.88,5.51
+S_060,Nouvelle-Aquitaine,Normandie,Marseille,2.06,1.744,2024-07-10 00:00:00,47.598909,-0.313705,2.52,8.34
+S_029,Île-de-France,Nouvelle-Aquitaine,Marseille,2.68,1.959,2024-01-19 00:00:00,49.970072,5.843067,1.71,4.76
+S_070,Normandie,Pays de la Loire,Toulouse,8.17,1.729,2024-06-16 00:00:00,51.09176,5.315948,8.76,1.87
+S_083,Normandie,Pays de la Loire,Strasbourg,8.38,1.837,2024-07-22 00:00:00,47.95184,6.049452,2.09,6.75
+S_051,Nouvelle-Aquitaine,Grand Est,Paris,4.53,1.759,2024-08-06 00:00:00,45.99499,1.503409,3.34,3.15
+S_095,Hauts-de-France,Auvergne-Rhône-Alpes,Marseille,4.83,1.804,2024-03-14 00:00:00,49.731471,4.619758,7.66,7.77
+S_032,Nouvelle-Aquitaine,Nouvelle-Aquitaine,Montpellier,7.86,1.849,2024-06-08 00:00:00,50.120685,5.37236,7.55,1.73
+S_052,Hauts-de-France,Grand Est,Toulouse,1.58,1.966,2024-04-27 00:00:00,46.168727,-0.680984,3.56,8.01
+S_053,Grand Est,Hauts-de-France,Nantes,8.32,1.726,2024-09-06 00:00:00,45.630501,-0.916293,6.81,6.16
+S_031,Bretagne,Pays de la Loire,Toulouse,5.17,1.714,2024-02-09 00:00:00,51.752562,2.313579,5.15,2.55
+S_026,Hauts-de-France,Bretagne,Nantes,2.83,1.918,2024-05-24 00:00:00,46.443858,3.633262,6.98,4.33
+S_088,Occitanie,Nouvelle-Aquitaine,Lille,5.16,1.681,2024-09-22 00:00:00,51.154321,-1.300967,7.11,5.83
+S_065,Provence-Alpes-Côte d'Azur,Île-de-France,Paris,3.44,1.896,2024-04-13 00:00:00,51.775184,3.466982,7.31,1.52
+S_062,Île-de-France,Pays de la Loire,Nantes,8.67,1.899,2024-07-11 00:00:00,50.539189,4.325649,4.2,8.75
+S_065,Auvergne-Rhône-Alpes,Auvergne-Rhône-Alpes,Strasbourg,6.77,1.705,2024-08-23 00:00:00,47.855047,6.336293,7.57,6.05
+S_082,Occitanie,Auvergne-Rhône-Alpes,Bordeaux,6.5,1.797,2024-07-17 00:00:00,46.584334,1.348199,6.64,6.88
+S_020,Pays de la Loire,Pays de la Loire,Bordeaux,7.22,1.96,2024-01-24 00:00:00,50.912305,3.029094,8.59,3.56
+S_002,Auvergne-Rhône-Alpes,Pays de la Loire,Marseille,2.18,1.792,2024-05-12 00:00:00,48.912021,4.43531,4.92,5.1
+S_081,Bretagne,Auvergne-Rhône-Alpes,Toulouse,5.0,1.983,2024-01-07 00:00:00,51.703986,1.104503,4.81,7.39
+S_059,Normandie,Hauts-de-France,Lille,2.5,1.974,2024-12-12 00:00:00,51.192455,3.586069,1.62,1.87
+S_074,Normandie,Nouvelle-Aquitaine,Nice,2.77,1.846,2024-08-16 00:00:00,52.231867,0.980023,7.22,7.79
+S_002,Bretagne,Normandie,Toulouse,6.82,1.977,2024-09-05 00:00:00,47.534339,5.229983,2.71,7.89
+S_050,Occitanie,Île-de-France,Nantes,4.79,1.868,2024-07-24 00:00:00,51.292366,1.640216,2.38,8.08
+S_085,Provence-Alpes-Côte d'Azur,Provence-Alpes-Côte d'Azur,Toulouse,3.29,1.928,2024-03-14 00:00:00,52.054942,3.035316,8.06,8.07
+S_085,Bretagne,Pays de la Loire,Nice,1.49,1.881,2024-06-15 00:00:00,52.049427,1.896664,6.46,6.01
+S_022,Provence-Alpes-Côte d'Azur,Occitanie,Nantes,6.64,1.916,2024-03-05 00:00:00,48.078914,3.866202,6.28,1.39
+S_079,Bretagne,Grand Est,Lille,8.3,1.952,2024-06-09 00:00:00,46.528501,0.699425,7.95,6.37
+S_047,Normandie,Provence-Alpes-Côte d'Azur,Montpellier,3.66,1.902,2024-07-28 00:00:00,47.70213,6.287665,6.05,7.92
+S_079,Provence-Alpes-Côte d'Azur,Normandie,Bordeaux,4.71,1.91,2024-04-03 00:00:00,46.880224,5.488147,5.94,8.23
+S_028,Bretagne,Auvergne-Rhône-Alpes,Bordeaux,6.43,1.779,2024-07-18 00:00:00,46.288246,2.686106,1.83,2.64
+S_075,Grand Est,Pays de la Loire,Lyon,6.91,1.691,2024-03-01 00:00:00,48.800213,5.965354,8.09,8.38
+S_056,Île-de-France,Île-de-France,Marseille,1.32,1.931,2024-01-13 00:00:00,45.912715,5.10603,3.54,4.26
+S_049,Auvergne-Rhône-Alpes,Grand Est,Nice,6.51,1.933,2024-06-12 00:00:00,50.909081,5.238585,1.81,4.99
+S_095,Grand Est,Grand Est,Nantes,6.42,1.99,2024-03-13 00:00:00,49.658117,4.777551,6.55,6.76
+S_013,Bretagne,Île-de-France,Marseille,3.03,1.798,2024-04-07 00:00:00,49.728966,-0.358482,6.87,4.0
+S_034,Provence-Alpes-Côte d'Azur,Auvergne-Rhône-Alpes,Lille,2.68,1.951,2024-01-27 00:00:00,49.139317,5.563519,5.51,6.53
+S_089,Bretagne,Île-de-France,Lyon,3.26,1.922,2024-03-31 00:00:00,45.713325,3.74844,4.52,5.62
+S_020,Provence-Alpes-Côte d'Azur,Auvergne-Rhône-Alpes,Strasbourg,6.81,1.884,2024-01-05 00:00:00,49.47675,1.108449,7.76,7.94
+S_066,Provence-Alpes-Côte d'Azur,Hauts-de-France,Marseille,7.07,1.782,2024-07-25 00:00:00,47.960818,2.382218,2.96,7.63
+S_015,Normandie,Hauts-de-France,Lyon,1.53,1.703,2024-09-11 00:00:00,48.72138,-0.518574,1.47,6.69
+S_065,Hauts-de-France,Occitanie,Marseille,4.19,1.681,2024-04-20 00:00:00,49.789034,0.206902,1.54,8.49
+S_008,Normandie,Hauts-de-France,Nantes,7.32,1.85,2024-08-07 00:00:00,45.432612,-0.804217,6.66,1.67
+S_073,Provence-Alpes-Côte d'Azur,Hauts-de-France,Toulouse,8.55,1.865,2024-11-26 00:00:00,51.261785,4.761059,3.81,4.79
+S_050,Grand Est,Hauts-de-France,Toulouse,8.18,1.873,2024-05-29 00:00:00,51.562708,5.388271,5.66,4.04
+S_032,Pays de la Loire,Provence-Alpes-Côte d'Azur,Marseille,2.98,1.687,2024-06-09 00:00:00,51.79992,0.992962,4.76,4.39
+S_006,Auvergne-Rhône-Alpes,Pays de la Loire,Lyon,6.17,1.975,2024-02-23 00:00:00,48.863609,-1.383158,7.41,2.75
+S_034,Grand Est,Occitanie,Lille,7.9,1.836,2024-07-21 00:00:00,48.913293,2.384037,7.27,1.42
+S_039,Hauts-de-France,Hauts-de-France,Marseille,4.44,1.937,2024-12-03 00:00:00,47.944682,1.608782,2.41,5.44
+S_002,Auvergne-Rhône-Alpes,Provence-Alpes-Côte d'Azur,Bordeaux,3.15,1.687,2024-08-04 00:00:00,52.741342,4.793636,4.42,7.53
+S_085,Nouvelle-Aquitaine,Normandie,Toulouse,7.03,1.872,2024-06-03 00:00:00,49.112147,2.080246,4.13,8.72
+S_085,Île-de-France,Hauts-de-France,Lille,4.47,1.785,2024-01-20 00:00:00,48.512387,-1.327945,3.12,7.03
+S_072,Auvergne-Rhône-Alpes,Occitanie,Bordeaux,1.38,1.931,2024-07-05 00:00:00,46.197686,2.275966,6.87,8.45
+S_057,Nouvelle-Aquitaine,Île-de-France,Nice,8.79,1.683,2024-01-14 00:00:00,51.762237,-0.792087,2.61,3.91
+S_098,Bretagne,Auvergne-Rhône-Alpes,Bordeaux,1.21,1.926,2024-02-26 00:00:00,47.614917,6.152486,7.7,2.95
+S_002,Occitanie,Normandie,Toulouse,4.77,1.682,2024-05-08 00:00:00,52.061206,0.786376,4.82,3.89
+S_057,Grand Est,Nouvelle-Aquitaine,Nice,6.74,1.886,2024-06-04 00:00:00,51.924329,1.065606,7.12,7.7
+S_079,Provence-Alpes-Côte d'Azur,Île-de-France,Bordeaux,2.5,1.795,2024-11-20 00:00:00,51.625791,2.963597,8.04,2.17
+S_079,Normandie,Île-de-France,Montpellier,5.82,1.841,2024-08-31 00:00:00,46.149312,0.899301,1.62,7.56
+S_023,Auvergne-Rhône-Alpes,Hauts-de-France,Nantes,6.42,1.772,2024-09-06 00:00:00,48.77669,0.74372,1.87,6.96
+S_065,Normandie,Hauts-de-France,Montpellier,4.16,1.771,2024-01-15 00:00:00,50.527726,1.469137,8.4,3.03
+S_068,Bretagne,Normandie,Toulouse,6.27,1.839,2024-02-15 00:00:00,50.099601,0.924922,8.36,3.26
+S_008,Hauts-de-France,Île-de-France,Strasbourg,2.71,1.736,2024-03-08 00:00:00,52.133385,-0.969883,8.47,8.08
+S_097,Grand Est,Provence-Alpes-Côte d'Azur,Nice,3.69,1.951,2024-10-29 00:00:00,50.035477,2.381648,4.82,3.35
+S_053,Auvergne-Rhône-Alpes,Bretagne,Nantes,4.71,1.842,2024-12-18 00:00:00,52.375581,-1.554385,4.3,6.3
+S_050,Pays de la Loire,Auvergne-Rhône-Alpes,Bordeaux,1.84,1.708,2024-06-13 00:00:00,47.300635,4.635749,1.28,3.42
+S_071,Île-de-France,Normandie,Bordeaux,7.32,1.696,2024-03-12 00:00:00,52.768008,4.993541,2.18,8.19
+S_007,Auvergne-Rhône-Alpes,Hauts-de-France,Lille,1.33,1.774,2024-10-22 00:00:00,50.13305,4.004829,4.48,5.13
+S_024,Hauts-de-France,Auvergne-Rhône-Alpes,Nantes,3.51,1.725,2024-12-18 00:00:00,46.611809,-1.276786,5.07,1.62
+S_045,Hauts-de-France,Hauts-de-France,Toulouse,1.33,1.781,2024-04-04 00:00:00,51.7793,-0.673239,7.39,2.03
+S_029,Normandie,Grand Est,Nantes,3.33,1.826,2024-01-16 00:00:00,48.319626,0.106817,5.48,2.19
+S_081,Nouvelle-Aquitaine,Île-de-France,Strasbourg,1.75,1.705,2024-01-15 00:00:00,46.625177,5.987526,6.33,7.41
+S_045,Auvergne-Rhône-Alpes,Provence-Alpes-Côte d'Azur,Lyon,6.01,1.839,2024-12-11 00:00:00,46.080807,0.794063,1.26,6.13
+S_019,Normandie,Occitanie,Lyon,1.39,1.889,2024-04-15 00:00:00,47.987443,4.324108,5.14,7.21
+S_003,Île-de-France,Île-de-France,Paris,3.02,1.833,2024-12-03 00:00:00,48.516464,1.823851,2.06,4.38
+S_062,Occitanie,Nouvelle-Aquitaine,Bordeaux,2.4,1.874,2024-02-02 00:00:00,47.771819,1.518757,3.89,1.4
+S_064,Hauts-de-France,Île-de-France,Lille,8.13,1.905,2024-08-31 00:00:00,52.311059,-0.692483,1.81,5.11
+S_099,Auvergne-Rhône-Alpes,Provence-Alpes-Côte d'Azur,Strasbourg,6.05,1.906,2024-12-12 00:00:00,44.969834,4.149455,7.94,1.29
+S_045,Occitanie,Bretagne,Toulouse,4.41,1.752,2024-03-07 00:00:00,46.404528,5.512633,3.49,8.03
+S_100,Bretagne,Grand Est,Montpellier,4.33,1.861,2024-01-19 00:00:00,52.385035,1.902239,6.92,7.69
+S_089,Île-de-France,Provence-Alpes-Côte d'Azur,Nice,2.0,1.752,2024-11-03 00:00:00,51.847552,3.897087,1.59,5.46
+S_087,Hauts-de-France,Normandie,Lyon,6.87,1.867,2024-11-29 00:00:00,50.771294,2.491138,3.54,3.18
+S_020,Nouvelle-Aquitaine,Grand Est,Paris,3.02,1.846,2024-05-07 00:00:00,50.544897,0.896494,6.74,5.02
+S_046,Bretagne,Auvergne-Rhône-Alpes,Montpellier,6.95,1.743,2024-06-27 00:00:00,50.270004,2.74103,4.86,3.24
+S_079,Nouvelle-Aquitaine,Normandie,Marseille,4.03,1.735,2024-07-22 00:00:00,51.799012,3.669592,4.53,3.83
+S_077,Auvergne-Rhône-Alpes,Auvergne-Rhône-Alpes,Lille,4.77,1.88,2024-09-22 00:00:00,46.948431,-0.120561,6.34,2.24
+S_015,Grand Est,Bretagne,Lille,3.79,1.977,2024-03-04 00:00:00,47.565455,4.971854,8.06,4.31
+S_080,Île-de-France,Pays de la Loire,Lyon,7.46,1.744,2024-05-08 00:00:00,45.894733,-0.337753,4.74,2.47
+S_020,Auvergne-Rhône-Alpes,Bretagne,Bordeaux,4.46,1.921,2024-02-24 00:00:00,51.462637,2.582939,2.79,5.47
+S_076,Hauts-de-France,Nouvelle-Aquitaine,Strasbourg,1.8,1.773,2024-02-15 00:00:00,51.954728,5.842177,1.44,5.7
+S_022,Grand Est,Hauts-de-France,Montpellier,3.55,1.757,2024-11-09 00:00:00,45.198385,1.873879,7.89,4.75
+S_040,Bretagne,Hauts-de-France,Marseille,4.87,1.825,2024-04-19 00:00:00,49.622955,0.335315,7.74,6.14
+S_050,Normandie,Hauts-de-France,Lille,7.92,1.771,2024-02-16 00:00:00,51.384717,0.703917,3.82,2.66
+S_094,Pays de la Loire,Pays de la Loire,Nantes,5.55,1.851,2024-12-04 00:00:00,51.080645,3.320451,7.2,5.54
+S_014,Hauts-de-France,Bretagne,Marseille,8.15,1.944,2024-09-23 00:00:00,52.084574,0.012632,3.86,5.25
+S_032,Hauts-de-France,Bretagne,Toulouse,7.66,1.823,2024-03-27 00:00:00,51.350627,0.613894,1.41,4.48
+S_055,Nouvelle-Aquitaine,Pays de la Loire,Nantes,4.23,1.694,2024-09-09 00:00:00,51.481502,-0.712398,4.86,4.67
+S_003,Hauts-de-France,Provence-Alpes-Côte d'Azur,Paris,5.28,1.758,2024-07-27 00:00:00,51.6681,-0.440767,3.98,6.97
+S_007,Provence-Alpes-Côte d'Azur,Normandie,Nantes,5.61,1.864,2024-03-28 00:00:00,49.703125,4.127522,7.54,1.79
+S_002,Provence-Alpes-Côte d'Azur,Île-de-France,Bordeaux,8.52,1.798,2024-05-03 00:00:00,50.005184,-0.888165,3.44,5.35
+S_037,Occitanie,Provence-Alpes-Côte d'Azur,Toulouse,1.51,1.8,2024-02-23 00:00:00,49.664872,1.273178,7.51,5.37
+S_031,Pays de la Loire,Provence-Alpes-Côte d'Azur,Lille,4.91,1.757,2024-02-09 00:00:00,45.27992,2.321721,5.0,2.64
+S_020,Nouvelle-Aquitaine,Nouvelle-Aquitaine,Nantes,6.41,1.978,2024-06-03 00:00:00,51.148774,4.025884,1.62,7.91
+S_046,Auvergne-Rhône-Alpes,Auvergne-Rhône-Alpes,Nantes,1.65,1.986,2024-02-27 00:00:00,51.082829,5.554463,4.08,3.13
+S_057,Nouvelle-Aquitaine,Bretagne,Bordeaux,6.27,1.794,2024-02-19 00:00:00,49.048268,-1.216164,5.24,3.6
+S_050,Hauts-de-France,Pays de la Loire,Bordeaux,4.86,1.794,2024-08-24 00:00:00,50.566034,-1.005251,2.89,5.36
+S_008,Occitanie,Pays de la Loire,Lille,4.48,1.701,2024-02-25 00:00:00,47.799859,-0.99738,5.34,4.32
+S_058,Nouvelle-Aquitaine,Hauts-de-France,Bordeaux,1.33,1.881,2024-03-12 00:00:00,49.853932,5.974845,6.03,8.29
+S_045,Normandie,Grand Est,Marseille,7.41,1.764,2024-01-06 00:00:00,48.666418,5.154847,8.71,3.17
+S_041,Pays de la Loire,Occitanie,Bordeaux,1.27,1.855,2024-11-08 00:00:00,49.260763,-1.166523,2.2,6.56
+S_063,Provence-Alpes-Côte d'Azur,Grand Est,Lille,3.79,1.897,2024-05-08 00:00:00,45.142333,2.713257,5.73,5.31
+S_084,Auvergne-Rhône-Alpes,Bretagne,Montpellier,2.0,1.79,2024-08-06 00:00:00,47.121814,-0.399073,5.27,3.96
+S_056,Pays de la Loire,Auvergne-Rhône-Alpes,Paris,4.85,1.889,2024-03-21 00:00:00,49.328417,0.257667,2.07,2.78
+S_021,Normandie,Pays de la Loire,Marseille,7.48,1.784,2024-12-23 00:00:00,49.522824,3.763283,8.38,2.06
+S_050,Provence-Alpes-Côte d'Azur,Pays de la Loire,Paris,4.91,1.726,2024-04-01 00:00:00,48.577578,1.334502,7.7,4.49
+S_080,Provence-Alpes-Côte d'Azur,Normandie,Toulouse,6.48,1.757,2024-01-08 00:00:00,51.580573,2.537585,4.61,5.92
+S_043,Pays de la Loire,Grand Est,Montpellier,1.22,1.83,2024-08-07 00:00:00,47.973474,0.207051,2.73,7.18
+S_099,Grand Est,Provence-Alpes-Côte d'Azur,Bordeaux,6.49,1.954,2024-08-05 00:00:00,45.652129,6.082259,5.97,6.66
+S_034,Auvergne-Rhône-Alpes,Nouvelle-Aquitaine,Paris,5.19,1.723,2024-07-27 00:00:00,47.375974,4.807757,1.99,6.37
+S_058,Occitanie,Occitanie,Lille,6.84,1.737,2024-06-21 00:00:00,52.373805,2.754142,4.4,6.96
+S_093,Provence-Alpes-Côte d'Azur,Provence-Alpes-Côte d'Azur,Toulouse,1.7,1.682,2024-03-19 00:00:00,49.819089,-0.491174,4.83,2.6
+S_017,Île-de-France,Île-de-France,Lyon,6.96,1.905,2024-06-01 00:00:00,46.872638,2.420541,1.42,3.31
+S_038,Auvergne-Rhône-Alpes,Bretagne,Lille,8.08,1.887,2024-04-27 00:00:00,49.124687,1.265346,2.59,4.76
+S_075,Grand Est,Normandie,Marseille,4.15,1.897,2024-01-03 00:00:00,47.454613,-1.436422,2.2,3.69
+S_062,Occitanie,Occitanie,Toulouse,4.37,1.72,2024-07-18 00:00:00,50.371939,0.880239,8.27,2.83
+S_056,Normandie,Normandie,Nice,3.3,1.865,2024-07-22 00:00:00,50.618527,4.841025,7.75,1.33
+S_081,Pays de la Loire,Île-de-France,Marseille,7.71,1.828,2024-08-11 00:00:00,48.606094,2.953939,7.65,7.73
+S_056,Bretagne,Provence-Alpes-Côte d'Azur,Bordeaux,5.41,1.936,2024-11-09 00:00:00,49.967614,-1.155799,5.28,2.92
+S_024,Normandie,Grand Est,Marseille,7.9,1.976,2024-06-27 00:00:00,50.749555,1.255295,3.31,4.11
+S_090,Provence-Alpes-Côte d'Azur,Bretagne,Bordeaux,4.64,1.863,2024-01-03 00:00:00,46.084548,1.097444,7.64,2.97
+S_007,Provence-Alpes-Côte d'Azur,Nouvelle-Aquitaine,Strasbourg,4.97,1.918,2024-01-20 00:00:00,47.823896,4.05973,2.88,8.52
+S_029,Auvergne-Rhône-Alpes,Grand Est,Montpellier,2.81,1.816,2024-12-10 00:00:00,47.423547,-1.064092,8.12,3.7
+S_089,Auvergne-Rhône-Alpes,Île-de-France,Marseille,7.04,1.768,2024-02-28 00:00:00,52.84069,5.850042,7.34,5.17
+S_053,Provence-Alpes-Côte d'Azur,Nouvelle-Aquitaine,Marseille,3.27,1.731,2024-04-06 00:00:00,52.818172,5.30642,5.44,7.38
+S_016,Bretagne,Pays de la Loire,Marseille,2.72,1.883,2024-01-12 00:00:00,46.797356,2.051045,4.96,7.56
+S_050,Occitanie,Bretagne,Toulouse,1.31,1.787,2024-02-13 00:00:00,49.917118,1.451597,3.58,5.62
+S_065,Hauts-de-France,Hauts-de-France,Paris,8.09,1.911,2024-05-11 00:00:00,52.273415,4.901987,2.3,7.24
+S_048,Provence-Alpes-Côte d'Azur,Provence-Alpes-Côte d'Azur,Paris,3.34,1.781,2024-02-28 00:00:00,47.404212,5.925951,6.1,8.53
+S_099,Pays de la Loire,Auvergne-Rhône-Alpes,Paris,7.38,1.89,2024-07-25 00:00:00,48.11715,6.136496,7.7,7.14
+S_090,Auvergne-Rhône-Alpes,Bretagne,Strasbourg,2.13,1.918,2024-09-16 00:00:00,52.151921,3.855416,3.81,6.41
+S_070,Pays de la Loire,Nouvelle-Aquitaine,Marseille,3.43,1.838,2024-06-07 00:00:00,50.069596,3.717614,3.89,1.31
+S_016,Provence-Alpes-Côte d'Azur,Hauts-de-France,Paris,6.55,1.963,2024-05-17 00:00:00,51.494672,0.563397,3.51,1.26
+S_093,Normandie,Occitanie,Nice,7.21,1.989,2024-06-07 00:00:00,49.574902,3.134923,1.7,3.25
+S_030,Île-de-France,Normandie,Montpellier,4.88,1.754,2024-01-25 00:00:00,47.69294,2.902786,7.13,1.8
+S_028,Occitanie,Occitanie,Lyon,8.76,1.888,2024-06-14 00:00:00,49.062475,4.975012,7.41,8.25
+S_094,Auvergne-Rhône-Alpes,Grand Est,Nice,2.25,1.896,2024-08-17 00:00:00,51.652431,3.636253,1.44,4.72
+S_076,Normandie,Occitanie,Paris,7.21,1.707,2024-04-08 00:00:00,46.670958,3.228314,4.25,5.31
+S_017,Normandie,Hauts-de-France,Strasbourg,3.81,1.803,2024-04-04 00:00:00,49.368732,4.189465,7.91,2.91
+S_039,Bretagne,Occitanie,Montpellier,5.75,1.833,2024-02-13 00:00:00,47.000946,6.049184,2.59,5.39
+S_025,Île-de-France,Bretagne,Nice,2.79,1.75,2024-03-10 00:00:00,46.362003,0.506725,3.74,4.65
+S_095,Grand Est,Normandie,Paris,5.27,1.946,2024-05-22 00:00:00,50.633174,-1.523838,2.96,1.85
+S_056,Nouvelle-Aquitaine,Provence-Alpes-Côte d'Azur,Nantes,7.17,1.742,2024-03-12 00:00:00,49.071061,5.540854,4.89,3.13
+S_094,Auvergne-Rhône-Alpes,Auvergne-Rhône-Alpes,Lille,2.4,1.959,2024-02-18 00:00:00,47.151531,1.592377,3.28,2.13
+S_061,Bretagne,Grand Est,Toulouse,6.15,1.85,2024-03-19 00:00:00,47.287861,3.613749,2.06,3.29
+S_027,Normandie,Bretagne,Lille,7.92,1.751,2024-04-03 00:00:00,46.363296,3.355204,6.72,7.12
+S_068,Occitanie,Normandie,Toulouse,4.88,1.982,2024-11-03 00:00:00,52.027057,6.249375,7.08,7.48
+S_079,Île-de-France,Occitanie,Bordeaux,2.14,1.917,2024-05-16 00:00:00,44.893146,6.146576,5.05,7.04
+S_053,Normandie,Bretagne,Nantes,7.65,1.802,2024-11-25 00:00:00,50.912023,1.899205,6.68,3.53
+S_013,Occitanie,Provence-Alpes-Côte d'Azur,Lyon,6.43,1.841,2024-05-02 00:00:00,51.052502,3.195944,8.6,8.79
+S_011,Bretagne,Île-de-France,Strasbourg,2.94,1.706,2024-10-21 00:00:00,48.632101,1.288875,4.39,5.39
+S_024,Normandie,Île-de-France,Nantes,5.67,1.82,2024-01-20 00:00:00,51.436431,1.4481,5.5,2.09
+S_087,Occitanie,Pays de la Loire,Nantes,5.4,1.713,2024-05-05 00:00:00,49.094998,-0.791043,5.68,3.0
+S_052,Île-de-France,Provence-Alpes-Côte d'Azur,Nice,2.95,1.978,2024-06-01 00:00:00,50.056309,2.874003,6.26,3.89
+S_083,Hauts-de-France,Nouvelle-Aquitaine,Lille,3.56,1.945,2024-05-17 00:00:00,49.240292,2.622156,7.49,6.61
+S_086,Occitanie,Normandie,Bordeaux,2.22,1.989,2024-09-06 00:00:00,49.059372,5.386349,7.26,3.11
+S_028,Nouvelle-Aquitaine,Île-de-France,Nantes,4.19,1.815,2024-12-23 00:00:00,46.214635,5.467026,7.6,4.0
+S_010,Normandie,Grand Est,Montpellier,7.47,1.73,2024-12-01 00:00:00,45.35609,1.826528,7.63,7.95
+S_011,Île-de-France,Provence-Alpes-Côte d'Azur,Lyon,1.92,1.982,2024-11-17 00:00:00,48.834104,3.763517,6.34,8.48
+S_013,Occitanie,Auvergne-Rhône-Alpes,Nantes,2.54,1.958,2024-05-10 00:00:00,48.422158,3.180929,5.1,1.64
+S_095,Île-de-France,Provence-Alpes-Côte d'Azur,Strasbourg,8.66,1.848,2024-09-30 00:00:00,51.473659,3.742213,4.43,2.74
+S_093,Nouvelle-Aquitaine,Hauts-de-France,Toulouse,2.34,1.828,2024-06-01 00:00:00,52.264908,-1.229437,1.83,6.18
+S_043,Grand Est,Provence-Alpes-Côte d'Azur,Paris,5.67,1.857,2024-07-18 00:00:00,51.953301,0.755173,4.65,2.31
+S_013,Provence-Alpes-Côte d'Azur,Auvergne-Rhône-Alpes,Paris,5.98,1.694,2024-06-21 00:00:00,51.440835,1.582035,1.27,5.48
+S_054,Hauts-de-France,Grand Est,Marseille,6.29,1.69,2024-07-10 00:00:00,44.889231,5.271302,1.5,8.29
+S_022,Grand Est,Île-de-France,Nantes,4.35,1.734,2024-07-14 00:00:00,52.80164,0.26991,8.43,1.74
+S_024,Hauts-de-France,Pays de la Loire,Bordeaux,4.31,1.824,2024-02-20 00:00:00,47.164284,-0.497878,2.42,3.81
+S_058,Normandie,Provence-Alpes-Côte d'Azur,Marseille,2.12,1.805,2024-06-10 00:00:00,47.24362,3.288715,2.83,1.39
+S_018,Île-de-France,Bretagne,Montpellier,2.26,1.753,2024-08-22 00:00:00,46.791968,2.971752,7.54,2.25
+S_048,Occitanie,Auvergne-Rhône-Alpes,Lyon,1.5,1.951,2024-06-15 00:00:00,47.922649,2.90008,4.15,2.26
+S_061,Grand Est,Nouvelle-Aquitaine,Toulouse,3.76,1.969,2024-03-04 00:00:00,45.665083,3.873434,7.09,4.35
+S_083,Nouvelle-Aquitaine,Nouvelle-Aquitaine,Bordeaux,7.76,1.904,2024-05-17 00:00:00,47.492429,1.024468,8.43,3.57
+S_034,Normandie,Île-de-France,Marseille,4.88,1.952,2024-10-02 00:00:00,50.049505,1.9928,6.44,2.55
+S_045,Pays de la Loire,Grand Est,Bordeaux,4.96,1.682,2024-09-12 00:00:00,45.521449,-0.534882,3.1,6.47
+S_031,Auvergne-Rhône-Alpes,Normandie,Toulouse,8.14,1.765,2024-12-14 00:00:00,52.523727,0.480584,3.76,5.41
+S_079,Auvergne-Rhône-Alpes,Île-de-France,Bordeaux,1.78,1.779,2024-12-13 00:00:00,49.243711,2.240056,6.14,8.72
+S_086,Île-de-France,Provence-Alpes-Côte d'Azur,Strasbourg,4.74,1.921,2024-05-02 00:00:00,45.161994,5.370227,8.67,8.43
+S_055,Nouvelle-Aquitaine,Auvergne-Rhône-Alpes,Marseille,5.49,1.968,2024-04-24 00:00:00,50.343033,0.959722,6.67,8.34
+S_030,Grand Est,Provence-Alpes-Côte d'Azur,Paris,3.76,1.754,2024-12-09 00:00:00,51.168802,0.330007,7.05,6.88
+S_015,Grand Est,Hauts-de-France,Marseille,2.92,1.854,2024-04-19 00:00:00,51.713532,-1.529967,8.07,4.95
+S_017,Occitanie,Auvergne-Rhône-Alpes,Nantes,8.24,1.881,2024-03-26 00:00:00,52.726546,4.506507,7.87,6.03
+S_065,Provence-Alpes-Côte d'Azur,Normandie,Nantes,6.84,1.751,2024-08-06 00:00:00,45.185916,4.944159,5.66,5.72
+S_036,Nouvelle-Aquitaine,Bretagne,Lyon,2.23,1.783,2024-09-16 00:00:00,45.145788,3.889321,2.57,5.11

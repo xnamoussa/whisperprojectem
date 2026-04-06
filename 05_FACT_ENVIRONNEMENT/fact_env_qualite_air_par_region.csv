@@ -1,0 +1,51 @@
+col_region,col_polluant,col_concentration_moyenne,col_concentration_min,col_concentration_max,col_indice_qualite,col_nombre_stations,col_date_maj,col_source
+Hauts-de-France,NO2,63.72,25.72,52.68,4.05,Saint-Charles 6,2024-07-31 00:00:00,Data.gouv.fr
+Provence-Alpes-Côte d'Azur,O3,55.27,13.29,8.3,4.33,Saint-Jean 2,2024-09-02 00:00:00,Data.gouv.fr
+Hauts-de-France,CO,72.27,73.48,12.7,4.23,Gare de Lyon 7,2024-05-15 00:00:00,Airparif
+Île-de-France,CO,34.0,72.82,52.01,6.86,Saint-Charles 7,2024-12-18 00:00:00,SNCF_Open_Data
+Nouvelle-Aquitaine,O3,42.36,78.66,26.83,8.07,Matabiau 1,2024-02-20 00:00:00,Data.gouv.fr
+Grand Est,O3,56.87,19.3,35.46,2.37,Part-Dieu 6,2024-08-28 00:00:00,Data.gouv.fr
+Occitanie,CO,5.34,73.72,71.62,4.28,Montparnasse 1,2024-11-11 00:00:00,Data.gouv.fr
+Occitanie,PM2.5,28.65,56.88,73.82,5.67,Gare du Nord 2,2024-05-03 00:00:00,Data.gouv.fr
+Provence-Alpes-Côte d'Azur,O3,10.91,53.89,15.65,1.81,Haussmann Saint-Lazare 5,2024-02-19 00:00:00,RATP_Open_Data_2024
+Île-de-France,O3,25.0,49.32,82.84,8.21,Gare de Lyon 8,2024-08-31 00:00:00,RATP_Open_Data_2024
+Provence-Alpes-Côte d'Azur,O3,61.32,45.77,18.89,7.82,Haussmann Saint-Lazare 9,2024-01-08 00:00:00,Airparif
+Normandie,CO,66.21,19.69,29.93,6.53,Saint-Jean 8,2024-08-24 00:00:00,Airparif
+Occitanie,CO,17.69,9.96,12.68,6.22,Gare de Lyon 1,2024-02-06 00:00:00,SNCF_Open_Data
+Bretagne,PM10,77.19,51.61,78.25,2.63,Gare de l'Est 5,2024-08-02 00:00:00,Météo-France
+Provence-Alpes-Côte d'Azur,PM10,45.01,28.15,11.18,3.78,Montparnasse 9,2024-10-16 00:00:00,Airparif
+Grand Est,NO2,21.97,11.36,79.65,3.28,Haussmann Saint-Lazare 5,2024-06-19 00:00:00,Data.gouv.fr
+Bretagne,SO2,64.94,79.0,75.1,7.52,Haussmann Saint-Lazare 7,2024-06-16 00:00:00,SNCF_Open_Data
+Normandie,NO2,15.01,75.21,59.27,4.92,Montparnasse 9,2024-03-28 00:00:00,Airparif
+Nouvelle-Aquitaine,NO2,36.78,4.84,84.29,5.08,Gare de Lyon 5,2024-02-26 00:00:00,Airparif
+Grand Est,SO2,70.03,68.78,50.03,3.42,Saint-Jean 6,2024-03-14 00:00:00,RATP_Open_Data_2024
+Occitanie,O3,82.94,5.27,81.74,1.44,Gare du Nord 3,2024-09-08 00:00:00,Data.gouv.fr
+Hauts-de-France,CO,70.72,60.29,29.56,5.0,Gare de l'Est 6,2024-01-10 00:00:00,Airparif
+Bretagne,CO,43.44,80.8,59.44,5.37,Montparnasse 8,2024-01-30 00:00:00,Airparif
+Normandie,SO2,46.44,13.72,66.89,1.25,Haussmann Saint-Lazare 5,2024-08-09 00:00:00,Airparif
+Hauts-de-France,NO2,48.52,18.59,16.42,1.38,Part-Dieu 1,2024-10-05 00:00:00,RATP_Open_Data_2024
+Grand Est,SO2,73.67,23.66,4.44,6.2,Saint-Jean 4,2024-08-08 00:00:00,Airparif
+Nouvelle-Aquitaine,PM10,43.64,70.28,78.32,2.1,Montparnasse 4,2024-07-03 00:00:00,Data.gouv.fr
+Pays de la Loire,NO2,12.12,10.24,35.82,2.85,Saint-Jean 5,2024-06-09 00:00:00,Météo-France
+Normandie,NO2,9.26,73.57,18.83,7.63,Gare du Nord 5,2024-02-08 00:00:00,Airparif
+Provence-Alpes-Côte d'Azur,SO2,62.25,80.02,10.86,5.68,Part-Dieu 4,2024-10-02 00:00:00,RATP_Open_Data_2024
+Hauts-de-France,NO2,78.96,35.6,44.99,2.12,Matabiau 3,2024-04-30 00:00:00,Météo-France
+Nouvelle-Aquitaine,PM10,48.7,74.77,44.27,1.43,Gare de Lyon 2,2024-06-03 00:00:00,SNCF_Open_Data
+Hauts-de-France,NO2,14.58,69.53,24.89,4.39,Gare du Nord 3,2024-02-08 00:00:00,RATP_Open_Data_2024
+Hauts-de-France,PM10,43.75,22.73,52.56,2.07,Saint-Charles 1,2024-05-14 00:00:00,Météo-France
+Normandie,SO2,56.28,79.05,29.54,2.3,Haussmann Saint-Lazare 4,2024-10-27 00:00:00,RATP_Open_Data_2024
+Île-de-France,NO2,79.27,70.68,67.86,4.63,Gare du Nord 6,2024-01-27 00:00:00,Météo-France
+Grand Est,PM10,38.95,16.06,5.08,5.83,Gare de l'Est 4,2024-05-22 00:00:00,SNCF_Open_Data
+Pays de la Loire,PM10,12.4,49.17,57.74,7.29,Gare du Nord 6,2024-05-23 00:00:00,RATP_Open_Data_2024
+Normandie,O3,53.5,25.26,4.49,3.32,Gare du Nord 4,2024-11-07 00:00:00,Airparif
+Bretagne,CO,65.77,4.03,43.29,1.48,Saint-Jean 3,2024-02-14 00:00:00,SNCF_Open_Data
+Grand Est,PM10,24.27,14.38,34.03,6.61,Matabiau 8,2024-12-04 00:00:00,SNCF_Open_Data
+Nouvelle-Aquitaine,SO2,20.6,29.14,75.01,4.46,Montparnasse 5,2024-03-10 00:00:00,Data.gouv.fr
+Auvergne-Rhône-Alpes,PM10,48.57,46.65,59.21,4.29,Part-Dieu 1,2024-10-17 00:00:00,SNCF_Open_Data
+Bretagne,PM2.5,35.84,31.08,59.18,2.81,Gare de l'Est 8,2024-02-28 00:00:00,Data.gouv.fr
+Bretagne,PM2.5,22.55,45.32,36.14,2.79,Part-Dieu 7,2024-09-01 00:00:00,SNCF_Open_Data
+Île-de-France,NO2,33.85,56.15,17.23,3.52,Gare de Lyon 7,2024-09-23 00:00:00,RATP_Open_Data_2024
+Provence-Alpes-Côte d'Azur,PM2.5,10.13,75.47,25.19,7.34,Haussmann Saint-Lazare 6,2024-12-25 00:00:00,Airparif
+Auvergne-Rhône-Alpes,PM10,27.83,38.75,11.51,5.42,Part-Dieu 3,2024-11-05 00:00:00,Data.gouv.fr
+Bretagne,PM2.5,58.78,60.24,30.5,4.17,Haussmann Saint-Lazare 2,2024-02-16 00:00:00,SNCF_Open_Data
+Hauts-de-France,CO,61.57,24.74,62.17,1.23,Part-Dieu 1,2024-10-05 00:00:00,Airparif

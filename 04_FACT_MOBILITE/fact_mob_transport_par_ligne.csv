@@ -1,0 +1,111 @@
+col_ligne,col_station,col_trafic_annuel,col_ville,col_source,col_date_collecte,col_nombre_stations,col_longueur_km,col_frequence_moyenne_min,col_trafic_journalier
+6.15,Saint-Charles 1,2.53,Strasbourg,Airparif,2024-12-16 00:00:00,Gare de Lyon 6,5.508525,2.56,5.13
+4.13,Gare de Lyon 9,7.12,Nantes,Data.gouv.fr,2024-10-15 00:00:00,Haussmann Saint-Lazare 5,3.92421,8.5,2.55
+2.08,Gare de Lyon 6,3.09,Marseille,Data.gouv.fr,2024-12-15 00:00:00,Part-Dieu 3,5.980801,6.06,3.82
+2.4,Gare du Nord 4,5.48,Paris,Airparif,2024-10-18 00:00:00,Gare de l'Est 2,1.42817,8.56,2.39
+6.41,Part-Dieu 2,6.49,Nantes,RATP_Open_Data_2024,2024-09-18 00:00:00,Gare de Lyon 3,4.111518,7.25,8.54
+8.22,Saint-Charles 6,4.72,Montpellier,Météo-France,2024-09-27 00:00:00,Montparnasse 9,0.460909,3.33,7.54
+6.0,Gare de Lyon 4,1.69,Strasbourg,Météo-France,2024-08-29 00:00:00,Saint-Charles 8,0.927776,2.84,1.35
+8.0,Saint-Jean 3,6.06,Toulouse,Météo-France,2024-01-19 00:00:00,Saint-Jean 5,4.100668,3.15,4.54
+5.01,Montparnasse 3,7.44,Strasbourg,Data.gouv.fr,2024-09-25 00:00:00,Part-Dieu 4,3.768354,2.1,1.82
+8.17,Saint-Jean 6,2.92,Nantes,Airparif,2024-10-13 00:00:00,Part-Dieu 5,2.520202,4.9,2.17
+3.42,Saint-Charles 2,2.29,Bordeaux,Météo-France,2024-09-03 00:00:00,Haussmann Saint-Lazare 3,0.753735,8.61,7.75
+7.7,Gare de l'Est 8,3.73,Nice,Airparif,2024-05-18 00:00:00,Part-Dieu 5,-0.978755,5.61,1.4
+3.03,Saint-Charles 4,7.55,Toulouse,RATP_Open_Data_2024,2024-12-26 00:00:00,Saint-Jean 8,4.198807,5.26,6.88
+6.76,Montparnasse 8,5.84,Bordeaux,Météo-France,2024-04-21 00:00:00,Saint-Charles 9,2.369801,6.02,1.89
+7.53,Gare de Lyon 7,3.59,Lille,Airparif,2024-05-01 00:00:00,Montparnasse 1,2.256199,1.8,7.29
+6.31,Gare de l'Est 6,5.27,Nice,Météo-France,2024-04-17 00:00:00,Gare du Nord 5,-0.090818,6.56,7.03
+6.19,Saint-Charles 7,7.11,Toulouse,Data.gouv.fr,2024-07-16 00:00:00,Montparnasse 3,2.964153,1.4,6.27
+5.21,Saint-Jean 8,2.77,Montpellier,Météo-France,2024-06-02 00:00:00,Part-Dieu 4,1.434771,6.09,5.26
+7.69,Montparnasse 1,6.04,Montpellier,Data.gouv.fr,2024-11-23 00:00:00,Gare de l'Est 6,0.882494,7.55,3.65
+1.56,Gare de l'Est 8,7.57,Paris,RATP_Open_Data_2024,2024-02-13 00:00:00,Gare de l'Est 6,5.31631,6.97,7.66
+7.75,Gare de Lyon 2,6.54,Montpellier,Airparif,2024-09-19 00:00:00,Matabiau 3,4.57266,2.26,1.77
+4.82,Saint-Jean 2,1.88,Lyon,Météo-France,2024-06-16 00:00:00,Montparnasse 4,-0.552743,3.05,5.43
+5.14,Haussmann Saint-Lazare 1,8.77,Lyon,Météo-France,2024-11-09 00:00:00,Saint-Charles 3,1.192792,8.15,6.06
+6.7,Saint-Charles 7,2.95,Montpellier,RATP_Open_Data_2024,2024-12-12 00:00:00,Part-Dieu 6,-1.263651,3.85,1.33
+1.59,Part-Dieu 5,4.62,Paris,SNCF_Open_Data,2024-05-02 00:00:00,Haussmann Saint-Lazare 3,-0.95871,3.97,7.37
+3.2,Matabiau 5,4.75,Marseille,SNCF_Open_Data,2024-01-16 00:00:00,Montparnasse 9,4.657301,2.84,2.37
+3.95,Part-Dieu 7,7.67,Marseille,Météo-France,2024-07-26 00:00:00,Montparnasse 5,-0.840873,4.21,8.56
+7.1,Saint-Charles 7,5.11,Nantes,Météo-France,2024-11-27 00:00:00,Saint-Jean 2,1.055377,7.58,4.61
+7.17,Gare du Nord 7,5.5,Strasbourg,Airparif,2024-07-19 00:00:00,Montparnasse 8,4.576266,2.02,4.05
+2.75,Saint-Jean 3,8.22,Bordeaux,RATP_Open_Data_2024,2024-06-29 00:00:00,Gare de Lyon 9,2.364608,8.42,6.21
+8.58,Part-Dieu 6,7.43,Strasbourg,Airparif,2024-11-20 00:00:00,Gare de l'Est 4,1.742627,1.32,3.91
+3.67,Saint-Jean 1,8.08,Strasbourg,Météo-France,2024-01-28 00:00:00,Gare de l'Est 5,0.205889,8.19,2.19
+3.32,Montparnasse 9,4.93,Montpellier,RATP_Open_Data_2024,2024-04-01 00:00:00,Gare du Nord 2,2.041474,5.95,5.89
+7.68,Part-Dieu 5,6.71,Strasbourg,SNCF_Open_Data,2024-06-18 00:00:00,Gare du Nord 9,4.133243,6.84,8.27
+5.45,Saint-Charles 6,1.95,Toulouse,Airparif,2024-01-26 00:00:00,Haussmann Saint-Lazare 7,-0.080495,5.48,8.34
+6.99,Gare de Lyon 2,6.49,Toulouse,RATP_Open_Data_2024,2024-08-12 00:00:00,Gare de l'Est 5,1.34,1.46,6.67
+5.47,Montparnasse 4,6.66,Lille,Météo-France,2024-04-30 00:00:00,Montparnasse 2,4.681911,3.01,5.23
+7.28,Gare de l'Est 8,4.33,Toulouse,Data.gouv.fr,2024-03-16 00:00:00,Saint-Jean 3,0.574399,2.07,5.45
+3.84,Gare de Lyon 8,3.67,Lille,RATP_Open_Data_2024,2024-07-09 00:00:00,Gare du Nord 8,2.767157,5.97,5.16
+4.19,Saint-Charles 9,7.62,Toulouse,Météo-France,2024-08-05 00:00:00,Haussmann Saint-Lazare 5,5.559758,5.6,6.61
+5.81,Saint-Charles 5,5.17,Lyon,Data.gouv.fr,2024-09-26 00:00:00,Part-Dieu 8,6.264831,6.92,2.42
+6.38,Matabiau 6,4.26,Nantes,Météo-France,2024-04-05 00:00:00,Montparnasse 9,1.783985,7.73,5.61
+7.49,Gare du Nord 3,8.51,Nantes,SNCF_Open_Data,2024-09-15 00:00:00,Gare de Lyon 9,5.607209,6.68,4.99
+8.73,Saint-Jean 5,8.63,Lille,Météo-France,2024-10-06 00:00:00,Haussmann Saint-Lazare 1,4.906274,6.29,7.63
+6.35,Haussmann Saint-Lazare 6,5.72,Bordeaux,Data.gouv.fr,2024-08-08 00:00:00,Montparnasse 6,3.373173,6.4,3.98
+7.85,Saint-Jean 1,6.89,Nice,RATP_Open_Data_2024,2024-07-01 00:00:00,Matabiau 3,3.677339,7.38,7.55
+4.1,Saint-Jean 5,6.02,Lille,Airparif,2024-01-21 00:00:00,Saint-Charles 4,2.325334,4.29,4.76
+4.49,Part-Dieu 4,3.39,Marseille,Data.gouv.fr,2024-10-05 00:00:00,Saint-Jean 2,3.875574,5.8,2.45
+1.44,Haussmann Saint-Lazare 5,5.61,Lille,Météo-France,2024-01-08 00:00:00,Saint-Jean 7,-1.482308,5.93,1.23
+1.96,Matabiau 8,8.02,Nice,RATP_Open_Data_2024,2024-07-31 00:00:00,Saint-Jean 8,1.520512,2.62,3.18
+8.33,Matabiau 2,6.57,Nice,RATP_Open_Data_2024,2024-07-07 00:00:00,Part-Dieu 7,4.054614,5.28,4.71
+5.73,Matabiau 6,5.75,Lille,Data.gouv.fr,2024-02-17 00:00:00,Saint-Charles 1,-0.638213,1.73,6.6
+7.14,Gare du Nord 2,4.08,Lyon,Data.gouv.fr,2024-01-02 00:00:00,Haussmann Saint-Lazare 5,-1.054941,2.77,7.09
+5.92,Saint-Jean 2,1.32,Lyon,Météo-France,2024-03-26 00:00:00,Saint-Charles 4,3.000908,2.79,8.28
+6.12,Haussmann Saint-Lazare 8,7.74,Nantes,SNCF_Open_Data,2024-12-26 00:00:00,Matabiau 7,-0.649087,3.1,7.07
+8.13,Haussmann Saint-Lazare 5,4.68,Lyon,SNCF_Open_Data,2024-08-26 00:00:00,Gare de Lyon 1,1.892187,4.1,5.85
+7.53,Part-Dieu 5,4.03,Toulouse,Airparif,2024-08-17 00:00:00,Part-Dieu 8,4.849598,1.28,5.82
+7.16,Saint-Jean 3,5.76,Bordeaux,Data.gouv.fr,2024-04-11 00:00:00,Haussmann Saint-Lazare 8,6.185454,8.63,4.11
+3.56,Saint-Jean 1,5.59,Nantes,Data.gouv.fr,2024-08-26 00:00:00,Matabiau 4,5.644453,6.21,1.29
+7.64,Matabiau 7,6.02,Bordeaux,Météo-France,2024-11-17 00:00:00,Saint-Charles 4,0.134549,6.77,1.69
+7.21,Gare de l'Est 2,5.46,Bordeaux,SNCF_Open_Data,2024-12-04 00:00:00,Gare de Lyon 4,3.142454,5.45,4.17
+5.08,Gare de l'Est 9,2.37,Montpellier,SNCF_Open_Data,2024-04-11 00:00:00,Saint-Jean 8,1.020038,5.43,7.82
+1.57,Haussmann Saint-Lazare 2,5.02,Toulouse,Airparif,2024-10-17 00:00:00,Gare de l'Est 9,4.523863,1.26,5.86
+1.53,Haussmann Saint-Lazare 5,6.65,Nantes,Météo-France,2024-11-02 00:00:00,Haussmann Saint-Lazare 3,5.397357,5.58,4.97
+7.02,Saint-Charles 8,5.57,Nantes,RATP_Open_Data_2024,2024-05-25 00:00:00,Gare de l'Est 4,0.534848,2.58,3.75
+4.76,Saint-Jean 5,6.99,Marseille,Météo-France,2024-01-14 00:00:00,Saint-Charles 7,-0.551149,1.34,4.22
+6.49,Saint-Charles 7,5.52,Marseille,RATP_Open_Data_2024,2024-11-09 00:00:00,Gare de Lyon 5,4.200041,7.89,8.34
+5.77,Matabiau 4,6.67,Nantes,Météo-France,2024-07-02 00:00:00,Part-Dieu 6,0.39227,2.36,5.49
+5.21,Gare de l'Est 7,7.58,Bordeaux,Data.gouv.fr,2024-04-04 00:00:00,Gare de l'Est 8,3.286766,6.99,8.33
+1.34,Gare du Nord 4,5.84,Toulouse,SNCF_Open_Data,2024-11-27 00:00:00,Saint-Jean 1,2.794654,1.59,1.71
+2.16,Montparnasse 3,6.72,Paris,SNCF_Open_Data,2024-01-18 00:00:00,Gare de Lyon 6,2.622477,3.0,1.97
+7.17,Gare de l'Est 3,6.06,Strasbourg,Data.gouv.fr,2024-03-31 00:00:00,Gare de Lyon 3,0.888013,3.78,4.53
+8.02,Saint-Jean 9,8.63,Paris,Airparif,2024-05-18 00:00:00,Gare du Nord 9,6.008744,4.67,7.92
+4.52,Saint-Jean 4,2.73,Nice,SNCF_Open_Data,2024-09-22 00:00:00,Part-Dieu 9,-1.574444,6.93,5.39
+1.56,Saint-Charles 9,4.89,Lille,Météo-France,2024-10-12 00:00:00,Haussmann Saint-Lazare 1,3.203642,6.37,1.84
+4.48,Gare de l'Est 3,7.34,Lyon,Data.gouv.fr,2024-12-01 00:00:00,Saint-Charles 8,2.962912,5.05,7.47
+5.6,Part-Dieu 4,7.96,Bordeaux,Data.gouv.fr,2024-04-26 00:00:00,Gare de l'Est 3,3.951944,3.15,5.29
+1.27,Gare de Lyon 4,2.68,Toulouse,Data.gouv.fr,2024-06-17 00:00:00,Saint-Jean 5,4.33164,2.98,4.31
+5.44,Gare du Nord 7,2.31,Nantes,RATP_Open_Data_2024,2024-07-24 00:00:00,Gare du Nord 1,3.231847,5.8,8.56
+3.13,Saint-Jean 4,8.29,Toulouse,RATP_Open_Data_2024,2024-07-03 00:00:00,Haussmann Saint-Lazare 5,-1.212972,3.05,2.36
+3.47,Gare du Nord 2,1.68,Lyon,Météo-France,2024-02-29 00:00:00,Saint-Charles 6,4.241998,1.91,1.74
+4.39,Saint-Jean 2,8.02,Marseille,SNCF_Open_Data,2024-08-06 00:00:00,Saint-Jean 8,1.704739,6.91,5.22
+2.3,Matabiau 5,8.49,Bordeaux,RATP_Open_Data_2024,2024-09-09 00:00:00,Part-Dieu 9,5.162377,5.73,2.44
+2.8,Gare de l'Est 4,2.2,Montpellier,Airparif,2024-03-02 00:00:00,Saint-Charles 8,2.503477,4.94,7.33
+7.92,Haussmann Saint-Lazare 9,2.33,Paris,Data.gouv.fr,2024-09-13 00:00:00,Part-Dieu 5,4.203849,6.5,2.94
+8.58,Matabiau 7,3.61,Nice,RATP_Open_Data_2024,2024-10-30 00:00:00,Saint-Charles 8,-0.753284,6.19,3.32
+4.74,Gare du Nord 4,3.2,Marseille,Météo-France,2024-08-30 00:00:00,Gare de l'Est 9,-1.247304,2.25,6.98
+6.11,Gare du Nord 1,6.69,Nice,Airparif,2024-01-21 00:00:00,Saint-Jean 7,4.439351,2.47,6.62
+4.03,Matabiau 6,8.67,Bordeaux,RATP_Open_Data_2024,2024-06-17 00:00:00,Saint-Charles 7,1.206149,7.08,5.69
+1.36,Gare de Lyon 5,6.36,Paris,Airparif,2024-02-08 00:00:00,Part-Dieu 5,-1.62833,7.27,6.18
+7.56,Part-Dieu 9,4.48,Bordeaux,RATP_Open_Data_2024,2024-09-01 00:00:00,Part-Dieu 4,3.074951,5.77,5.05
+4.35,Gare de l'Est 2,8.36,Toulouse,Airparif,2024-02-03 00:00:00,Montparnasse 4,4.686246,5.45,6.4
+3.58,Matabiau 2,5.88,Lyon,Data.gouv.fr,2024-10-14 00:00:00,Gare de l'Est 3,-0.575817,4.4,1.34
+6.46,Montparnasse 6,8.26,Strasbourg,RATP_Open_Data_2024,2024-04-18 00:00:00,Gare du Nord 4,3.156049,7.5,7.17
+4.03,Matabiau 3,7.75,Strasbourg,Airparif,2024-05-16 00:00:00,Gare de Lyon 3,-0.429638,3.74,2.38
+2.0,Part-Dieu 5,6.88,Montpellier,Météo-France,2024-04-17 00:00:00,Montparnasse 1,2.770159,5.01,1.34
+7.94,Gare de l'Est 5,2.19,Montpellier,Data.gouv.fr,2024-12-20 00:00:00,Haussmann Saint-Lazare 6,5.00218,6.69,5.56
+6.31,Gare de Lyon 2,8.14,Marseille,SNCF_Open_Data,2024-06-17 00:00:00,Gare de l'Est 3,5.155235,5.41,4.96
+8.41,Saint-Charles 8,5.88,Paris,SNCF_Open_Data,2024-10-11 00:00:00,Part-Dieu 8,3.819182,7.8,3.64
+6.83,Gare de l'Est 4,3.38,Montpellier,Météo-France,2024-12-18 00:00:00,Montparnasse 1,0.276169,6.95,3.01
+4.94,Haussmann Saint-Lazare 7,5.48,Paris,Airparif,2024-08-26 00:00:00,Part-Dieu 8,5.594768,3.68,1.97
+4.04,Montparnasse 8,7.82,Toulouse,Data.gouv.fr,2024-04-12 00:00:00,Gare de l'Est 6,1.368444,8.37,5.16
+1.4,Gare du Nord 6,6.41,Marseille,Météo-France,2024-11-09 00:00:00,Matabiau 5,1.84572,5.86,4.38
+6.65,Matabiau 4,2.11,Nice,Airparif,2024-08-19 00:00:00,Gare du Nord 9,3.201987,1.82,2.84
+1.59,Part-Dieu 1,1.99,Paris,RATP_Open_Data_2024,2024-05-19 00:00:00,Gare de l'Est 8,5.856173,2.72,5.81
+5.14,Gare de Lyon 5,2.39,Montpellier,Météo-France,2024-02-11 00:00:00,Gare du Nord 8,5.00396,8.64,3.68
+2.2,Part-Dieu 4,1.48,Nice,Airparif,2024-02-09 00:00:00,Gare de l'Est 2,-1.025277,2.77,6.97
+4.75,Haussmann Saint-Lazare 7,6.4,Paris,RATP_Open_Data_2024,2024-05-26 00:00:00,Part-Dieu 5,-0.569302,8.7,6.01
+5.79,Gare de l'Est 1,6.3,Strasbourg,Météo-France,2024-07-10 00:00:00,Montparnasse 6,-0.223147,2.61,4.56
+4.5,Matabiau 7,4.59,Lille,Météo-France,2024-08-01 00:00:00,Gare de Lyon 6,1.013643,4.21,6.14

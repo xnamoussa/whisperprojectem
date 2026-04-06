@@ -1,0 +1,66 @@
+col_region,col_carburant,col_prix_moyen,col_prix_min,col_prix_max,col_nombre_stations,col_date_maj,col_source
+Provence-Alpes-Côte d'Azur,4.84,1.894,1.911,1.896,Saint-Jean 8,2024-06-22 00:00:00,Airparif
+Normandie,7.91,1.783,1.715,1.861,Haussmann Saint-Lazare 3,2024-04-10 00:00:00,SNCF_Open_Data
+Normandie,3.72,1.894,1.715,1.684,Haussmann Saint-Lazare 5,2024-03-10 00:00:00,Airparif
+Île-de-France,5.41,1.886,1.791,1.828,Part-Dieu 6,2024-10-10 00:00:00,Météo-France
+Auvergne-Rhône-Alpes,7.43,1.724,1.846,1.934,Haussmann Saint-Lazare 1,2024-07-15 00:00:00,Météo-France
+Hauts-de-France,6.02,1.882,1.718,1.959,Gare de l'Est 1,2024-01-01 00:00:00,Data.gouv.fr
+Grand Est,2.62,1.839,1.707,1.864,Gare de l'Est 4,2024-09-09 00:00:00,Météo-France
+Bretagne,5.87,1.863,1.805,1.823,Saint-Jean 4,2024-10-31 00:00:00,RATP_Open_Data_2024
+Pays de la Loire,3.54,1.794,1.875,1.876,Saint-Charles 4,2024-12-08 00:00:00,Airparif
+Hauts-de-France,2.66,1.707,1.854,1.982,Gare de Lyon 7,2024-09-11 00:00:00,Airparif
+Normandie,3.1,1.92,1.964,1.873,Saint-Charles 4,2024-02-03 00:00:00,Data.gouv.fr
+Occitanie,5.46,1.944,1.779,1.692,Matabiau 3,2024-09-20 00:00:00,Data.gouv.fr
+Grand Est,7.97,1.976,1.835,1.706,Matabiau 4,2024-08-16 00:00:00,Data.gouv.fr
+Hauts-de-France,2.98,1.738,1.91,1.887,Gare de Lyon 6,2024-03-15 00:00:00,Airparif
+Occitanie,4.28,1.734,1.955,1.791,Saint-Charles 7,2024-08-08 00:00:00,Météo-France
+Pays de la Loire,3.86,1.767,1.922,1.737,Gare de Lyon 4,2024-08-27 00:00:00,SNCF_Open_Data
+Pays de la Loire,4.46,1.927,1.706,1.778,Part-Dieu 2,2024-04-08 00:00:00,RATP_Open_Data_2024
+Occitanie,1.49,1.861,1.804,1.964,Montparnasse 9,2024-01-12 00:00:00,SNCF_Open_Data
+Grand Est,5.11,1.917,1.732,1.721,Gare du Nord 8,2024-04-08 00:00:00,Data.gouv.fr
+Grand Est,7.72,1.897,1.901,1.701,Gare du Nord 9,2024-09-15 00:00:00,SNCF_Open_Data
+Nouvelle-Aquitaine,2.96,1.764,1.945,1.981,Gare de l'Est 8,2024-12-19 00:00:00,RATP_Open_Data_2024
+Île-de-France,7.13,1.794,1.691,1.76,Matabiau 2,2024-11-28 00:00:00,RATP_Open_Data_2024
+Nouvelle-Aquitaine,7.16,1.691,1.879,1.906,Gare du Nord 3,2024-11-06 00:00:00,SNCF_Open_Data
+Grand Est,8.14,1.751,1.839,1.979,Haussmann Saint-Lazare 4,2024-09-30 00:00:00,SNCF_Open_Data
+Bretagne,7.15,1.739,1.874,1.885,Saint-Charles 2,2024-02-16 00:00:00,Data.gouv.fr
+Provence-Alpes-Côte d'Azur,7.02,1.765,1.709,1.921,Saint-Jean 6,2024-10-27 00:00:00,Météo-France
+Île-de-France,3.81,1.783,1.715,1.934,Gare de l'Est 3,2024-08-03 00:00:00,Météo-France
+Occitanie,5.07,1.874,1.907,1.943,Matabiau 1,2024-02-01 00:00:00,Météo-France
+Île-de-France,6.85,1.745,1.887,1.839,Montparnasse 3,2024-05-07 00:00:00,RATP_Open_Data_2024
+Grand Est,4.52,1.951,1.815,1.71,Gare de Lyon 2,2024-03-19 00:00:00,RATP_Open_Data_2024
+Auvergne-Rhône-Alpes,2.69,1.772,1.775,1.763,Gare du Nord 3,2024-07-20 00:00:00,Data.gouv.fr
+Île-de-France,2.74,1.868,1.927,1.861,Montparnasse 6,2024-05-02 00:00:00,Météo-France
+Grand Est,3.87,1.979,1.792,1.982,Gare du Nord 5,2024-08-21 00:00:00,Airparif
+Île-de-France,1.44,1.766,1.904,1.955,Saint-Jean 3,2024-04-01 00:00:00,Airparif
+Grand Est,7.43,1.858,1.848,1.747,Haussmann Saint-Lazare 8,2024-10-29 00:00:00,Météo-France
+Normandie,1.74,1.747,1.899,1.981,Saint-Jean 8,2024-03-11 00:00:00,SNCF_Open_Data
+Occitanie,6.76,1.824,1.774,1.97,Gare du Nord 8,2024-04-17 00:00:00,Data.gouv.fr
+Hauts-de-France,6.32,1.875,1.685,1.728,Gare de l'Est 5,2024-05-26 00:00:00,Data.gouv.fr
+Bretagne,3.44,1.892,1.974,1.688,Saint-Charles 7,2024-10-08 00:00:00,RATP_Open_Data_2024
+Provence-Alpes-Côte d'Azur,2.91,1.869,1.957,1.984,Gare de Lyon 7,2024-09-14 00:00:00,SNCF_Open_Data
+Provence-Alpes-Côte d'Azur,2.23,1.774,1.89,1.745,Matabiau 4,2024-06-11 00:00:00,SNCF_Open_Data
+Nouvelle-Aquitaine,5.43,1.869,1.785,1.724,Part-Dieu 7,2024-03-21 00:00:00,Airparif
+Auvergne-Rhône-Alpes,6.45,1.912,1.868,1.91,Gare de l'Est 5,2024-05-28 00:00:00,SNCF_Open_Data
+Nouvelle-Aquitaine,1.74,1.898,1.751,1.687,Gare de Lyon 8,2024-06-30 00:00:00,SNCF_Open_Data
+Occitanie,2.88,1.837,1.682,1.887,Gare de l'Est 3,2024-09-05 00:00:00,SNCF_Open_Data
+Hauts-de-France,2.36,1.932,1.742,1.732,Saint-Jean 5,2024-12-11 00:00:00,SNCF_Open_Data
+Auvergne-Rhône-Alpes,3.37,1.952,1.885,1.866,Part-Dieu 8,2024-09-13 00:00:00,Data.gouv.fr
+Normandie,2.41,1.716,1.944,1.885,Gare de Lyon 8,2024-12-10 00:00:00,Météo-France
+Nouvelle-Aquitaine,1.21,1.88,1.87,1.766,Gare du Nord 4,2024-10-21 00:00:00,Airparif
+Grand Est,2.38,1.681,1.728,1.893,Gare de Lyon 9,2024-02-15 00:00:00,Météo-France
+Provence-Alpes-Côte d'Azur,7.29,1.952,1.883,1.878,Montparnasse 5,2024-04-05 00:00:00,SNCF_Open_Data
+Nouvelle-Aquitaine,8.63,1.875,1.716,1.748,Gare de l'Est 5,2024-11-05 00:00:00,Airparif
+Grand Est,2.0,1.876,1.891,1.811,Matabiau 6,2024-08-27 00:00:00,SNCF_Open_Data
+Occitanie,8.22,1.78,1.84,1.831,Montparnasse 9,2024-01-10 00:00:00,SNCF_Open_Data
+Île-de-France,2.48,1.912,1.856,1.772,Gare de Lyon 1,2024-01-10 00:00:00,RATP_Open_Data_2024
+Bretagne,6.32,1.769,1.871,1.689,Part-Dieu 6,2024-02-03 00:00:00,Airparif
+Nouvelle-Aquitaine,2.59,1.763,1.743,1.907,Gare du Nord 6,2024-11-17 00:00:00,Airparif
+Île-de-France,8.07,1.922,1.695,1.798,Saint-Charles 7,2024-08-27 00:00:00,RATP_Open_Data_2024
+Auvergne-Rhône-Alpes,1.91,1.987,1.909,1.956,Matabiau 1,2024-11-09 00:00:00,Airparif
+Bretagne,7.43,1.925,1.713,1.821,Saint-Jean 9,2024-05-31 00:00:00,SNCF_Open_Data
+Auvergne-Rhône-Alpes,4.67,1.757,1.912,1.984,Saint-Jean 2,2024-09-25 00:00:00,Airparif
+Auvergne-Rhône-Alpes,1.22,1.851,1.903,1.845,Part-Dieu 1,2024-11-08 00:00:00,SNCF_Open_Data
+Provence-Alpes-Côte d'Azur,6.93,1.819,1.785,1.727,Montparnasse 5,2024-04-21 00:00:00,Airparif
+Auvergne-Rhône-Alpes,4.85,1.736,1.932,1.872,Part-Dieu 2,2024-07-06 00:00:00,SNCF_Open_Data
+Pays de la Loire,4.41,1.79,1.942,1.896,Part-Dieu 8,2024-04-19 00:00:00,Airparif
