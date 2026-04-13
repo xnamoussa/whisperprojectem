@@ -1,0 +1,213 @@
+﻿[33mÔØ»[39m Building...
+[32mÔ£ö[39m Building...
+Application bundle generation failed. [4.596 seconds] - 2026-04-09T19:39:45.145Z
+
+npx : [1m[31m[31mX [41;
+31m[[41;97mERROR[41;31m]
+[0m [1mNG5002: Parser 
+Error: Lexer Error: 
+Unexpected character [├®] 
+at column 33 in expression 
+[adv.nlp.sentiment_distribu
+tion.N├®gatif] at the end 
+of the expression [adv.nlp.
+sentiment_distribution.N├®g
+atif] in C:\Users\USER\Desk
+top\angularmobility\fronten
+d\src\app\pages\dashboard.c
+omponent.html@436:52[0m 
+[1m[35m[plugin 
+angular-compiler][0m
+Au caractère Ligne:1 : 1
++ npx ng build 
+--configuration 
+development 2>&1 | 
+Out-File -FilePath bu ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo         
+     : NotSpecified: ([1  
+  m[31m[31mX...r-compi   
+ ler][0m:String) [], R    
+emoteException
+    + FullyQualifiedErrorI 
+   d : NativeCommandError
+ 
+
+    src/app/pages/dashboard
+.component.html:437:52:
+[37m      437 Ôöé ...e.wid
+th.%]="[32madv.nlp.sentime
+nt_distribution.N├®gati[37
+mf" title="N´┐¢...
+          ÔòÁ              
+  [32m~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~[0m
+
+  Error occurs in the 
+template of component 
+DashboardComponent.
+
+    src/app/pages/dashboard
+.component.ts:26:15:
+[37m      26 Ôöé   
+templateUrl: [32m'./dashbo
+ard.component.html'[37m,
+         ÔòÁ               
+ [32m~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERR
+OR[41;31m][0m 
+[1mNG5002: Parser Error: 
+Unexpected token 'Lexer 
+Error: Unexpected 
+character [├®] at column 
+33 in expression [adv.nlp.s
+entiment_distribution.N├®ga
+tif]' at column 34 in [adv.
+nlp.sentiment_distribution.
+N├®gatif] in C:\Users\USER\
+Desktop\angularmobility\fro
+ntend\src\app\pages\dashboa
+rd.component.html@436:52[0
+m [1m[35m[plugin 
+angular-compiler][0m
+
+    src/app/pages/dashboard
+.component.html:437:52:
+[37m      437 Ôöé ...e.wid
+th.%]="[32madv.nlp.sentime
+nt_distribution.N├®gati[37
+mf" title="N´┐¢...
+          ÔòÁ              
+  [32m~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~[0m
+
+  Error occurs in the 
+template of component 
+DashboardComponent.
+
+    src/app/pages/dashboard
+.component.ts:26:15:
+[37m      26 Ôöé   
+templateUrl: [32m'./dashbo
+ard.component.html'[37m,
+         ÔòÁ               
+ [32m~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERR
+OR[41;31m][0m 
+[1mNG5002: Parser Error: 
+Lexer Error: Unexpected 
+character [├®] at column 
+33 in expression [adv.nlp.s
+entiment_distribution.N├®ga
+tif] at the end of the 
+expression [adv.nlp.sentime
+nt_distribution.N├®gatif] 
+in C:\Users\USER\Desktop\an
+gularmobility\frontend\src\
+app\pages\dashboard.compone
+nt.html@441:55[0m 
+[1m[35m[plugin 
+angular-compiler][0m
+
+    src/app/pages/dashboard
+.component.html:442:55:
+[37m      442 Ôöé ...i> 
+N├®gatif [32m({{adv.nlp.se
+ntiment_distribution.N├®gat
+if[37m}}%)</span>
+          ÔòÁ              
+ [32m~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~[0m
+
+  Error occurs in the 
+template of component 
+DashboardComponent.
+
+    src/app/pages/dashboard
+.component.ts:26:15:
+[37m      26 Ôöé   
+templateUrl: [32m'./dashbo
+ard.component.html'[37m,
+         ÔòÁ               
+ [32m~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERR
+OR[41;31m][0m 
+[1mNG5002: Parser Error: 
+Unexpected token 'Lexer 
+Error: Unexpected 
+character [├®] at column 
+33 in expression [adv.nlp.s
+entiment_distribution.N├®ga
+tif]' at column 34 in [adv.
+nlp.sentiment_distribution.
+N├®gatif] in C:\Users\USER\
+Desktop\angularmobility\fro
+ntend\src\app\pages\dashboa
+rd.component.html@441:55[0
+m [1m[35m[plugin 
+angular-compiler][0m
+
+    src/app/pages/dashboard
+.component.html:442:55:
+[37m      442 Ôöé ...i> 
+N├®gatif [32m({{adv.nlp.se
+ntiment_distribution.N├®gat
+if[37m}}%)</span>
+          ÔòÁ              
+ [32m~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~[0m
+
+  Error occurs in the 
+template of component 
+DashboardComponent.
+
+    src/app/pages/dashboard
+.component.ts:26:15:
+[37m      26 Ôöé   
+templateUrl: [32m'./dashbo
+ard.component.html'[37m,
+         ÔòÁ               
+ [32m~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERR
+OR[41;31m][0m 
+[1mTS2571: Object is of 
+type 'unknown'.[0m 
+[1m[35m[plugin 
+angular-compiler][0m
+
+    src/app/pages/dashboard
+.component.html:517:38:
+[37m      517 Ôöé ...     
+     ÔÜá´©Å Observation 
+#[32m{{[37ma.id || '?'}} 
+detect├®e comme ...
+          ÔòÁ              
+                [32m~~[0m
+
+  Error occurs in the 
+template of component 
+DashboardComponent.
+
+    src/app/pages/dashboard
+.component.ts:26:15:
+[37m      26 Ôöé   
+templateUrl: [32m'./dashbo
+ard.component.html'[37m,
+         ÔòÁ               
+ [32m~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~[0m
+
+[39m[22m
