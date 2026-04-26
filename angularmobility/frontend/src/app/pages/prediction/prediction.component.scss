@@ -1,0 +1,215 @@
+.prediction-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: #e2e8f0;
+
+  .header {
+    text-align: center;
+    margin-bottom: 3rem;
+
+    h1 {
+      font-size: 2.5rem;
+      background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      color: #94a3b8;
+      font-size: 1.1rem;
+    }
+
+    .api-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: #1e293b;
+      border-radius: 20px;
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      border: 1px solid #334155;
+
+      .status-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #94a3b8;
+      }
+
+      &.online .status-dot { background: #10b981; box-shadow: 0 0 8px #10b981; }
+      &.offline .status-dot { background: #ef4444; }
+      &.checking .status-dot { background: #f59e0b; animation: pulse 1s infinite; }
+    }
+  }
+
+  .content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+
+    @media (max-width: 968px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .card {
+    background: #1e293b;
+    border-radius: 16px;
+    padding: 2rem;
+    border: 1px solid #334155;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+
+    h2 {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 1.25rem;
+      margin-bottom: 1.5rem;
+      color: #f8fafc;
+      i { color: #818cf8; }
+    }
+  }
+
+  .form-group {
+    margin-bottom: 1.25rem;
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: #94a3b8;
+      font-size: 0.9rem;
+    }
+
+    input, select {
+      width: 100%;
+      background: #0f172a;
+      border: 1px solid #334155;
+      padding: 0.75rem;
+      border-radius: 8px;
+      color: #f8fafc;
+      outline: none;
+      transition: border-color 0.2s;
+
+      &:focus {
+        border-color: #6366f1;
+      }
+    }
+  }
+
+  .row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .predict-btn {
+    width: 100%;
+    background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: all 0.2s;
+
+    &:hover:not(:disabled) {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4);
+    }
+
+    &:disabled {
+      background: #475569;
+      cursor: not-allowed;
+      opacity: 0.7;
+    }
+  }
+
+  .placeholder {
+    text-align: center;
+    padding: 4rem 0;
+    opacity: 0.5;
+    p { margin-top: 1rem; }
+  }
+
+  .result-display {
+    animation: fadeIn 0.5s ease;
+
+    .risk-badge {
+      display: inline-block;
+      padding: 0.5rem 1.5rem;
+      border-radius: 30px;
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+
+      &.high {
+        background: rgba(239, 68, 68, 0.1);
+        color: #ef4444;
+        border: 1px solid #ef4444;
+      }
+
+      &.low {
+        background: rgba(16, 185, 129, 0.1);
+        color: #10b981;
+        border: 1px solid #10b981;
+      }
+    }
+
+    .prob-bar {
+      margin-bottom: 1.5rem;
+      
+      .label { font-size: 0.85rem; color: #94a3b8; margin-bottom: 0.4rem; }
+      
+      .bar-container {
+        height: 8px;
+        background: #0f172a;
+        border-radius: 4px;
+        overflow: hidden;
+        
+        .bar {
+          height: 100%;
+          background: #3b82f6;
+          border-radius: 4px;
+          transition: width 1s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+          
+          &.high { background: #f43f5e; }
+        }
+      }
+      
+      .value { text-align: right; font-size: 0.8rem; margin-top: 0.25rem; color: #64748b; }
+    }
+
+    .insight {
+      margin-top: 2rem;
+      padding: 1.25rem;
+      background: #1e293b;
+      border-left: 4px solid #6366f1;
+      display: flex;
+      gap: 1rem;
+      font-size: 0.95rem;
+      line-height: 1.5;
+      
+      i { color: #f59e0b; margin-top: 0.25rem; }
+    }
+  }
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

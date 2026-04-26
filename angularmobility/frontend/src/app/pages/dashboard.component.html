@@ -548,6 +548,11 @@
         </div>
       </section>
 
+      <!-- ════════ MLOPS TAB ════════ -->
+      <section *ngIf="activeTab() === 'mlops' && !loading()" class="fade-in">
+        <app-prediction></app-prediction>
+      </section>
+
       <!-- ════════ ADVANCED TAB ════════ -->
       <section *ngIf="activeTab() === 'advanced' && !loading()" class="fade-in">
         <h2 class="section-title">Objectifs Avancés & Spécialisés</h2>

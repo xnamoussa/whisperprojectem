@@ -1,0 +1,114 @@
+<div class="prediction-container">
+  <div class="header">
+    <h1>Urban Mobility Risk Prediction</h1>
+    <p>Industrialized AI for Smarter City Governance</p>
+    <div class="api-status" [ngClass]="apiStatus">
+      <span class="status-dot"></span>
+      API Status: {{ apiStatus | titlecase }}
+    </div>
+  </div>
+
+  <div class="content-grid">
+    <div class="input-card card">
+      <h2><i class="fas fa-sliders-h"></i> Input Parameters</h2>
+      <div class="form-group">
+        <label>City</label>
+        <select [(ngModel)]="inputData.city">
+          <option *ngFor="let city of cities" [value]="city">{{ city }}</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Station Type</label>
+        <select [(ngModel)]="inputData.station_type">
+          <option *ngFor="let type of stationTypes" [value]="type">{{ type }}</option>
+        </select>
+      </div>
+
+      <div class="row">
+        <div class="form-group">
+          <label>Latitude</label>
+          <input type="number" [(ngModel)]="inputData.lat" step="0.0001">
+        </div>
+        <div class="form-group">
+          <label>Longitude</label>
+          <input type="number" [(ngModel)]="inputData.lon" step="0.0001">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Daily Traffic Intensity</label>
+        <input type="number" [(ngModel)]="inputData.daily_traffic">
+      </div>
+
+      <div class="form-group">
+        <label>Nitrogen Dioxide (NO2) Level</label>
+        <input type="number" [(ngModel)]="inputData.no2">
+      </div>
+
+      <div class="form-group">
+        <label>Connections Count</label>
+        <input type="number" [(ngModel)]="inputData.connections">
+      </div>
+
+      <button (click)="onPredict()" [disabled]="loading || apiStatus !== 'online'" class="predict-btn">
+        <span *ngIf="!loading">Run Inference</span>
+        <span *ngIf="loading" class="spinner"></span>
+      </button>
+    </div>
+
+    <div class="result-card card" [ngClass]="{'has-result': result}">
+      <h2><i class="fas fa-chart-pie"></i> Prediction Result</h2>
+      
+      <div *ngIf="!result && !loading && !error" class="placeholder">
+        <img src="https://img.icons8.com/fluency/96/brain--v1.png" alt="AI">
+        <p>Configure parameters and run the model to see results.</p>
+      </div>
+
+      <div *ngIf="loading" class="loading-state">
+        <div class="pulse"></div>
+        <p>AI Engine Processing...</p>
+      </div>
+
+      <div *ngIf="error" class="error-state">
+        <i class="fas fa-exclamation-triangle"></i>
+        <p>{{ error }}</p>
+        <button (click)="checkApi()" class="retry-btn">Retry Connection</button>
+      </div>
+
+      <div *ngIf="result" class="result-display">
+        <div class="risk-badge" [ngClass]="result.risk_level.toLowerCase()">
+          {{ result.risk_level }} Risk
+        </div>
+        
+        <div class="probability-section">
+          <h3>Confidence Scores</h3>
+          <div class="prob-bar">
+            <div class="label">Low Risk</div>
+            <div class="bar-container">
+              <div class="bar" [style.width.%]="result.probability[0] * 100"></div>
+            </div>
+            <div class="value">{{ result.probability[0] | percent:'1.1-1' }}</div>
+          </div>
+          <div class="prob-bar">
+            <div class="label">High Risk</div>
+            <div class="bar-container">
+              <div class="bar high" [style.width.%]="result.probability[1] * 100"></div>
+            </div>
+            <div class="value">{{ result.probability[1] | percent:'1.1-1' }}</div>
+          </div>
+        </div>
+
+        <div class="insight">
+          <i class="fas fa-lightbulb"></i>
+          <p *ngIf="result.prediction === 1">
+            <strong>Warning:</strong> High environmental risk detected. Recommended actions: increase monitoring frequencies and implement traffic calming measures.
+          </p>
+          <p *ngIf="result.prediction === 0">
+            <strong>Clear:</strong> Environment levels are within safe thresholds. No immediate intervention required.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+artifact_uri: file:///app/mlruns/811499849052971023/c45ec330e87642b3b7eb096033644c71/artifacts
+end_time: 1777235931052
+entry_point_name: ''
+experiment_id: '811499849052971023'
+lifecycle_stage: active
+run_id: c45ec330e87642b3b7eb096033644c71
+run_name: mysterious-newt-32
+run_uuid: c45ec330e87642b3b7eb096033644c71
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1777235927940
+status: 3
+tags: []
+user_id: root

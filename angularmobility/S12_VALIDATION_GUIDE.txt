@@ -1,0 +1,68 @@
+================================================================================
+SASA MOBILITY - WEEK S12 MLOPS VALIDATION GUIDE
+================================================================================
+
+This guide outlines where each required component is located and how to 
+demonstrate it to the teacher.
+
+--------------------------------------------------------------------------------
+1. EXPERIMENT TRACKING (MLflow)
+--------------------------------------------------------------------------------
+- WHERE: Open http://localhost:5000 in your browser.
+- WHAT TO SHOW: 
+  * The experiment "Urban_Mobility_Risk_Prediction".
+  * Show that there are AT LEAST 2 RUNS.
+  * Click on a run to show parameters (n_estimators, max_depth) and 
+    metrics (Accuracy, F1).
+  * Show the "Artifacts" section where the model is stored.
+
+--------------------------------------------------------------------------------
+2. AUTOMATED TRAINING PIPELINE
+--------------------------------------------------------------------------------
+- WHERE: File: ml_service/train_pipeline.py
+- WHAT TO SHOW: 
+  * The Python script that handles everything: Data Generation -> 
+    Preprocessing -> Training -> Evaluation -> Saving to MLflow.
+  * Mention that it is fully reproducible and requires no manual steps.
+
+--------------------------------------------------------------------------------
+3. MODEL MANAGEMENT
+--------------------------------------------------------------------------------
+- WHERE: Folder: ml_service/mlruns/ (Versions) and ml_service/models/ (Latest)
+- WHAT TO SHOW: 
+  * Explain that MLflow versions every run.
+  * Show the 'risk_model.joblib' file which is used by the API.
+
+--------------------------------------------------------------------------------
+4. MODEL SERVING (API)
+--------------------------------------------------------------------------------
+- WHERE: File: ml_service/main.py and URL: http://localhost:8000/health
+- WHAT TO SHOW: 
+  * The FastAPI code with the @app.post("/predict") route.
+  * Show the health check in the browser to prove the model is loaded.
+
+--------------------------------------------------------------------------------
+5. CONTAINERIZATION
+--------------------------------------------------------------------------------
+- WHERE: File: docker-compose.yml and command 'docker ps'
+- WHAT TO SHOW: 
+  * Show the docker-compose.yml file orchestrating the API and MLflow.
+  * Run 'docker ps' in the terminal to show the two services running in containers.
+
+--------------------------------------------------------------------------------
+6. CODE QUALITY
+--------------------------------------------------------------------------------
+- WHERE: Any file in ml_service/
+- WHAT TO SHOW: 
+  * Point out the clean structure, comments, and use of modern libraries 
+    (FastAPI, Scikit-Learn Pipelines).
+
+--------------------------------------------------------------------------------
+7. WEB APP INTEGRATION (END-TO-END)
+--------------------------------------------------------------------------------
+- WHERE: Angular App -> Dashboard -> "IA Industrialisée" Tab (Globe icon)
+- WHAT TO SHOW: 
+  * This is the "Showcase": enter data, click "Run Inference", and show the 
+    result (High/Low risk) coming back from the API in real-time.
+  * Explain that the Angular Frontend -> FastAPI -> ML Model -> Display.
+================================================================================

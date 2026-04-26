@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  ml-service:
+    build: ./ml_service
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./ml_service/models:/app/models
+      - ./ml_service/mlruns:/app/mlruns
+    environment:
+      - MLFLOW_TRACKING_URI=file:///app/mlruns
+    restart: always
+
+  mlflow-ui:
+    build: ./ml_service
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./ml_service/mlruns:/app/mlruns
+    command: mlflow ui --host 0.0.0.0 --port 5000 --backend-store-uri file:///app/mlruns
+    restart: always
