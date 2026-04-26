@@ -1,0 +1,42 @@
+{
+  "traffic": {
+    "mean": 2631.934,
+    "std": 1289.7647397148146
+  },
+  "speed": {
+    "mean": 47.01162027,
+    "std": 15.275377898446317
+  },
+  "accidents": {
+    "mean": 0.178,
+    "std": 0.6285747468876313
+  },
+  "congestion": {
+    "mean": 56.3632,
+    "std": 31.7556105809152
+  },
+  "col_feedback_score": {
+    "mean": 5.0,
+    "std": 0.0
+  },
+  "col_est_annule": {
+    "mean": 0.0,
+    "std": 0.0
+  },
+  "ridership": {
+    "mean": 384.8782,
+    "std": 224.89925454333613
+  },
+  "col_capacite_vehicule": {
+    "mean": 52.5,
+    "std": 24.748737341529164
+  },
+  "col_nb_blesses_leger": {
+    "mean": 0.0,
+    "std": 0.0
+  },
+  "col_nb_blesses_grave": {
+    "mean": 0.0,
+    "std": 0.0
+  }
+}

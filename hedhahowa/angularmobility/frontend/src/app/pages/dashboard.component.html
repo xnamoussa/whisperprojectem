@@ -1,0 +1,989 @@
+<!-- ═══════════════════════════════════════════════════════
+     Urbain Mobility — Minister Dashboard Layout
+     ═══════════════════════════════════════════════════════ -->
+<div class="dashboard-layout" [class.collapsed]="sidebarCollapsed()">
+
+  <!-- ────── SIDEBAR ────── -->
+  <aside class="sidebar glass">
+    <div class="sidebar-header">
+      <div class="logo" *ngIf="!sidebarCollapsed()">
+        <!-- République Française Logo -->
+        <div class="rf-logo">
+          <div class="rf-flag">
+            <div class="rf-blue"></div>
+            <div class="rf-white"></div>
+            <div class="rf-red"></div>
+          </div>
+          <div class="rf-text">
+            <span class="rf-title">RÉPUBLIQUE</span>
+            <span class="rf-title">FRANÇAISE</span>
+          </div>
+        </div>
+      </div>
+      <button class="toggle-btn" (click)="sidebarCollapsed.set(!sidebarCollapsed())" aria-label="Toggle sidebar">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round">
+          <path d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+
+    <div class="sidebar-app-name" *ngIf="!sidebarCollapsed()">
+      <span class="app-label">Urbain<strong>Mobility</strong></span>
+    </div>
+
+    <nav class="sidebar-nav">
+      <button *ngFor="let t of tabs" class="nav-item" [class.active]="activeTab() === t.key" (click)="setTab(t.key)"
+        [title]="t.label">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path [attr.d]="t.icon" />
+        </svg>
+        <span class="nav-label" *ngIf="!sidebarCollapsed()">{{ t.label }}</span>
+      </button>
+    </nav>
+
+    <div class="sidebar-footer" *ngIf="!sidebarCollapsed()">
+      <div class="user-pill">
+        <div class="avatar">{{ (auth.user()?.username ?? 'U')[0] | uppercase }}</div>
+        <div class="user-info">
+          <span class="user-name">{{ auth.user()?.username }}</span>
+          <span class="user-role">{{ ministryTitle() }}</span>
+        </div>
+      </div>
+      <button class="logout-btn" (click)="logout()">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round">
+          <path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4M16 17l5-5-5-5M21 12H9" />
+        </svg>
+        Déconnexion
+      </button>
+    </div>
+  </aside>
+
+  <!-- ────── MAIN CONTENT ────── -->
+  <main class="main-content">
+
+    <!-- Top Bar -->
+    <header class="topbar">
+      <div class="topbar-left">
+        <span class="ministry-badge" [style.background]="ministryMeta[ministryKey()]?.color + '20'"
+          [style.color]="ministryMeta[ministryKey()]?.color">
+          {{ ministryMeta[ministryKey()]?.icon }} {{ ministryTitle() }}
+        </span>
+      </div>
+      <div class="topbar-right">
+        <span class="date-label">{{ today }}</span>
+      </div>
+    </header>
+
+    <section class="ml-control-panel glass">
+      <div class="ctrl-block">
+        <label>Preset ML</label>
+        <select [ngModel]="selectedPreset" (ngModelChange)="applyPreset($event)" class="pred-select">
+          <option value="rapid">Rapide</option>
+          <option value="balanced">Équilibré</option>
+          <option value="precision">Précision max</option>
+        </select>
+        <button class="mini-btn" (click)="resetMlSettings()">Réinitialiser</button>
+      </div>
+      <div class="ctrl-block">
+        <label>Taille échantillon</label>
+        <input type="range" min="200" max="2000" step="100" [ngModel]="mlConfig().sampleSize"
+          (ngModelChange)="mlConfig.set({ ...mlConfig(), sampleSize: +$event })" />
+        <strong>{{ mlConfig().sampleSize }}</strong>
+      </div>
+      <div class="ctrl-block">
+        <label>Arbres Classification</label>
+        <input type="range" min="50" max="500" step="10" [ngModel]="mlConfig().classificationTrees"
+          (ngModelChange)="mlConfig.set({ ...mlConfig(), classificationTrees: +$event })" />
+        <strong>{{ mlConfig().classificationTrees }}</strong>
+      </div>
+      <div class="ctrl-block">
+        <label>Arbres Régression</label>
+        <input type="range" min="80" max="700" step="20" [ngModel]="mlConfig().regressionTrees"
+          (ngModelChange)="mlConfig.set({ ...mlConfig(), regressionTrees: +$event })" />
+        <strong>{{ mlConfig().regressionTrees }}</strong>
+      </div>
+      <div class="ctrl-block">
+        <label>Clusters KMeans</label>
+        <input type="range" min="2" max="8" step="1" [ngModel]="mlConfig().clusteringK"
+          (ngModelChange)="mlConfig.set({ ...mlConfig(), clusteringK: +$event })" />
+        <strong>{{ mlConfig().clusteringK }}</strong>
+      </div>
+      <div class="ctrl-block">
+        <label>Horizon Prévision (mois)</label>
+        <input type="range" min="6" max="24" step="1" [ngModel]="mlConfig().forecastHorizon"
+          (ngModelChange)="mlConfig.set({ ...mlConfig(), forecastHorizon: +$event })" />
+        <strong>{{ mlConfig().forecastHorizon }}</strong>
+      </div>
+      <div class="ctrl-switches">
+        <label class="switch-row">
+          <input type="checkbox" [ngModel]="stationaritySwitch()" (ngModelChange)="stationaritySwitch.set(!!$event); applyMlSettings()" />
+          <span>Série non stationnaire → rendre stationnaire</span>
+        </label>
+        <label class="switch-row">
+          <input type="checkbox" [ngModel]="realtimeEnabled()" (ngModelChange)="toggleRealtime()" />
+          <span>Temps réel (auto-refresh)</span>
+        </label>
+        <div class="inline">
+          <label>Intervalle (sec)</label>
+          <input type="number" min="10" max="300" [ngModel]="realtimeIntervalSec()"
+            (ngModelChange)="realtimeIntervalSec.set(+$event); onRealtimeIntervalChanged()" />
+        </div>
+        <button class="pred-run-btn" (click)="applyMlSettings()">Appliquer les réglages ML</button>
+        <small *ngIf="lastRefresh()">Dernière mise à jour: {{ lastRefresh() | date:'HH:mm:ss' }}</small>
+      </div>
+    </section>
+
+    <!-- Global Shell Loading -->
+    <div class="loading-overlay" *ngIf="loading()">
+      <div class="loader">
+        <div class="loader-ring"></div>
+        <p>Initialisation du Dashboard Urbain Mobility...</p>
+      </div>
+    </div>
+
+    <!-- ML Progress Indicator with Countdown -->
+    <div class="ml-progress-box glass" *ngIf="mlLoading() && !loading()">
+      <div class="proc-info">
+        <div class="status-msg">
+          <span class="spinner"></span>
+          {{ loadingProgress() < 30 ? 'Génération des données...' : (loadingProgress() < 70
+            ? 'Entraînement des modèles ML...' : 'Finalisation des graphiques...' ) }} </div>
+            <div class="proc-countdown">Temps estimé restant: <strong>{{timeRemaining()}}s</strong></div>
+        </div>
+        <div class="proc-bar">
+          <div class="proc-fill" [style.width.%]="loadingProgress()"></div>
+        </div>
+        <div class="proc-footer">
+          <span class="proc-perc">{{loadingProgress()}}%</span>
+          <span class="proc-timer">Démarré il y a {{loadingTime()}}s</span>
+        </div>
+      </div>
+
+      <!-- ════════ OVERVIEW TAB ════════ -->
+      <section *ngIf="activeTab() === 'overview' && !loading()" class="fade-in">
+        <h2 class="section-title">Vue d'ensemble — KPIs Globaux</h2>
+
+        <!-- Ministerial Insights (Dynamic) -->
+        <div class="insights-grid fade-in" *ngIf="mlData() as ml">
+          <div class="insight-card glass" *ngFor="let insight of (ml.classification?.ministerial_insights || [])">
+            <div class="insight-header">
+              <span class="insight-icon">💡</span>
+              <span class="insight-tag">Intelligence IA</span>
+            </div>
+            <h4>{{ insight.title }}</h4>
+            <p class="obs"><strong>Observation:</strong> {{ insight.observation }}</p>
+            <p class="rec"><strong>Recommandation:</strong> {{ insight.recommendation }}</p>
+          </div>
+        </div>
+
+        <div class="kpi-grid" *ngIf="mlLoading()">
+          <div class="kpi-card glass shimmer" *ngFor="let i of [1,2,3,4,5,6]">
+            <div class="skeleton-icon"></div>
+            <div class="skeleton-text"></div>
+          </div>
+        </div>
+
+        <div class="kpi-grid" *ngIf="!mlLoading()">
+          <div class="kpi-card glass" *ngFor="let kpi of kpis; let i = index" [style.--accent]="kpi.color"
+            [class]="'fade-in fade-in-d' + (i % 4 + 1)">
+            <div class="kpi-icon">{{ kpi.icon }}</div>
+            <div class="kpi-body">
+              <span class="kpi-value">{{ kpi.value }}</span>
+              <span class="kpi-label">{{ kpi.label }}</span>
+            </div>
+            <div class="kpi-bar" [style.background]="kpi.color + '30'">
+              <div [style.width.%]="kpiProgress(kpi.value)" [style.background]="kpi.color"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="charts-grid-2" *ngIf="!mlLoading()">
+          <div class="chart-card glass fade-in fade-in-d1"><canvas #rocCanvas></canvas></div>
+          <div class="chart-card glass fade-in fade-in-d2"><canvas #cmCanvas></canvas></div>
+        </div>
+        <div class="charts-grid-2" *ngIf="!mlLoading()">
+          <div class="chart-card glass fade-in fade-in-d3"><canvas #actualPredCanvas></canvas></div>
+          <div class="chart-card glass fade-in fade-in-d4"><canvas #pcaCanvas></canvas></div>
+        </div>
+        <div class="charts-grid-1" *ngIf="!mlLoading()">
+          <div class="chart-card glass chart-wide fade-in"><canvas #tsCanvas></canvas></div>
+        </div>
+
+        <!-- Data Preparation Summary -->
+        <div class="info-card glass fade-in" *ngIf="mlData()?.data_preparation as dp">
+          <h3>A — Préparation des Données & Feature Engineering</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>🧹 Nettoyage</h4>
+              <ul><li *ngFor="let step of dp.cleaning_steps">{{ step }}</li></ul>
+              <p><strong>Outliers avant:</strong> {{ dp.outliers_before }} → <strong>après:</strong> {{ dp.outliers_after }}</p>
+            </div>
+            <div class="info-block">
+              <h4>⚙️ Features Engineered</h4>
+              <div class="feat-tag" *ngFor="let f of dp.engineered_features"><strong>{{ f.name }}</strong>: {{ f.description }}</div>
+            </div>
+            <div class="info-block">
+              <h4>🎯 Sélection de Features</h4>
+              <p>Méthode: {{ dp.feature_selection.method }}</p>
+              <div class="top-features">
+                <span class="feature-chip" *ngFor="let f of dp.feature_selection.top_features">{{ f.name }} <em>({{ f.score }})</em></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ════════ CLASSIFICATION TAB ════════ -->
+      <section *ngIf="activeTab() === 'classification' && !loading()" class="fade-in">
+        <h2 class="section-title">C — Classification (≥ 3 Modèles)</h2>
+
+        <!-- ── FILTER BAR ── -->
+        <div class="filter-bar glass fade-in">
+          <div class="filter-group">
+            <span class="filter-label">🎯 Modèles visibles</span>
+            <div class="filter-chips">
+              <button *ngFor="let m of mlData()?.classification?.models" class="filter-chip"
+                [class.active]="isClassModelSelected(m.name)" (click)="toggleClassModel(m.name)">
+                {{ m.name }}
+              </button>
+            </div>
+          </div>
+          <div class="filter-group">
+            <span class="filter-label">Meilleur modèle</span>
+            <span class="filter-badge best">🏆 {{ mlData()?.classification?.best_model }}</span>
+          </div>
+        </div>
+        <div class="insights-grid fade-in" *ngIf="mlData()?.classification?.ministerial_insights as insights">
+          <div class="insight-card glass" *ngFor="let insight of insights">
+            <div class="insight-header"><span class="insight-icon">🎯</span><span class="insight-tag">Directeur Analyse</span></div>
+            <h4>{{ insight.title }}</h4>
+            <p class="obs"><strong>Observation:</strong> {{ insight.observation }}</p>
+            <p class="rec"><strong>Recommandation:</strong> {{ insight.recommendation }}</p>
+          </div>
+        </div>
+
+        <div class="understanding-grid" *ngIf="mlData()?.classification?.model_understanding as mu">
+          <div class="understanding-card glass" *ngFor="let entry of objectEntries(mu)">
+            <h4>{{ entry[0] }}</h4>
+            <p class="intuition">{{ entry[1].intuition }}</p>
+            <div class="understanding-details">
+              <div><strong>Paramètres:</strong> {{ entry[1].key_parameters?.join(', ') }}</div>
+              <div><strong>Hypothèses:</strong><ul><li *ngFor="let a of entry[1].assumptions">{{ a }}</li></ul></div>
+              <div><strong>Limites:</strong><ul><li *ngFor="let l of entry[1].limitations">{{ l }}</li></ul></div>
+              <div class="justification"><strong>Justification:</strong> {{ entry[1].justification }}</div>
+            </div>
+          </div>
+        </div>
+        <div class="table-card glass">
+          <h3>Comparaison des Métriques</h3>
+          <div class="table-scroll">
+            <table>
+              <thead><tr><th>Modèle</th><th>Accuracy</th><th>Precision</th><th>Recall</th><th>F1</th><th>ROC-AUC</th><th>CV F1 (μ±σ)</th></tr></thead>
+              <tbody>
+                <tr *ngFor="let m of mlData()?.classification?.models" [class.best-row]="m.name === mlData()?.classification?.best_model">
+                  <td class="model-name">{{ m.name }}<span class="best-badge" *ngIf="m.name === mlData()?.classification?.best_model">BEST</span></td>
+                  <td>{{ m.metrics.accuracy }}</td><td>{{ m.metrics.precision }}</td><td>{{ m.metrics.recall }}</td><td>{{ m.metrics.f1 }}</td><td>{{ m.metrics.roc_auc }}</td><td>{{ m.metrics.cv_f1_mean }} ± {{ m.metrics.cv_f1_std }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="charts-grid-2">
+          <div class="chart-card glass"><canvas #rocCanvas></canvas></div>
+          <div class="chart-card glass"><canvas #cmCanvas></canvas></div>
+        </div>
+        <div class="charts-grid-2">
+          <div class="chart-card glass"><canvas #featImpCanvas></canvas></div>
+          <div class="chart-card glass"><canvas #classCompCanvas></canvas></div>
+        </div>
+      </section>
+
+      <!-- ════════ REGRESSION TAB ════════ -->
+      <section *ngIf="activeTab() === 'regression' && !loading()" class="fade-in">
+        <h2 class="section-title">D — Régression (≥ 4 Modèles)</h2>
+
+        <!-- Ministerial Insights -->
+        <div class="insights-grid fade-in" *ngIf="mlData()?.regression?.ministerial_insights as insights">
+          <div class="insight-card glass" *ngFor="let insight of insights">
+            <div class="insight-header"><span class="insight-icon">📈</span><span class="insight-tag">Conseiller Stratégique</span></div>
+            <h4>{{ insight.title }}</h4>
+            <p class="obs"><strong>Observation:</strong> {{ insight.observation }}</p>
+            <p class="rec"><strong>Recommandation:</strong> {{ insight.recommendation }}</p>
+          </div>
+        </div>
+
+        <div class="understanding-grid" *ngIf="mlData()?.regression?.model_understanding as mu">
+          <div class="understanding-card glass" *ngFor="let entry of objectEntries(mu)">
+            <h4>{{ entry[0] }}</h4>
+            <p class="intuition">{{ entry[1].intuition }}</p>
+            <div class="understanding-details">
+              <div><strong>Paramètres:</strong> {{ entry[1].key_parameters?.join(', ') }}</div>
+              <div><strong>Justification:</strong> {{ entry[1].justification }}</div>
+            </div>
+          </div>
+        </div>
+        <div class="table-card glass">
+          <h3>Comparaison des Métriques</h3>
+          <div class="table-scroll">
+            <table>
+              <thead><tr><th>Modèle</th><th>MSE</th><th>RMSE</th><th>MAE</th><th>R²</th><th>CV MSE</th></tr></thead>
+              <tbody>
+                <tr *ngFor="let m of mlData()?.regression?.models">
+                  <td class="model-name">{{ m.name }}</td><td>{{ m.metrics.mse }}</td><td>{{ m.metrics.rmse }}</td><td>{{ m.metrics.mae }}</td><td>{{ m.metrics.r2 }}</td><td>{{ m.metrics.cv_mse_mean }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="table-card glass" *ngIf="mlData()?.regression?.coefficients as coefs">
+          <h3>Coefficients (Modèles Linéaires)</h3>
+          <div *ngFor="let entry of objectEntries(coefs)">
+            <h4>{{ entry[0] }}</h4>
+            <div class="coef-chips"><span class="coef-chip" *ngFor="let c of entry[1]" [class.negative]="c.coefficient < 0">{{ c.feature }}: <strong>{{ c.coefficient }}</strong></span></div>
+          </div>
+        </div>
+        <div class="charts-grid-2">
+          <div class="chart-card glass"><canvas #actualPredCanvas></canvas></div>
+          <div class="chart-card glass"><canvas #residualCanvas></canvas></div>
+        </div>
+        <div class="charts-grid-2">
+          <div class="chart-card glass"><canvas #regCompCanvas></canvas></div>
+          <div class="chart-card glass"><canvas #regFeatCanvas></canvas></div>
+        </div>
+      </section>
+
+      <!-- ════════ CLUSTERING TAB ════════ -->
+      <section *ngIf="activeTab() === 'clustering' && !loading()" class="fade-in">
+        <h2 class="section-title">E — Clustering (≥ 3 Modèles)</h2>
+
+        <!-- ── FILTER BAR: INSTANT K SLIDER ── -->
+        <div class="filter-bar glass fade-in">
+          <div class="filter-group">
+            <span class="filter-label">🔮 Clusters K (instant)</span>
+            <div class="k-slider-row">
+              <input type="range" min="2" max="8" step="1" [ngModel]="selectedClusterK()"
+                (ngModelChange)="onClusterKChanged(+$event)" class="k-slider" />
+              <span class="k-value">K = {{ selectedClusterK() }}</span>
+            </div>
+          </div>
+          <div class="filter-group" *ngIf="mlData()?.clustering?.optimal_k as optK">
+            <span class="filter-label">K Optimal (Silhouette)</span>
+            <span class="filter-badge best">⭐ K = {{ optK }}</span>
+          </div>
+          <div class="filter-group">
+            <span class="filter-label">Silhouette actuel</span>
+            <span class="filter-badge">{{ mlData()?.clustering?.precomputed_k?.[selectedClusterK() + '']?.silhouette }}</span>
+          </div>
+        </div>
+        <div class="insights-grid fade-in" *ngIf="mlData()?.clustering?.ministerial_insights as insights">
+          <div class="insight-card glass" *ngFor="let insight of insights">
+            <div class="insight-header"><span class="insight-icon">🧩</span><span class="insight-tag">Expert Planification</span></div>
+            <h4>{{ insight.title }}</h4>
+            <p class="obs"><strong>Observation:</strong> {{ insight.observation }}</p>
+            <p class="rec"><strong>Recommandation:</strong> {{ insight.recommendation }}</p>
+          </div>
+        </div>
+
+        <div class="understanding-grid" *ngIf="mlData()?.clustering?.model_understanding as mu">
+          <div class="understanding-card glass" *ngFor="let entry of objectEntries(mu)">
+            <h4>{{ entry[0] }}</h4>
+            <p class="intuition">{{ entry[1].intuition }}</p>
+            <div class="understanding-details"><div><strong>Justification:</strong> {{ entry[1].justification }}</div></div>
+          </div>
+        </div>
+        <div class="table-card glass">
+          <h3>Évaluation des Modèles</h3>
+          <div class="table-scroll">
+            <table>
+              <thead><tr><th>Modèle</th><th>Clusters</th><th>Silhouette</th><th>Davies-Bouldin</th></tr></thead>
+              <tbody>
+                <tr *ngFor="let m of mlData()?.clustering?.models">
+                  <td class="model-name">{{ m.name }}</td><td>{{ m.n_clusters }}</td><td>{{ m.silhouette }}</td><td>{{ m.davies_bouldin }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="charts-grid-2">
+          <div class="chart-card glass"><canvas #pcaCanvas></canvas></div>
+          <div class="chart-card glass"><canvas #elbowCanvas></canvas></div>
+        </div>
+        <div class="charts-grid-2">
+          <div class="chart-card glass"><canvas #silhouetteCanvas></canvas></div>
+          <div class="chart-card glass"><canvas #heatmapCanvas></canvas></div>
+        </div>
+        <div class="table-card glass" *ngIf="mlData()?.clustering?.cluster_profile as profile">
+          <h3>Profil des Clusters (KMeans)</h3>
+          <div class="table-scroll">
+            <table>
+              <thead><tr><th>Cluster</th><th *ngFor="let col of getProfileColumns(profile)">{{ col }}</th></tr></thead>
+              <tbody>
+                <tr *ngFor="let row of profile">
+                  <td><span class="cluster-badge" [style.background]="getClusterColor(row.cluster)">{{ row.cluster }}</span></td>
+                  <td *ngFor="let col of getProfileColumns(profile)">{{ row[col] }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- ════════ FORECASTING TAB ════════ -->
+      <section *ngIf="activeTab() === 'forecasting' && !loading()" class="fade-in">
+        <h2 class="section-title">F — Séries Temporelles & Prévisions</h2>
+
+        <!-- ── FILTER BAR ── -->
+        <div class="filter-bar glass fade-in">
+          <div class="filter-group">
+            <span class="filter-label">📈 Modèles Prévision</span>
+            <div class="filter-chips">
+              <button class="filter-chip" [class.active]="isForecastModelSelected('ARIMA')" (click)="toggleForecastModel('ARIMA')">ARIMA</button>
+              <button class="filter-chip" [class.active]="isForecastModelSelected('SARIMA')" (click)="toggleForecastModel('SARIMA')">SARIMA</button>
+              <button class="filter-chip" [class.active]="isForecastModelSelected('XGBoost TS')" (click)="toggleForecastModel('XGBoost TS')">XGBoost TS</button>
+            </div>
+          </div>
+          <div class="filter-group">
+            <span class="filter-label">📊 Visualisations</span>
+            <div class="filter-chips">
+              <button class="filter-chip" [class.active]="showACF()" (click)="toggleACF()">📊 ACF</button>
+              <button class="filter-chip" [class.active]="showStationarityComparison()" (click)="toggleStationarityComparison()">🔄 Avant/Après</button>
+            </div>
+          </div>
+          <div class="filter-group">
+            <span class="filter-label">Stationnarité</span>
+            <label class="switch-row">
+              <input type="checkbox" [ngModel]="stationaritySwitch()" (ngModelChange)="stationaritySwitch.set(!!$event); applyMlSettings()" />
+              <span>{{ stationaritySwitch() ? '✅ Stationnarisée' : '❌ Non stationnaire' }}</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Ministerial Insights -->
+        <div class="insights-grid fade-in" *ngIf="mlData()?.forecasting?.ministerial_insights as insights">
+          <div class="insight-card glass" *ngFor="let insight of insights">
+            <div class="insight-header"><span class="insight-icon">📅</span><span class="insight-tag">Coordination Prospective</span></div>
+            <h4>{{ insight.title }}</h4>
+            <p class="obs"><strong>Observation:</strong> {{ insight.observation }}</p>
+            <p class="rec"><strong>Recommandation:</strong> {{ insight.recommendation }}</p>
+          </div>
+        </div>
+
+        <div class="understanding-grid" *ngIf="mlData()?.forecasting?.model_understanding as mu">
+          <div class="understanding-card glass" *ngFor="let entry of objectEntries(mu)">
+            <h4>{{ entry[0] }}</h4>
+            <p class="intuition">{{ entry[1].intuition }}</p>
+          </div>
+        </div>
+        <div class="table-card glass" *ngIf="mlData()?.forecasting?.stationarity as stat">
+          <h3>Tests de Stationnarité</h3>
+          <div class="pred-alert info" *ngIf="mlData()?.forecasting?.stationarity?.stationarization_applied">
+            <span class="alert-icon">ℹ️</span>
+            Stationnarisation appliquée automatiquement par différenciation (switch activé).
+          </div>
+          <div class="stat-grid">
+            <div class="stat-item">
+              <span class="stat-label">ADF Statistic</span>
+              <span class="stat-value">{{ stat.adf_statistic }}</span>
+              <span class="stat-status" [class.pass]="stat.adf_is_stationary" [class.fail]="!stat.adf_is_stationary">p={{ stat.adf_p_value }} {{ stat.adf_is_stationary ? '✓ Stationnaire' : '✗ Non-stationnaire' }}</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-label">KPSS Statistic</span>
+              <span class="stat-value">{{ stat.kpss_statistic }}</span>
+              <span class="stat-status" [class.pass]="stat.kpss_is_stationary" [class.fail]="!stat.kpss_is_stationary">p={{ stat.kpss_p_value }} {{ stat.kpss_is_stationary ? '✓ Stationnaire' : '✗ Non-stationnaire' }}</span>
+            </div>
+          </div>
+        </div>
+        <div class="table-card glass">
+          <h3>Évaluation des Modèles de Prévision</h3>
+          <div class="table-scroll">
+            <table>
+              <thead><tr><th>Modèle</th><th>Config</th><th>MAE</th><th>RMSE</th><th>MAPE (%)</th></tr></thead>
+              <tbody>
+                <tr *ngFor="let m of mlData()?.forecasting?.models">
+                  <td class="model-name">{{ m.name }}</td>
+                  <td>{{ m.order || (m.lags ? 'Lags: ' + m.lags.join(',') : '-') }}</td>
+                  <td>{{ m.metrics?.mae ?? 'N/A' }}</td><td>{{ m.metrics?.rmse ?? 'N/A' }}</td><td>{{ m.metrics?.mape ?? 'N/A' }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="charts-grid-1"><div class="chart-card glass chart-wide"><canvas #tsCanvas></canvas></div></div>
+        <div class="charts-grid-2">
+          <div class="chart-card glass"><canvas #decompCanvas></canvas></div>
+          <div class="chart-card glass"><canvas #tsCompCanvas></canvas></div>
+        </div>
+
+        <!-- ── ACF Chart (toggle) ── -->
+        <div class="charts-grid-1" *ngIf="showACF()">
+          <div class="chart-card glass chart-wide fade-in"><canvas #acfCanvas></canvas></div>
+        </div>
+
+        <!-- ── Stationarity Before/After (toggle) ── -->
+        <div class="stationarity-comparison fade-in" *ngIf="showStationarityComparison()">
+          <div class="chart-card glass chart-wide"><canvas #beforeAfterCanvas></canvas></div>
+          <div class="stat-comparison-info glass" *ngIf="mlData()?.forecasting?.stationarity as stat">
+            <div class="stat-comparison-col">
+              <h4>🟥 Avant (Originale)</h4>
+              <div class="stat-metric">ADF p-value: <strong [class.fail]="stat.adf_p_value >= 0.05" [class.pass]="stat.adf_p_value < 0.05">{{ stat.adf_p_value }}</strong></div>
+              <div class="stat-metric">Statut: <span [class.fail]="!stat.adf_is_stationary" [class.pass]="stat.adf_is_stationary">{{ stat.adf_is_stationary ? '✓ Stationnaire' : '✗ Non-stationnaire' }}</span></div>
+            </div>
+            <div class="stat-comparison-arrow">➡️</div>
+            <div class="stat-comparison-col" *ngIf="stat.adf_after_p_value !== null">
+              <h4>🟢 Après (Différenciée)</h4>
+              <div class="stat-metric">ADF p-value: <strong class="pass">{{ stat.adf_after_p_value }}</strong></div>
+              <div class="stat-metric">Statut: <span class="pass">✓ Stationnaire</span></div>
+            </div>
+            <div class="stat-comparison-col" *ngIf="stat.adf_after_p_value === null">
+              <h4>⚠️ Non appliquée</h4>
+              <p class="stat-hint">Activez le switch de stationnarisation pour voir les résultats</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ════════ DEEP LEARNING TAB ════════ -->
+      <section *ngIf="activeTab() === 'deeplearning' && !loading() && !mlLoading()" class="fade-in">
+        <h2 class="section-title">Deep Learning — CNN, RNN, LSTM, Transformer</h2>
+
+        <ng-container *ngIf="mlData()?.advanced_objectives?.deep_learning as dl">
+          <!-- Best Model Banner -->
+          <div class="dl-best-banner glass fade-in">
+            <div class="best-icon">🏆</div>
+            <div class="best-info">
+              <h3>Meilleur Modèle : <span class="best-highlight">{{ dl.best_model }}</span></h3>
+              <p>{{ dl.best_reason }}</p>
+            </div>
+          </div>
+
+          <!-- Comparison Table -->
+          <div class="table-card glass fade-in fade-in-d1">
+            <h3>Comparaison des 4 Architectures Deep Learning</h3>
+            <div class="table-scroll">
+              <table>
+                <thead>
+                  <tr><th>Modèle</th><th>Accuracy</th><th>Val Accuracy</th><th>Val Loss</th><th>Paramètres</th><th>Inférence</th><th>Verdict</th></tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let row of dl.comparison_table" [class.best-row]="row.is_best">
+                    <td class="model-name">{{ row.model }}<span class="best-badge" *ngIf="row.is_best">BEST</span></td>
+                    <td>{{ (row.accuracy * 100).toFixed(1) }}%</td>
+                    <td>{{ (row.val_accuracy * 100).toFixed(1) }}%</td>
+                    <td>{{ row.val_loss.toFixed(4) }}</td>
+                    <td>{{ formatParams(row.params) }}</td>
+                    <td>{{ row.inference_ms }}ms</td>
+                    <td><span class="verdict-chip" [class.best]="row.is_best">{{ row.is_best ? '★ Champion' : 'Concurrent' }}</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Training Curves -->
+          <div class="charts-grid-2 fade-in fade-in-d2">
+            <div class="chart-card glass"><canvas #dlLossCanvas></canvas></div>
+            <div class="chart-card glass"><canvas #dlAccCanvas></canvas></div>
+          </div>
+
+          <!-- Model Architecture Cards -->
+          <div class="dl-arch-grid fade-in fade-in-d3">
+            <div class="dl-arch-card glass" *ngFor="let model of dl.models" [class.is-best]="model.type === dl.best_model">
+              <div class="arch-header">
+                <span class="arch-type">{{ model.type }}</span>
+                <span class="arch-best-tag" *ngIf="model.type === dl.best_model">🏆 BEST</span>
+              </div>
+              <div class="arch-fullname">{{ model.full_name }}</div>
+              <div class="arch-usecase">{{ model.use_case }}</div>
+
+              <div class="arch-section">
+                <h5>Architecture</h5>
+                <div class="arch-layers">
+                  <div class="arch-layer" *ngFor="let layer of model.architecture.layers; let last = last">
+                    <code>{{ layer }}</code>
+                    <span class="arch-arrow" *ngIf="!last">↓</span>
+                  </div>
+                </div>
+                <div class="arch-params">
+                  <span>Total: <strong>{{ formatParams(model.architecture.params_total) }}</strong></span>
+                  <span>Trainable: <strong>{{ formatParams(model.architecture.trainable_params) }}</strong></span>
+                </div>
+              </div>
+
+              <div class="arch-section">
+                <h5>Hyperparamètres</h5>
+                <div class="hp-grid">
+                  <div class="hp-item" *ngFor="let hp of objectEntries(model.hyperparameters)">
+                    <span class="hp-key">{{ hp[0] }}</span>
+                    <span class="hp-val">{{ hp[1] }}</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="arch-section">
+                <h5>Métriques Finales</h5>
+                <div class="metrics-pills">
+                  <span class="m-pill" *ngFor="let me of objectEntries(model.metrics)">
+                    {{ me[0] }}: <strong>{{ me[1] }}</strong>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="dl-footer-info glass fade-in">
+            <span>Framework: <strong>{{ dl.framework }}</strong></span>
+            <span>Hardware: <strong>{{ dl.hardware }}</strong></span>
+            <span>Status: <strong>{{ dl.status }}</strong></span>
+          </div>
+        </ng-container>
+      </section>
+
+      <!-- ════════ PREDICTIONS TAB ════════ -->
+      <section *ngIf="activeTab() === 'predictions' && !loading()" class="fade-in">
+        <h2 class="section-title">Prédictions Instantanées — {{ ministryTitle() }}</h2>
+
+        <!-- Prediction Controls -->
+        <div class="pred-controls glass fade-in">
+          <div class="pred-form">
+            <div class="pred-field">
+              <label>Scénario de Prédiction</label>
+              <select [(ngModel)]="selectedScenario" class="pred-select">
+                <option *ngFor="let s of predScenarios()" [value]="s.id">{{ s.icon }} {{ s.label }}</option>
+              </select>
+            </div>
+            <div class="pred-field">
+              <label>Horizon</label>
+              <select [(ngModel)]="selectedPredHorizon" class="pred-select">
+                <option value="24h">24h</option>
+                <option value="48h">48h</option>
+                <option value="72h">72h</option>
+              </select>
+            </div>
+            <div class="pred-field">
+              <label>Date scénario</label>
+              <input type="date" [(ngModel)]="selectedScenarioDate" (ngModelChange)="onScenarioDateChanged()" class="pred-select" />
+            </div>
+            <div class="pred-field">
+              <label>Ville</label>
+              <select [(ngModel)]="selectedCity" class="pred-select">
+                <option *ngFor="let c of cities" [value]="c">{{ c }}</option>
+              </select>
+            </div>
+            <div class="pred-field">
+              <label>Météo</label>
+              <select [(ngModel)]="predWeather" class="pred-select">
+                <option value="normal">Normale</option>
+                <option value="rain">Pluie</option>
+                <option value="storm">Orage</option>
+                <option value="heat">Canicule</option>
+              </select>
+            </div>
+            <div class="pred-field">
+              <label>Événement</label>
+              <select [(ngModel)]="predEventLevel" class="pred-select">
+                <option value="none">Aucun</option>
+                <option value="low">Faible</option>
+                <option value="medium">Moyen</option>
+                <option value="high">Élevé</option>
+              </select>
+            </div>
+            <button class="pred-run-btn" (click)="runPrediction()" [disabled]="predLoading()">
+              <span *ngIf="!predLoading()">⚡ Lancer la Prédiction</span>
+              <span *ngIf="predLoading()" class="spinner"></span>
+            </button>
+          </div>
+          <div class="pred-form pred-flags">
+            <label class="switch-row"><input type="checkbox" [(ngModel)]="predIsWeekend" /> Weekend</label>
+            <label class="switch-row"><input type="checkbox" [(ngModel)]="predIsHoliday" /> Jour férié</label>
+            <label class="switch-row"><input type="checkbox" [(ngModel)]="predRushHour" /> Heure de pointe</label>
+            <label class="switch-row">
+              <input type="checkbox" [ngModel]="predRealtimeEnabled()" (ngModelChange)="togglePredictionRealtime()" />
+              Prédiction temps réel
+            </label>
+            <div class="inline">
+              <label>Intervalle</label>
+              <input type="number" min="10" max="180" [ngModel]="predRealtimeIntervalSec()"
+                (ngModelChange)="predRealtimeIntervalSec.set(+$event); onPredictionRealtimeIntervalChanged()" />
+            </div>
+            <button class="mini-btn" (click)="exportPrediction('excel')">Export Excel</button>
+            <button class="mini-btn" (click)="exportPrediction('pdf')">Export PDF</button>
+          </div>
+        </div>
+
+        <!-- Prediction Results -->
+        <ng-container *ngIf="predResult() as pred">
+          <!-- KPI Cards -->
+          <div class="pred-kpi-grid fade-in fade-in-d1">
+            <div class="pred-kpi glass">
+              <div class="pk-icon">📊</div>
+              <div class="pk-body">
+                <span class="pk-value">{{ pred.current_value }} {{ getScenarioUnit(selectedScenario) }}</span>
+                <span class="pk-label">Valeur Actuelle</span>
+              </div>
+            </div>
+            <div class="pred-kpi glass">
+              <div class="pk-icon">📈</div>
+              <div class="pk-body">
+                <span class="pk-value" [class.positive]="pred.trend_pct > 0" [class.negative]="pred.trend_pct < 0">{{ pred.trend_pct > 0 ? '+' : '' }}{{ pred.trend_pct }}%</span>
+                <span class="pk-label">Tendance</span>
+              </div>
+            </div>
+            <div class="pred-kpi glass">
+              <div class="pk-icon">🎯</div>
+              <div class="pk-body">
+                <span class="pk-value">{{ (pred.confidence * 100).toFixed(1) }}%</span>
+                <span class="pk-label">Confiance</span>
+              </div>
+            </div>
+            <div class="pred-kpi glass">
+              <div class="pk-icon">🤖</div>
+              <div class="pk-body">
+                <span class="pk-value model-tag">{{ pred.model_used }}</span>
+                <span class="pk-label">Modèle IA</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Alerts -->
+          <div class="pred-alerts fade-in fade-in-d2" *ngIf="pred.alerts?.length">
+            <div class="pred-alert" *ngFor="let a of pred.alerts" [class.warning]="a.level === 'warning'" [class.info]="a.level === 'info'">
+              <span class="alert-icon">{{ a.level === 'warning' ? '⚠️' : 'ℹ️' }}</span>
+              {{ a.message }}
+            </div>
+          </div>
+
+          <div class="pred-insights glass fade-in fade-in-d2">
+            <div class="insight-item">
+              <span class="insight-label">Moyenne 24h</span>
+              <strong>{{ pred.mean_value }} {{ getScenarioUnit(selectedScenario) }}</strong>
+            </div>
+            <div class="insight-item" *ngIf="predictionPeak(pred) as peak">
+              <span class="insight-label">Pic attendu</span>
+              <strong>{{ peak.hour }}h00 ({{ peak.value }} {{ getScenarioUnit(selectedScenario) }})</strong>
+            </div>
+            <div class="insight-item">
+              <span class="insight-label">Amplitude</span>
+              <strong>{{ predictionRange(pred) }} {{ getScenarioUnit(selectedScenario) }}</strong>
+            </div>
+          </div>
+
+          <!-- Charts -->
+          <div class="charts-grid-2 fade-in fade-in-d3">
+            <div class="chart-card glass"><canvas #predCurveCanvas></canvas></div>
+            <div class="chart-card glass"><canvas #predCityCanvas></canvas></div>
+          </div>
+        </ng-container>
+
+        <!-- Empty State -->
+        <div class="pred-empty glass" *ngIf="!predResult() && !predLoading()">
+          <div class="pred-empty-icon">🔮</div>
+          <h3>Sélectionnez un scénario et lancez la prédiction</h3>
+          <p>Chaque ministre dispose de prédictions dédiées à son domaine de compétence. Les résultats sont générés instantanément par nos modèles IA.</p>
+        </div>
+      </section>
+
+      <!-- ════════ POWER BI TAB ════════ -->
+      <section *ngIf="activeTab() === 'powerbi'">
+        <h2 class="section-title">Tableaux Power BI — {{ ministryTitle() }}</h2>
+        <div class="pbi-layout">
+          <div class="pbi-sidebar">
+            <h3>Pages autorisées</h3>
+            <div class="page-grid">
+              <button class="page-card glass" *ngFor="let page of data()?.dashboard?.allowed_pages"
+                [class.selected]="selectedPageName() === page.name" (click)="selectPage(page.name, page.url)">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="3" /><path d="M9 3v18M3 9h18" /></svg>
+                <span>{{ page.name }}</span>
+              </button>
+            </div>
+          </div>
+          <div class="pbi-main glass">
+            <div class="pbi-actions" *ngIf="selectedPageUrl()">
+              <a [href]="selectedPageUrl()" target="_blank" class="pbi-link-btn glass">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" /></svg>
+                Mode Plein Écran
+              </a>
+            </div>
+            <iframe *ngIf="selectedPageUrl()" [src]="selectedPageUrl()" frameborder="0" allowFullScreen="true"></iframe>
+            <div *ngIf="!selectedPageUrl()" class="pbi-placeholder">
+              <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1v12zM4 22v-7" /></svg>
+              <p>Sélectionnez une page de rapport dans la liste à gauche</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ════════ ADVANCED TAB ════════ -->
+      <section *ngIf="activeTab() === 'advanced' && !loading()" class="fade-in">
+        <h2 class="section-title">Objectifs Avancés & Spécialisés</h2>
+
+        <div class="advanced-grid-layout" *ngIf="mlData()?.advanced_objectives as adv">
+          <!-- NLP Section (Enhanced) -->
+          <div class="nlp-dashboard full-width fade-in">
+            <!-- NLP Header: Chatbot & Model Info -->
+            <div class="nlp-top-bar glass">
+              <div class="chatbot-info">
+                <div class="bot-icon">🤖</div>
+                <div class="bot-details">
+                  <h4>Assistant IA verox</h4>
+                  <p>{{adv.nlp.chatbot.model}} • {{adv.nlp.chatbot.rag_status}}</p>
+                </div>
+              </div>
+              <div class="bot-stats">
+                <div class="stat-pill"><small>Latence</small> <strong>{{adv.nlp.chatbot.latency}}</strong></div>
+                <div class="stat-pill"><small>Context</small> <strong>{{adv.nlp.chatbot.context_window}}</strong></div>
+              </div>
+              <div class="nlp-method-tag">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+                Advanced NLP Engine
+              </div>
+            </div>
+
+            <div class="nlp-main-grid">
+              <!-- Column 1: Sentiment & Trend -->
+              <div class="nlp-col glass">
+                <div class="col-header"><h3>Sentiment & Opinion</h3><span>{{adv.nlp.sentiment.distribution.Positif}}% satisfaction</span></div>
+                <div class="small-chart"><canvas #nlpSentimentCanvas></canvas></div>
+                <div class="line-chart-mini"><canvas #nlpTrendCanvas></canvas></div>
+              </div>
+
+              <!-- Column 2: Word Cloud & Topics -->
+              <div class="nlp-col glass">
+                <div class="col-header"><h3>Topic Modeling & Lexicon</h3><span>Top {{adv.nlp.topic_modeling.n_topics}} Topics</span></div>
+                <div class="topic-spider"><canvas #nlpTopicsCanvas></canvas></div>
+                <div class="word-cloud-container">
+                  <div class="word-cloud">
+                    <span *ngFor="let w of adv.nlp.word_cloud" [style.font-size.px]="w.size / 2.5 + 10" class="word">
+                      {{w.text}}
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Column 3: NER & Feed -->
+              <div class="nlp-col glass">
+                <div class="col-header"><h3>Named Entities & Real-time Feed</h3><span>Active Extraction</span></div>
+                <div class="ner-categorized">
+                  <div class="ner-group" *ngFor="let group of ['LOC', 'ORG', 'MISC']">
+                    <h6>{{group}}</h6>
+                    <div class="ner-tags">
+                      <ng-container *ngFor="let ent of adv.nlp.ner.entities">
+                        <span class="ner-item" *ngIf="ent.label === group">
+                          {{ent.text}} <small>{{ent.count}}</small>
+                        </span>
+                      </ng-container>
+                    </div>
+                  </div>
+                </div>
+                <div class="nlp-mini-feed">
+                  <h6>Flux de Commentaires Analysés</h6>
+                  <div class="feed-item" *ngFor="let comment of adv.nlp.recent_comments">
+                    <div class="feed-mark" [class.pos]="comment.sentiment === 'Positif'" [class.neg]="comment.sentiment === 'Negatif'"></div>
+                    <div class="feed-content">
+                      <p>"{{comment.text}}"</p>
+                      <div class="feed-meta">
+                        <span class="f-topic" *ngFor="let t of comment.topics">{{t}}</span>
+                        <span class="f-sentiment">{{comment.sentiment}}</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- Recommendation, Anomaly, RL -->
+          <div class="adv-card glass full-width">
+            <div class="adv-header"><span class="adv-status ready">RecSys</span><h3>2. Recommendation Systems</h3></div>
+            <div class="adv-body">
+              <p class="algo">Algorithm: <strong>{{adv.recommendation_systems.algorithm}}</strong></p>
+              <div class="rec-list-horizontal">
+                <div class="rec-item glass" *ngFor="let r of adv.recommendation_systems.top_recommendations">
+                  <div class="rec-score">{{(r.score * 100).toFixed(0)}}%</div>
+                  <div class="rec-text">{{r.origin}} → {{r.dest}}</div>
+                  <div class="rec-id">ID: {{r.id}}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="charts-grid-2">
+            <div class="adv-card glass">
+              <div class="adv-header"><span class="adv-status ready">IsolationForest</span><h3>3. Anomaly Detection</h3></div>
+              <div class="adv-body">
+                <div class="anomaly-summary"><div class="big-num">{{adv.anomaly_detection.total_anomalies}}</div><p>Anomalies détectées ({{adv.anomaly_detection.anomaly_rate}})</p></div>
+              </div>
+            </div>
+            <div class="adv-card glass">
+              <div class="adv-header"><span class="adv-status ready">RL Simulator</span><h3>4. Reinforcement Learning</h3></div>
+              <div class="adv-body">
+                <p class="agent">Agent: <strong>{{adv.reinforcement_learning.agent}}</strong></p>
+                <div class="rl-progress"><div class="rl-stat">Réduction attente: <strong>{{adv.reinforcement_learning.waiting_time_reduction}}</strong></div></div>
+                <div class="reward-chart"><div class="rw-bar" *ngFor="let r of adv.reinforcement_learning.average_reward" [style.height.%]="(r/200)*100"></div></div>
+                <span class="l-label">Récompense Cumulée (Training)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Correlation Matrix (New Card - Fixed for Visibility) -->
+          <div class="adv-card glass full-width fade-in">
+            <div class="adv-header">
+              <span class="adv-status ready">Heatmap</span>
+              <h3>5. Matrice de Corrélation des Données Réelles (Pearson)</h3>
+            </div>
+            <div class="adv-body">
+              <div class="heatmap-wrapper" *ngIf="processedCorr() as pCorr">
+                <div class="heatmap-scroll">
+                  <table class="heatmap-table">
+                    <thead>
+                      <tr>
+                        <th class="corner"></th>
+                        <th *ngFor="let col of pCorr.columns" class="col-header">
+                          <div class="txt-rotate">{{ col }}</div>
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let row of pCorr.rows; let i = index">
+                        <td class="row-header">{{ row.name }}</td>
+                        <td *ngFor="let val of row.values" 
+                            [style.background-color]="getCorrColor(val)"
+                            [style.color]="getCorrTextColor(val)"
+                            class="cell">
+                          {{ val?.toFixed(2) }}
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="corr-legend-fixed glass">
+                  <h4>Légende Heatmap</h4>
+                  <div class="leg-items">
+                    <div class="leg-item"><div class="col-box" style="background: rgba(178, 34, 34, 0.8)"></div><span>Forte Positve (+1)</span></div>
+                    <div class="leg-item"><div class="col-box" style="background: rgba(200, 200, 200, 0.2)"></div><span>Neutre (0)</span></div>
+                    <div class="leg-item"><div class="col-box" style="background: rgba(70, 130, 180, 0.8)"></div><span>Forte Négative (-1)</span></div>
+                  </div>
+                  <p class="desc">La couleur rouge indique une corrélation directe (les deux variables augmentent ensemble), le bleu une corrélation inverse. Plus la couleur est intense, plus le lien est statistiquement significatif.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Model Understanding Global -->
+        <div class="info-card glass" *ngIf="mlData()?.model_understanding as mu">
+          <h3>B — Compréhension Globale des Modèles</h3>
+          <div class="info-grid">
+            <div class="info-block"><h4>Hypothèses Globales</h4><ul><li *ngFor="let a of mu.global_assumptions">{{ a }}</li></ul></div>
+            <div class="info-block"><h4>Limitations</h4><ul><li *ngFor="let l of mu.limitations">{{ l }}</li></ul></div>
+          </div>
+        </div>
+      </section>
+
+  </main>
+
+  <app-chatbot></app-chatbot>
+</div>

@@ -1,0 +1,579 @@
+{
+  "name": "Mobility Analytics — Full ML Pipeline",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "hours",
+              "hoursInterval": 6
+            }
+          ]
+        }
+      },
+      "id": "cron-retrain-001",
+      "name": "⏰ Cron — Retrain Every 6h",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [220, 160]
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "hours",
+              "hoursInterval": 3
+            }
+          ]
+        }
+      },
+      "id": "cron-inference-001",
+      "name": "⏰ Cron — Inference Every 3h",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [220, 560]
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "hours",
+              "hoursInterval": 12
+            }
+          ]
+        }
+      },
+      "id": "cron-drift-001",
+      "name": "⏰ Cron — Drift Check 12h",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [220, 960]
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "ml-pipeline-trigger",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "webhook-trigger-001",
+      "name": "🔗 Webhook — External Trigger",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [220, 360],
+      "webhookId": "ml-pipeline-trigger"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://host.docker.internal:8000/api/dashboard/automation/retrain/",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "source",
+              "value": "n8n-cron-schedule"
+            }
+          ]
+        },
+        "options": {
+          "timeout": 30000,
+          "retry": {
+            "maxRetries": 3,
+            "retryInterval": 5000
+          }
+        }
+      },
+      "id": "http-retrain-001",
+      "name": "🔄 HTTP — Trigger Retraining",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [500, 160],
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://host.docker.internal:8000/api/dashboard/automation/webhook/",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ event: $json.body?.event || 'retrain', ministry: $json.body?.ministry || 'all' }) }}",
+        "options": {
+          "timeout": 30000
+        }
+      },
+      "id": "http-webhook-forward-001",
+      "name": "🔄 HTTP — Forward Webhook Event",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [500, 360],
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://host.docker.internal:8000/api/dashboard/automation/inference/",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "source",
+              "value": "n8n-cron-inference"
+            }
+          ]
+        },
+        "options": {
+          "timeout": 30000
+        }
+      },
+      "id": "http-inference-001",
+      "name": "🔮 HTTP — Trigger Inference",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [500, 560],
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://host.docker.internal:8000/api/dashboard/automation/drift/",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "threshold",
+              "value": "0.15"
+            }
+          ]
+        },
+        "options": {
+          "timeout": 30000
+        }
+      },
+      "id": "http-drift-001",
+      "name": "📊 HTTP — Check Data Drift",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [500, 960],
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000
+    },
+    {
+      "parameters": {
+        "amount": 2,
+        "unit": "minutes"
+      },
+      "id": "wait-retrain-001",
+      "name": "⏳ Wait 2min (Retrain)",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [720, 160]
+    },
+    {
+      "parameters": {
+        "amount": 2,
+        "unit": "minutes"
+      },
+      "id": "wait-inference-001",
+      "name": "⏳ Wait 2min (Inference)",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [720, 560]
+    },
+    {
+      "parameters": {
+        "url": "http://host.docker.internal:8000/api/dashboard/automation/status/",
+        "options": {
+          "timeout": 15000
+        }
+      },
+      "id": "http-status-retrain-001",
+      "name": "📋 HTTP — Check Retrain Status",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [940, 160],
+      "retryOnFail": true,
+      "maxTries": 2,
+      "waitBetweenTries": 3000
+    },
+    {
+      "parameters": {
+        "method": "GET",
+        "url": "http://host.docker.internal:8000/api/dashboard/automation/inference/",
+        "options": {
+          "timeout": 15000
+        }
+      },
+      "id": "http-status-inference-001",
+      "name": "📋 HTTP — Check Inference Status",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [940, 560],
+      "retryOnFail": true,
+      "maxTries": 2,
+      "waitBetweenTries": 3000
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "condition-drift-detected",
+              "leftValue": "={{ $json.drift_detected }}",
+              "rightValue": true,
+              "operator": {
+                "type": "boolean",
+                "operation": "true"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "if-drift-001",
+      "name": "🔀 IF — Drift Detected?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [720, 960]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://host.docker.internal:8000/api/dashboard/automation/retrain/",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "source",
+              "value": "n8n-drift-auto-retrain"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "http-drift-retrain-001",
+      "name": "🔄 HTTP — Auto-Retrain (Drift)",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [980, 900],
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000
+    },
+    {
+      "parameters": {
+        "command": "echo \"[$(date)] Drift check completed. No drift detected. All models are up to date.\" >> /tmp/n8n_drift_log.txt && cat /tmp/n8n_drift_log.txt | tail -5"
+      },
+      "id": "exec-no-drift-001",
+      "name": "💻 Execute — Log No Drift",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [980, 1040]
+    },
+    {
+      "parameters": {
+        "command": "echo \"[$(date)] Retraining pipeline completed. Checking status...\" && curl -s http://host.docker.internal:8000/api/dashboard/automation/status/ | head -c 500"
+      },
+      "id": "exec-retrain-log-001",
+      "name": "💻 Execute — Log Retrain Result",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [1180, 160]
+    },
+    {
+      "parameters": {
+        "command": "echo \"[$(date)] Inference pipeline completed. Results:\" && curl -s http://host.docker.internal:8000/api/dashboard/automation/inference/ | head -c 500"
+      },
+      "id": "exec-inference-log-001",
+      "name": "💻 Execute — Log Inference Result",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [1180, 560]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://host.docker.internal:8000/api/dashboard/automation/test-email/",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "recipient",
+              "value": "emna.awini.work@gmail.com"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "http-send-email-retrain",
+      "name": "📧 HTTP — Email Retrain Report",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [1400, 160]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://host.docker.internal:8000/api/dashboard/automation/test-email/",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "recipient",
+              "value": "emna.awini.work@gmail.com"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "http-send-email-inference",
+      "name": "📧 HTTP — Email Inference Report",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [1400, 560]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ JSON.stringify({ status: 'accepted', message: 'Pipeline triggered via n8n webhook', triggered_at: new Date().toISOString() }) }}"
+      },
+      "id": "webhook-response-001",
+      "name": "✅ Respond to Webhook",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [720, 360]
+    },
+    {
+      "parameters": {
+        "command": "echo \"[$(date)] Drift detected → Auto-retraining triggered for all ministries\" >> /tmp/n8n_drift_log.txt"
+      },
+      "id": "exec-drift-retrain-log",
+      "name": "💻 Execute — Log Drift Retrain",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [1220, 900]
+    }
+  ],
+  "connections": {
+    "⏰ Cron — Retrain Every 6h": {
+      "main": [
+        [
+          {
+            "node": "🔄 HTTP — Trigger Retraining",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "⏰ Cron — Inference Every 3h": {
+      "main": [
+        [
+          {
+            "node": "🔮 HTTP — Trigger Inference",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "⏰ Cron — Drift Check 12h": {
+      "main": [
+        [
+          {
+            "node": "📊 HTTP — Check Data Drift",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "🔗 Webhook — External Trigger": {
+      "main": [
+        [
+          {
+            "node": "🔄 HTTP — Forward Webhook Event",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "🔄 HTTP — Forward Webhook Event": {
+      "main": [
+        [
+          {
+            "node": "✅ Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "🔄 HTTP — Trigger Retraining": {
+      "main": [
+        [
+          {
+            "node": "⏳ Wait 2min (Retrain)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "⏳ Wait 2min (Retrain)": {
+      "main": [
+        [
+          {
+            "node": "📋 HTTP — Check Retrain Status",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "📋 HTTP — Check Retrain Status": {
+      "main": [
+        [
+          {
+            "node": "💻 Execute — Log Retrain Result",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "💻 Execute — Log Retrain Result": {
+      "main": [
+        [
+          {
+            "node": "📧 HTTP — Email Retrain Report",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "🔮 HTTP — Trigger Inference": {
+      "main": [
+        [
+          {
+            "node": "⏳ Wait 2min (Inference)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "⏳ Wait 2min (Inference)": {
+      "main": [
+        [
+          {
+            "node": "📋 HTTP — Check Inference Status",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "📋 HTTP — Check Inference Status": {
+      "main": [
+        [
+          {
+            "node": "💻 Execute — Log Inference Result",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "💻 Execute — Log Inference Result": {
+      "main": [
+        [
+          {
+            "node": "📧 HTTP — Email Inference Report",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "📊 HTTP — Check Data Drift": {
+      "main": [
+        [
+          {
+            "node": "🔀 IF — Drift Detected?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "🔀 IF — Drift Detected?": {
+      "main": [
+        [
+          {
+            "node": "🔄 HTTP — Auto-Retrain (Drift)",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "💻 Execute — Log No Drift",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "🔄 HTTP — Auto-Retrain (Drift)": {
+      "main": [
+        [
+          {
+            "node": "💻 Execute — Log Drift Retrain",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "timezone": "Africa/Tunis",
+    "saveManualExecutions": true,
+    "callerPolicy": "workflowsFromSameOwner"
+  },
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "tags": [
+    {
+      "name": "ML Pipeline",
+      "createdAt": "2026-04-19T00:00:00.000Z",
+      "updatedAt": "2026-04-19T00:00:00.000Z"
+    },
+    {
+      "name": "Automation",
+      "createdAt": "2026-04-19T00:00:00.000Z",
+      "updatedAt": "2026-04-19T00:00:00.000Z"
+    }
+  ]
+}

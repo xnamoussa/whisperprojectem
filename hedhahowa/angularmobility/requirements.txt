@@ -1,0 +1,17 @@
+django>=5.1
+djangorestframework
+django-cors-headers
+djangorestframework-simplejwt
+pandas
+numpy
+scikit-learn
+xgboost
+joblib
+statsmodels
+psycopg2-binary
+scipy
+requests
+gunicorn
+whitenoise
+dj-database-url
+mysqlclient

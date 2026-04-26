@@ -1,0 +1,567 @@
+{
+    "pipeline_type": "retraining",
+    "timestamp": "2026-04-26T18:45:38.113432",
+    "ministries": {
+        "transport": {
+            "status": "success",
+            "metrics": {
+                "classification": [
+                    {
+                        "name": "LogisticRegression",
+                        "metrics": {
+                            "accuracy": 0.9787,
+                            "precision": 0.9838,
+                            "recall": 0.9733,
+                            "f1": 0.9785,
+                            "roc_auc": 0.9984,
+                            "cv_f1_mean": 0.9717,
+                            "cv_f1_std": 0.0114
+                        }
+                    },
+                    {
+                        "name": "RandomForestClassifier",
+                        "metrics": {
+                            "accuracy": 0.9787,
+                            "precision": 0.9786,
+                            "recall": 0.9786,
+                            "f1": 0.9786,
+                            "roc_auc": 0.9979,
+                            "cv_f1_mean": 0.9703,
+                            "cv_f1_std": 0.0063
+                        }
+                    },
+                    {
+                        "name": "GradientBoosting",
+                        "metrics": {
+                            "accuracy": 0.9867,
+                            "precision": 0.9946,
+                            "recall": 0.9786,
+                            "f1": 0.9865,
+                            "roc_auc": 0.9992,
+                            "cv_f1_mean": 0.9832,
+                            "cv_f1_std": 0.0076
+                        }
+                    }
+                ],
+                "regression": [
+                    {
+                        "name": "Ridge",
+                        "metrics": {
+                            "mse": 36.9199,
+                            "rmse": 6.0762,
+                            "mae": 4.8925,
+                            "r2": 0.9921,
+                            "cv_mse_mean": 34.8504
+                        }
+                    },
+                    {
+                        "name": "Lasso",
+                        "metrics": {
+                            "mse": 28.944,
+                            "rmse": 5.38,
+                            "mae": 4.297,
+                            "r2": 0.9938,
+                            "cv_mse_mean": 27.7347
+                        }
+                    },
+                    {
+                        "name": "RandomForestRegressor",
+                        "metrics": {
+                            "mse": 39.5087,
+                            "rmse": 6.2856,
+                            "mae": 5.0639,
+                            "r2": 0.9915,
+                            "cv_mse_mean": 38.9448
+                        }
+                    },
+                    {
+                        "name": "XGBoostRegressor",
+                        "metrics": {
+                            "mse": 35.8088,
+                            "rmse": 5.984,
+                            "mae": 4.7543,
+                            "r2": 0.9923,
+                            "cv_mse_mean": 33.1263
+                        }
+                    }
+                ],
+                "clustering": [
+                    {
+                        "name": "KMeans",
+                        "silhouette": 0.1037,
+                        "davies_bouldin": 2.2738,
+                        "n_clusters": 4
+                    },
+                    {
+                        "name": "DBSCAN",
+                        "silhouette": -1.0,
+                        "davies_bouldin": 99.0,
+                        "n_clusters": 1
+                    },
+                    {
+                        "name": "GMM",
+                        "silhouette": 0.1158,
+                        "davies_bouldin": 2.7929,
+                        "n_clusters": 4
+                    }
+                ],
+                "forecasting": [
+                    {
+                        "name": "ARIMA",
+                        "metrics": {
+                            "mae": 5.5766,
+                            "rmse": 7.3972,
+                            "mape": 3.5733
+                        },
+                        "order": "(1,1,1)"
+                    },
+                    {
+                        "name": "SARIMA",
+                        "metrics": {
+                            "mae": 2.4703,
+                            "rmse": 3.2877,
+                            "mape": 1.6404
+                        },
+                        "order": "(1,1,1)(1,1,1,12)"
+                    },
+                    {
+                        "name": "XGBoost TS",
+                        "metrics": {
+                            "mae": 2.0712,
+                            "rmse": 3.1958,
+                            "mape": 1.3659
+                        },
+                        "lags": [
+                            1,
+                            2,
+                            3,
+                            6,
+                            12
+                        ]
+                    }
+                ]
+            }
+        },
+        "transition": {
+            "status": "success",
+            "metrics": {
+                "classification": [
+                    {
+                        "name": "LogisticRegression",
+                        "metrics": {
+                            "accuracy": 0.9867,
+                            "precision": 0.984,
+                            "recall": 0.9893,
+                            "f1": 0.9867,
+                            "roc_auc": 0.9995,
+                            "cv_f1_mean": 0.9776,
+                            "cv_f1_std": 0.0108
+                        }
+                    },
+                    {
+                        "name": "RandomForestClassifier",
+                        "metrics": {
+                            "accuracy": 0.9893,
+                            "precision": 0.9893,
+                            "recall": 0.9893,
+                            "f1": 0.9893,
+                            "roc_auc": 0.9994,
+                            "cv_f1_mean": 0.9769,
+                            "cv_f1_std": 0.0075
+                        }
+                    },
+                    {
+                        "name": "GradientBoosting",
+                        "metrics": {
+                            "accuracy": 0.992,
+                            "precision": 0.9894,
+                            "recall": 0.9947,
+                            "f1": 0.992,
+                            "roc_auc": 0.9998,
+                            "cv_f1_mean": 0.9822,
+                            "cv_f1_std": 0.0028
+                        }
+                    }
+                ],
+                "regression": [
+                    {
+                        "name": "Ridge",
+                        "metrics": {
+                            "mse": 42.0595,
+                            "rmse": 6.4853,
+                            "mae": 5.1767,
+                            "r2": 0.9916,
+                            "cv_mse_mean": 38.7006
+                        }
+                    },
+                    {
+                        "name": "Lasso",
+                        "metrics": {
+                            "mse": 33.3992,
+                            "rmse": 5.7792,
+                            "mae": 4.6316,
+                            "r2": 0.9933,
+                            "cv_mse_mean": 28.3942
+                        }
+                    },
+                    {
+                        "name": "RandomForestRegressor",
+                        "metrics": {
+                            "mse": 53.6207,
+                            "rmse": 7.3226,
+                            "mae": 5.8114,
+                            "r2": 0.9893,
+                            "cv_mse_mean": 41.292
+                        }
+                    },
+                    {
+                        "name": "XGBoostRegressor",
+                        "metrics": {
+                            "mse": 47.3928,
+                            "rmse": 6.8842,
+                            "mae": 5.4498,
+                            "r2": 0.9905,
+                            "cv_mse_mean": 37.0512
+                        }
+                    }
+                ],
+                "clustering": [
+                    {
+                        "name": "KMeans",
+                        "silhouette": 0.1035,
+                        "davies_bouldin": 2.2891,
+                        "n_clusters": 4
+                    },
+                    {
+                        "name": "DBSCAN",
+                        "silhouette": -1.0,
+                        "davies_bouldin": 99.0,
+                        "n_clusters": 1
+                    },
+                    {
+                        "name": "GMM",
+                        "silhouette": 0.063,
+                        "davies_bouldin": 3.0526,
+                        "n_clusters": 4
+                    }
+                ],
+                "forecasting": [
+                    {
+                        "name": "ARIMA",
+                        "metrics": {
+                            "mae": 6.2099,
+                            "rmse": 7.7424,
+                            "mape": 3.9838
+                        },
+                        "order": "(1,1,1)"
+                    },
+                    {
+                        "name": "SARIMA",
+                        "metrics": {
+                            "mae": 2.4921,
+                            "rmse": 3.4931,
+                            "mape": 1.6507
+                        },
+                        "order": "(1,1,1)(1,1,1,12)"
+                    },
+                    {
+                        "name": "XGBoost TS",
+                        "metrics": {
+                            "mae": 5.1747,
+                            "rmse": 6.0111,
+                            "mape": 3.3571
+                        },
+                        "lags": [
+                            1,
+                            2,
+                            3,
+                            6,
+                            12
+                        ]
+                    }
+                ]
+            }
+        },
+        "interieur": {
+            "status": "success",
+            "metrics": {
+                "classification": [
+                    {
+                        "name": "LogisticRegression",
+                        "metrics": {
+                            "accuracy": 0.9787,
+                            "precision": 0.9786,
+                            "recall": 0.9786,
+                            "f1": 0.9786,
+                            "roc_auc": 0.9982,
+                            "cv_f1_mean": 0.9797,
+                            "cv_f1_std": 0.0059
+                        }
+                    },
+                    {
+                        "name": "RandomForestClassifier",
+                        "metrics": {
+                            "accuracy": 0.976,
+                            "precision": 0.9635,
+                            "recall": 0.9893,
+                            "f1": 0.9763,
+                            "roc_auc": 0.9968,
+                            "cv_f1_mean": 0.9752,
+                            "cv_f1_std": 0.0054
+                        }
+                    },
+                    {
+                        "name": "GradientBoosting",
+                        "metrics": {
+                            "accuracy": 0.984,
+                            "precision": 0.984,
+                            "recall": 0.984,
+                            "f1": 0.984,
+                            "roc_auc": 0.9992,
+                            "cv_f1_mean": 0.9876,
+                            "cv_f1_std": 0.0071
+                        }
+                    }
+                ],
+                "regression": [
+                    {
+                        "name": "Ridge",
+                        "metrics": {
+                            "mse": 39.5211,
+                            "rmse": 6.2866,
+                            "mae": 4.9399,
+                            "r2": 0.9908,
+                            "cv_mse_mean": 39.1957
+                        }
+                    },
+                    {
+                        "name": "Lasso",
+                        "metrics": {
+                            "mse": 31.8658,
+                            "rmse": 5.645,
+                            "mae": 4.5237,
+                            "r2": 0.9926,
+                            "cv_mse_mean": 29.6191
+                        }
+                    },
+                    {
+                        "name": "RandomForestRegressor",
+                        "metrics": {
+                            "mse": 43.193,
+                            "rmse": 6.5721,
+                            "mae": 5.3006,
+                            "r2": 0.99,
+                            "cv_mse_mean": 42.2197
+                        }
+                    },
+                    {
+                        "name": "XGBoostRegressor",
+                        "metrics": {
+                            "mse": 38.764,
+                            "rmse": 6.2261,
+                            "mae": 4.9578,
+                            "r2": 0.991,
+                            "cv_mse_mean": 37.251
+                        }
+                    }
+                ],
+                "clustering": [
+                    {
+                        "name": "KMeans",
+                        "silhouette": 0.1036,
+                        "davies_bouldin": 2.3081,
+                        "n_clusters": 4
+                    },
+                    {
+                        "name": "DBSCAN",
+                        "silhouette": -1.0,
+                        "davies_bouldin": 99.0,
+                        "n_clusters": 1
+                    },
+                    {
+                        "name": "GMM",
+                        "silhouette": 0.1365,
+                        "davies_bouldin": 2.658,
+                        "n_clusters": 4
+                    }
+                ],
+                "forecasting": [
+                    {
+                        "name": "ARIMA",
+                        "metrics": {
+                            "mae": 6.8723,
+                            "rmse": 8.3024,
+                            "mape": 4.3717
+                        },
+                        "order": "(1,1,1)"
+                    },
+                    {
+                        "name": "SARIMA",
+                        "metrics": {
+                            "mae": 2.1888,
+                            "rmse": 3.1296,
+                            "mape": 1.3941
+                        },
+                        "order": "(1,1,1)(1,1,1,12)"
+                    },
+                    {
+                        "name": "XGBoost TS",
+                        "metrics": {
+                            "mae": 7.9284,
+                            "rmse": 8.5478,
+                            "mape": 5.115
+                        },
+                        "lags": [
+                            1,
+                            2,
+                            3,
+                            6,
+                            12
+                        ]
+                    }
+                ]
+            }
+        },
+        "amenagement": {
+            "status": "success",
+            "metrics": {
+                "classification": [
+                    {
+                        "name": "LogisticRegression",
+                        "metrics": {
+                            "accuracy": 0.9813,
+                            "precision": 0.9787,
+                            "recall": 0.984,
+                            "f1": 0.9813,
+                            "roc_auc": 0.9992,
+                            "cv_f1_mean": 0.9726,
+                            "cv_f1_std": 0.0109
+                        }
+                    },
+                    {
+                        "name": "RandomForestClassifier",
+                        "metrics": {
+                            "accuracy": 0.9813,
+                            "precision": 0.9688,
+                            "recall": 0.9947,
+                            "f1": 0.9815,
+                            "roc_auc": 0.9974,
+                            "cv_f1_mean": 0.971,
+                            "cv_f1_std": 0.0098
+                        }
+                    },
+                    {
+                        "name": "GradientBoosting",
+                        "metrics": {
+                            "accuracy": 0.9867,
+                            "precision": 0.984,
+                            "recall": 0.9893,
+                            "f1": 0.9867,
+                            "roc_auc": 0.9996,
+                            "cv_f1_mean": 0.9851,
+                            "cv_f1_std": 0.0071
+                        }
+                    }
+                ],
+                "regression": [
+                    {
+                        "name": "Ridge",
+                        "metrics": {
+                            "mse": 37.7266,
+                            "rmse": 6.1422,
+                            "mae": 4.8285,
+                            "r2": 0.9912,
+                            "cv_mse_mean": 37.8679
+                        }
+                    },
+                    {
+                        "name": "Lasso",
+                        "metrics": {
+                            "mse": 29.0938,
+                            "rmse": 5.3939,
+                            "mae": 4.323,
+                            "r2": 0.9932,
+                            "cv_mse_mean": 29.4846
+                        }
+                    },
+                    {
+                        "name": "RandomForestRegressor",
+                        "metrics": {
+                            "mse": 40.0778,
+                            "rmse": 6.3307,
+                            "mae": 5.0744,
+                            "r2": 0.9907,
+                            "cv_mse_mean": 40.7977
+                        }
+                    },
+                    {
+                        "name": "XGBoostRegressor",
+                        "metrics": {
+                            "mse": 35.5125,
+                            "rmse": 5.9592,
+                            "mae": 4.7481,
+                            "r2": 0.9917,
+                            "cv_mse_mean": 38.0293
+                        }
+                    }
+                ],
+                "clustering": [
+                    {
+                        "name": "KMeans",
+                        "silhouette": 0.1068,
+                        "davies_bouldin": 2.2818,
+                        "n_clusters": 4
+                    },
+                    {
+                        "name": "DBSCAN",
+                        "silhouette": -1.0,
+                        "davies_bouldin": 99.0,
+                        "n_clusters": 1
+                    },
+                    {
+                        "name": "GMM",
+                        "silhouette": 0.0542,
+                        "davies_bouldin": 3.261,
+                        "n_clusters": 4
+                    }
+                ],
+                "forecasting": [
+                    {
+                        "name": "ARIMA",
+                        "metrics": {
+                            "mae": 11.9429,
+                            "rmse": 12.9207,
+                            "mape": 7.7307
+                        },
+                        "order": "(1,1,1)"
+                    },
+                    {
+                        "name": "SARIMA",
+                        "metrics": {
+                            "mae": 2.2016,
+                            "rmse": 2.7783,
+                            "mape": 1.4435
+                        },
+                        "order": "(1,1,1)(1,1,1,12)"
+                    },
+                    {
+                        "name": "XGBoost TS",
+                        "metrics": {
+                            "mae": 4.1859,
+                            "rmse": 5.049,
+                            "mape": 2.7255
+                        },
+                        "lags": [
+                            1,
+                            2,
+                            3,
+                            6,
+                            12
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+    "duration_seconds": 1685.324182
+}

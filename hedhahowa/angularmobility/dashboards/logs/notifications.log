@@ -1,0 +1,947 @@
+{"timestamp": "2026-04-19T17:39:43.702735", "channel": "email", "subject": "Test Email \u2014 SMTP Configuration Verified \u2705", "status": "failed", "detail": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1016)"}
+{"timestamp": "2026-04-19T19:26:03.342089", "channel": "email", "subject": "Test Email \u2014 SMTP Configuration Verified \u2705", "status": "failed", "detail": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1016)"}
+{"timestamp": "2026-04-19T19:38:10.330764", "channel": "email", "subject": "Test Email \u2014 SMTP Configuration Verified \u2705", "status": "failed", "detail": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1016)"}
+{"timestamp": "2026-04-19T19:43:16.789072", "channel": "email", "subject": "Test Email \u2014 SMTP Configuration Verified \u2705", "status": "failed", "detail": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1016)"}
+{"timestamp": "2026-04-19T19:43:51.196385", "channel": "email", "subject": "Test Email \u2014 SMTP Configuration Verified \u2705", "status": "failed", "detail": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1016)"}
+{"timestamp": "2026-04-19T19:44:21.743231", "channel": "email", "subject": "Test Email \u2014 SMTP Configuration Verified \u2705", "status": "failed", "detail": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1016)"}
+{"timestamp": "2026-04-19T19:45:28.304843", "channel": "email", "subject": "Test Email \u2014 SMTP Configuration Verified \u2705", "status": "failed", "detail": "(534, b'5.7.9 Application-specific password required. For more information, go to\\n5.7.9  https://support.google.com/mail/?p=InvalidSecondFactor 5b1f17b1804b1-4891b46cffasm36686985e9.13 - gsmtp')"}
+{"timestamp": "2026-04-19T20:01:22.780245", "channel": "email", "subject": "Test Email \u2014 SMTP Configuration Verified \u2705", "status": "failed", "detail": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-43fe4e4d6casm21679928f8f.32 - gsmtp')"}
+{"timestamp": "2026-04-19T20:01:45.741076", "channel": "email", "subject": "Test Email \u2014 SMTP Configuration Verified \u2705", "status": "failed", "detail": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-43fe4e3a341sm25778712f8f.24 - gsmtp')"}
+{"timestamp": "2026-04-19T20:23:52.945361", "channel": "email", "subject": "Test Email \u2014 SMTP Configuration Verified \u2705", "status": "failed", "detail": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-43fe4cb1365sm24081797f8f.7 - gsmtp')"}
+{"timestamp": "2026-04-19T20:24:33.450447", "channel": "email", "subject": "Test Email \u2014 SMTP Configuration Verified \u2705", "status": "failed", "detail": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-43fe4e4daf2sm22926868f8f.33 - gsmtp')"}
+{"timestamp": "2026-04-19T20:27:18.603022", "channel": "email", "subject": "Test Email \u2014 SMTP Configuration Verified \u2705", "status": "failed", "detail": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-488fb74eed9sm98900355e9.1 - gsmtp')"}
+{"timestamp": "2026-04-19T20:27:49.415800", "channel": "email", "subject": "Test Email \u2014 SMTP Configuration Verified \u2705", "status": "failed", "detail": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-43fe4e4d6casm21815271f8f.32 - gsmtp')"}
+{"timestamp": "2026-04-19T20:31:31.199962", "channel": "email", "subject": "Test Email \u2014 SMTP Configuration Verified \u2705", "status": "failed", "detail": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-488fb7a06f3sm83264755e9.22 - gsmtp')"}
+{"timestamp": "2026-04-19T20:34:50.345192", "channel": "email", "subject": "Test Email \u2014 SMTP Configuration Verified \u2705", "status": "failed", "detail": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-43fe4e591cesm31287625f8f.36 - gsmtp')"}
+{"timestamp": "2026-04-19T20:59:30.048354", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "failed", "detail": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-43fe4e4633bsm23226727f8f.26 - gsmtp')"}
+{"timestamp": "2026-04-19T20:59:30.743909", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-19T20:59:33.432506", "channel": "email", "subject": "ML Pipeline Success", "status": "failed", "detail": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-43fe4e3a381sm25592792f8f.21 - gsmtp')"}
+{"timestamp": "2026-04-19T21:07:21.200895", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "failed", "detail": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-43fe4cb1682sm24584080f8f.1 - gsmtp')"}
+{"timestamp": "2026-04-19T21:07:22.904719", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-19T21:07:25.454879", "channel": "email", "subject": "ML Pipeline Success", "status": "failed", "detail": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-43fe4c221cdsm23486097f8f.0 - gsmtp')"}
+{"timestamp": "2026-04-19T21:07:27.119276", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "failed", "detail": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-488fc0b4c85sm220815705e9.0 - gsmtp')"}
+{"timestamp": "2026-04-19T21:07:28.187754", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-19T21:07:30.420021", "channel": "email", "subject": "ML Pipeline Success", "status": "failed", "detail": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-488fb78446csm107731835e9.4 - gsmtp')"}
+{"timestamp": "2026-04-19T21:10:14.958999", "channel": "email", "subject": "Test Email \u2014 SMTP Configuration Verified \u2705", "status": "failed", "detail": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-43fe4cb13a0sm23638101f8f.8 - gsmtp')"}
+{"timestamp": "2026-04-19T21:11:58.458534", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "failed", "detail": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-4891f4016bbsm224885e9.4 - gsmtp')"}
+{"timestamp": "2026-04-19T21:11:59.689507", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-19T21:12:02.188366", "channel": "email", "subject": "ML Pipeline Success", "status": "failed", "detail": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-488fc140c82sm213273785e9.12 - gsmtp')"}
+{"timestamp": "2026-04-19T21:17:06.371497", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "failed", "detail": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-4891c318636sm29888675e9.7 - gsmtp')"}
+{"timestamp": "2026-04-19T21:17:07.442699", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-19T21:17:09.601110", "channel": "email", "subject": "ML Pipeline Success", "status": "failed", "detail": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-4890009e759sm167583875e9.6 - gsmtp')"}
+{"timestamp": "2026-04-19T21:17:53.024148", "channel": "email", "subject": "Test Email \u2014 SMTP Configuration Verified \u2705", "status": "failed", "detail": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-488fb7bf7besm81506195e9.34 - gsmtp')"}
+{"timestamp": "2026-04-19T21:18:29.499644", "channel": "email", "subject": "Test Email \u2014 SMTP Configuration Verified \u2705", "status": "failed", "detail": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-4891cdfcd50sm8106665e9.9 - gsmtp')"}
+{"timestamp": "2026-04-19T21:19:44.355481", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "failed", "detail": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-488fc0f8193sm208627285e9.1 - gsmtp')"}
+{"timestamp": "2026-04-19T21:19:45.521787", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-19T21:19:47.757739", "channel": "email", "subject": "ML Pipeline Success", "status": "failed", "detail": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-488fc0f8188sm250658725e9.2 - gsmtp')"}
+{"timestamp": "2026-04-19T21:20:28.702914", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "failed", "detail": "[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)"}
+{"timestamp": "2026-04-19T21:20:29.094723", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-19T21:20:31.924486", "channel": "email", "subject": "ML Pipeline Success", "status": "failed", "detail": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-4891c320084sm50217855e9.2 - gsmtp')"}
+{"timestamp": "2026-04-19T21:25:01.349038", "channel": "email", "subject": "Test Email \u2014 SMTP Configuration Verified \u2705", "status": "failed", "detail": "(535, b'5.7.8 Username and Password not accepted. For more information, go to\\n5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-43fe4cc09b1sm23530921f8f.9 - gsmtp')"}
+{"timestamp": "2026-04-19T22:09:00.736752", "channel": "email", "subject": "Test Email \u2014 SMTP Configuration Verified \u2705", "status": "failed", "detail": "(530, b'5.7.0 Authentication Required. For more information, go to\\n5.7.0  https://support.google.com/accounts/troubleshooter/2402620. 5b1f17b1804b1-488fb735d3dsm150520235e9.2 - gsmtp', 'Mobility Analytics <emna.awini.work@gmail.com>')"}
+{"timestamp": "2026-04-19T22:09:20.311778", "channel": "email", "subject": "Test Email \u2014 SMTP Configuration Verified \u2705", "status": "failed", "detail": "(530, b'5.7.0 Authentication Required. For more information, go to\\n5.7.0  https://support.google.com/accounts/troubleshooter/2402620. ffacd0b85a97d-43fe4c221cdsm23815439f8f.0 - gsmtp', 'Mobility Analytics <emna.awini.work@gmail.com>')"}
+{"timestamp": "2026-04-19T22:18:16.011398", "channel": "email", "subject": "Test Email \u2014 SMTP Configuration Verified \u2705", "status": "failed", "detail": "(530, b'5.7.0 Authentication Required. For more information, go to\\n5.7.0  https://support.google.com/accounts/troubleshooter/2402620. 5b1f17b1804b1-488fc0b4c85sm224297205e9.0 - gsmtp', 'Mobility Analytics <emna.awini.work@gmail.com>')"}
+{"timestamp": "2026-04-19T22:20:15.853939", "channel": "email", "subject": "Test Email \u2014 SMTP Configuration Verified \u2705", "status": "failed", "detail": "(530, b'5.7.0 Authentication Required. For more information, go to\\n5.7.0  https://support.google.com/accounts/troubleshooter/2402620. 5b1f17b1804b1-488fc10019bsm239365525e9.4 - gsmtp', 'Mobility Analytics <emna.awini.work@gmail.com>')"}
+{"timestamp": "2026-04-19T22:30:52.787136", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "failed", "detail": "(530, b'5.7.0 Authentication Required. For more information, go to\\n5.7.0  https://support.google.com/accounts/troubleshooter/2402620. 5b1f17b1804b1-488fc177dafsm293285935e9.4 - gsmtp', 'Mobility Analytics <emna.awini.work@gmail.com>')"}
+{"timestamp": "2026-04-19T22:31:00.603497", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-19T22:31:05.002831", "channel": "email", "subject": "ML Pipeline Success", "status": "failed", "detail": "(530, b'5.7.0 Authentication Required. For more information, go to\\n5.7.0  https://support.google.com/accounts/troubleshooter/2402620. 5b1f17b1804b1-488fc181c6dsm216415415e9.6 - gsmtp', 'Mobility Analytics <emna.awini.work@gmail.com>')"}
+{"timestamp": "2026-04-19T22:34:57.570006", "channel": "email", "subject": "Test Email \u2014 SMTP Configuration Verified \u2705", "status": "failed", "detail": "(530, b'5.7.0 Authentication Required. For more information, go to\\n5.7.0  https://support.google.com/accounts/troubleshooter/2402620. 5b1f17b1804b1-488fc1393d3sm349394585e9.11 - gsmtp', 'Mobility Analytics <emna.awini.work@gmail.com>')"}
+{"timestamp": "2026-04-19T22:35:26.067363", "channel": "email", "subject": "Test Email \u2014 SMTP Configuration Verified \u2705", "status": "failed", "detail": "(530, b'5.7.0 Authentication Required. For more information, go to\\n5.7.0  https://support.google.com/accounts/troubleshooter/2402620. 5b1f17b1804b1-4891b46cffasm48680625e9.13 - gsmtp', 'Mobility Analytics <emna.awini.work@gmail.com>')"}
+{"timestamp": "2026-04-19T22:35:44.572518", "channel": "email", "subject": "Test Email \u2014 SMTP Configuration Verified \u2705", "status": "failed", "detail": "(530, b'5.7.0 Authentication Required. For more information, go to\\n5.7.0  https://support.google.com/accounts/troubleshooter/2402620. 5b1f17b1804b1-48919d7df84sm17172005e9.19 - gsmtp', 'Mobility Analytics <emna.awini.work@gmail.com>')"}
+{"timestamp": "2026-04-19T22:35:58.015033", "channel": "email", "subject": "Test Email \u2014 SMTP Configuration Verified \u2705", "status": "failed", "detail": "(530, b'5.7.0 Authentication Required. For more information, go to\\n5.7.0  https://support.google.com/accounts/troubleshooter/2402620. 5b1f17b1804b1-488fc10019bsm240050525e9.4 - gsmtp', 'Mobility Analytics <emna.awini.work@gmail.com>')"}
+{"timestamp": "2026-04-19T22:37:04.067869", "channel": "email", "subject": "Test Email \u2014 SMTP Configuration Verified \u2705", "status": "failed", "detail": "(530, b'5.7.0 Authentication Required. For more information, go to\\n5.7.0  https://support.google.com/accounts/troubleshooter/2402620. 5b1f17b1804b1-4891c318636sm33772875e9.7 - gsmtp', 'Mobility Analytics <emna.awini.work@gmail.com>')"}
+{"timestamp": "2026-04-19T22:37:11.745717", "channel": "email", "subject": "Test Email \u2014 SMTP Configuration Verified \u2705", "status": "failed", "detail": "(530, b'5.7.0 Authentication Required. For more information, go to\\n5.7.0  https://support.google.com/accounts/troubleshooter/2402620. ffacd0b85a97d-43fe4e4d525sm23028443f8f.31 - gsmtp', 'Mobility Analytics <emna.awini.work@gmail.com>')"}
+{"timestamp": "2026-04-19T22:40:53.015883", "channel": "email", "subject": "Test Email \u2014 SMTP Configuration Verified \u2705", "status": "failed", "detail": "(530, b'5.7.0 Authentication Required. For more information, go to\\n5.7.0  https://support.google.com/accounts/troubleshooter/2402620. ffacd0b85a97d-43fe4dc24cfsm24407357f8f.16 - gsmtp', 'Mobility Analytics <emna.awini.work@gmail.com>')"}
+{"timestamp": "2026-04-19T22:42:16.407217", "channel": "email", "subject": "Test Email \u2014 SMTP Configuration Verified \u2705", "status": "failed", "detail": "(530, b'5.7.0 Authentication Required. For more information, go to\\n5.7.0  https://support.google.com/accounts/troubleshooter/2402620. ffacd0b85a97d-43fe4cb11b4sm24636390f8f.2 - gsmtp', 'Mobility Analytics <emna.awini.work@gmail.com>')"}
+{"timestamp": "2026-04-19T22:43:21.103095", "channel": "email", "subject": "Test Email \u2014 SMTP Configuration Verified \u2705", "status": "failed", "detail": "(530, b'5.7.0 Authentication Required. For more information, go to\\n5.7.0  https://support.google.com/accounts/troubleshooter/2402620. ffacd0b85a97d-43fe4e3a174sm27329566f8f.18 - gsmtp', 'Mobility Analytics <emna.awini.work@gmail.com>')"}
+{"timestamp": "2026-04-19T22:43:47.989677", "channel": "email", "subject": "Test Email \u2014 SMTP Configuration Verified \u2705", "status": "failed", "detail": "(530, b'5.7.0 Authentication Required. For more information, go to\\n5.7.0  https://support.google.com/accounts/troubleshooter/2402620. ffacd0b85a97d-43fe4cc375dsm21695502f8f.14 - gsmtp', 'Mobility Analytics <emna.awini.work@gmail.com>')"}
+{"timestamp": "2026-04-19T22:43:59.749300", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "failed", "detail": "(530, b'5.7.0 Authentication Required. For more information, go to\\n5.7.0  https://support.google.com/accounts/troubleshooter/2402620. 5b1f17b1804b1-488fb78446csm110035135e9.4 - gsmtp', 'Mobility Analytics <emna.awini.work@gmail.com>')"}
+{"timestamp": "2026-04-19T22:44:00.784315", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-19T22:44:02.715770", "channel": "email", "subject": "ML Pipeline Success", "status": "failed", "detail": "(530, b'5.7.0 Authentication Required. For more information, go to\\n5.7.0  https://support.google.com/accounts/troubleshooter/2402620. 5b1f17b1804b1-4891c318636sm34088735e9.7 - gsmtp', 'Mobility Analytics <emna.awini.work@gmail.com>')"}
+{"timestamp": "2026-04-19T23:00:53.732389", "channel": "email", "subject": "Test Email \u2014 SMTP Configuration Verified \u2705", "status": "failed", "detail": "(530, b'5.7.0 Authentication Required. For more information, go to\\n5.7.0  https://support.google.com/accounts/troubleshooter/2402620. 5b1f17b1804b1-488fc181c6dsm217666905e9.6 - gsmtp', 'Mobility Analytics <emna.awini.work@gmail.com>')"}
+{"timestamp": "2026-04-19T23:14:07.155943", "channel": "email", "subject": "Test Email \u2014 SMTP Configuration Verified \u2705", "status": "failed", "detail": "(530, b'5.7.0 Authentication Required. For more information, go to\\n5.7.0  https://support.google.com/accounts/troubleshooter/2402620. 5b1f17b1804b1-488fc10777csm272159815e9.8 - gsmtp', 'Mobility Analytics <emna.awini.work@gmail.com>')"}
+{"timestamp": "2026-04-19T23:35:36.512144", "channel": "email", "subject": "Test Email \u2014 SMTP Configuration Verified \u2705", "status": "failed", "detail": "(530, b'5.7.0 Authentication Required. For more information, go to\\n5.7.0  https://support.google.com/accounts/troubleshooter/2402620. ffacd0b85a97d-43fe4cc2cacsm24279186f8f.13 - gsmtp', 'Mobility Analytics <emna.awini.work@gmail.com>')"}
+{"timestamp": "2026-04-20T00:22:31.810587", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "failed", "detail": "(530, b'5.7.0 Authentication Required. For more information, go to\\n5.7.0  https://support.google.com/accounts/troubleshooter/2402620. ffacd0b85a97d-43fe4cc07bbsm26403805f8f.11 - gsmtp', 'Mobility Analytics <emna.awini.work@gmail.com>')"}
+{"timestamp": "2026-04-20T00:22:32.685131", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-20T00:22:34.130954", "channel": "email", "subject": "ML Pipeline Success", "status": "failed", "detail": "(530, b'5.7.0 Authentication Required. For more information, go to\\n5.7.0  https://support.google.com/accounts/troubleshooter/2402620. ffacd0b85a97d-43fe4e46898sm25084747f8f.27 - gsmtp', 'Mobility Analytics <emna.awini.work@gmail.com>')"}
+{"timestamp": "2026-04-20T00:22:37.003161", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "failed", "detail": "(530, b'5.7.0 Authentication Required. For more information, go to\\n5.7.0  https://support.google.com/accounts/troubleshooter/2402620. 5b1f17b1804b1-488fc10777csm277099345e9.8 - gsmtp', 'Mobility Analytics <emna.awini.work@gmail.com>')"}
+{"timestamp": "2026-04-20T00:22:37.607767", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "failed", "detail": "(530, b'5.7.0 Authentication Required. For more information, go to\\n5.7.0  https://support.google.com/accounts/troubleshooter/2402620. ffacd0b85a97d-43fe4cc0d51sm24056663f8f.10 - gsmtp', 'Mobility Analytics <emna.awini.work@gmail.com>')"}
+{"timestamp": "2026-04-20T00:22:37.771746", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "failed", "detail": "(530, b'5.7.0 Authentication Required. For more information, go to\\n5.7.0  https://support.google.com/accounts/troubleshooter/2402620. ffacd0b85a97d-43fe4cb1365sm25678544f8f.7 - gsmtp', 'Mobility Analytics <emna.awini.work@gmail.com>')"}
+{"timestamp": "2026-04-20T00:22:38.455187", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "failed", "detail": "(530, b'5.7.0 Authentication Required. For more information, go to\\n5.7.0  https://support.google.com/accounts/troubleshooter/2402620. ffacd0b85a97d-43fe4e4633bsm24224883f8f.26 - gsmtp', 'Mobility Analytics <emna.awini.work@gmail.com>')"}
+{"timestamp": "2026-04-20T00:22:38.556304", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "failed", "detail": "(530, b'5.7.0 Authentication Required. For more information, go to\\n5.7.0  https://support.google.com/accounts/troubleshooter/2402620. 5b1f17b1804b1-488fc177dafsm300085685e9.4 - gsmtp', 'Mobility Analytics <emna.awini.work@gmail.com>')"}
+{"timestamp": "2026-04-20T00:22:39.252401", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-20T00:22:39.443869", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-20T00:22:40.065848", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-20T00:22:40.149731", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-20T00:22:41.001453", "channel": "email", "subject": "ML Pipeline Success", "status": "failed", "detail": "(530, b'5.7.0 Authentication Required. For more information, go to\\n5.7.0  https://support.google.com/accounts/troubleshooter/2402620. 5b1f17b1804b1-488fc1c773fsm269858085e9.12 - gsmtp', 'Mobility Analytics <emna.awini.work@gmail.com>')"}
+{"timestamp": "2026-04-20T00:22:41.567545", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-20T00:22:42.623960", "channel": "email", "subject": "ML Pipeline Success", "status": "failed", "detail": "(530, b'5.7.0 Authentication Required. For more information, go to\\n5.7.0  https://support.google.com/accounts/troubleshooter/2402620. ffacd0b85a97d-43fe4e4d525sm23638959f8f.31 - gsmtp', 'Mobility Analytics <emna.awini.work@gmail.com>')"}
+{"timestamp": "2026-04-20T00:22:42.905793", "channel": "email", "subject": "ML Pipeline Success", "status": "failed", "detail": "(530, b'5.7.0 Authentication Required. For more information, go to\\n5.7.0  https://support.google.com/accounts/troubleshooter/2402620. ffacd0b85a97d-43fe4cc0d51sm24056983f8f.10 - gsmtp', 'Mobility Analytics <emna.awini.work@gmail.com>')"}
+{"timestamp": "2026-04-20T00:22:43.823211", "channel": "email", "subject": "ML Pipeline Success", "status": "failed", "detail": "(530, b'5.7.0 Authentication Required. For more information, go to\\n5.7.0  https://support.google.com/accounts/troubleshooter/2402620. 5b1f17b1804b1-488fc100162sm260320525e9.5 - gsmtp', 'Mobility Analytics <emna.awini.work@gmail.com>')"}
+{"timestamp": "2026-04-20T00:22:45.545349", "channel": "email", "subject": "ML Pipeline Success", "status": "failed", "detail": "(530, b'5.7.0 Authentication Required. For more information, go to\\n5.7.0  https://support.google.com/accounts/troubleshooter/2402620. 5b1f17b1804b1-488fc10777csm277110055e9.8 - gsmtp', 'Mobility Analytics <emna.awini.work@gmail.com>')"}
+{"timestamp": "2026-04-20T06:48:45.575748", "channel": "email", "subject": "Test Email \u2014 SMTP Configuration Verified \u2705", "status": "failed", "detail": "(530, b'5.7.0 Authentication Required. For more information, go to\\n5.7.0  https://support.google.com/accounts/troubleshooter/2402620. 5b1f17b1804b1-488fc10019bsm266982645e9.4 - gsmtp', 'Mobility Analytics <emna.awini.work@gmail.com>')"}
+{"timestamp": "2026-04-20T06:53:52.651338", "channel": "email", "subject": "Test Email \u2014 SMTP Configuration Verified \u2705", "status": "failed", "detail": "(530, b'5.7.0 Authentication Required. For more information, go to\\n5.7.0  https://support.google.com/accounts/troubleshooter/2402620. ffacd0b85a97d-43fe4cc0f31sm26879966f8f.12 - gsmtp', 'Mobility Analytics <emna.awini.work@gmail.com>')"}
+{"timestamp": "2026-04-20T06:55:21.830117", "channel": "email", "subject": "Test Email \u2014 SMTP Configuration Verified \u2705", "status": "failed", "detail": "(530, b'5.7.0 Authentication Required. For more information, go to\\n5.7.0  https://support.google.com/accounts/troubleshooter/2402620. ffacd0b85a97d-43fe4c221cdsm26520281f8f.0 - gsmtp', 'Mobility Analytics <emna.awini.work@gmail.com>')"}
+{"timestamp": "2026-04-20T11:43:10.715171", "channel": "email", "subject": "Test Email \u2014 SMTP Configuration Verified \u2705", "status": "failed", "detail": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Basic Constraints of CA cert not marked critical (_ssl.c:1081)"}
+{"timestamp": "2026-04-20T11:46:00.454221", "channel": "email", "subject": "Test Email \u2014 SMTP Configuration Verified \u2705", "status": "failed", "detail": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Basic Constraints of CA cert not marked critical (_ssl.c:1081)"}
+{"timestamp": "2026-04-20T12:26:26.821346", "channel": "email", "subject": "Test Email \u2014 SMTP Configuration Verified \u2705", "status": "failed", "detail": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Basic Constraints of CA cert not marked critical (_ssl.c:1081)"}
+{"timestamp": "2026-04-20T13:51:01.620318", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "failed", "detail": "(530, b'5.7.0 Authentication Required. For more information, go to\\n5.7.0  https://support.google.com/accounts/troubleshooter/2402620. ffacd0b85a97d-43fe4cb135asm33252122f8f.6 - gsmtp', 'Mobility Analytics <emna.awini.work@gmail.com>')"}
+{"timestamp": "2026-04-20T13:51:02.598123", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-20T13:51:04.737289", "channel": "email", "subject": "ML Pipeline Success", "status": "failed", "detail": "(530, b'5.7.0 Authentication Required. For more information, go to\\n5.7.0  https://support.google.com/accounts/troubleshooter/2402620. 5b1f17b1804b1-4891c08faffsm155075345e9.1 - gsmtp', 'Mobility Analytics <emna.awini.work@gmail.com>')"}
+{"timestamp": "2026-04-20T15:01:14.341757", "channel": "email", "subject": "\ud83d\udd2e Automated Inference Complete", "status": "failed", "detail": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Basic Constraints of CA cert not marked critical (_ssl.c:1081)"}
+{"timestamp": "2026-04-20T15:02:27.753312", "channel": "email", "subject": "Test Email \u2014 SMTP Configuration Verified \u2705", "status": "failed", "detail": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Basic Constraints of CA cert not marked critical (_ssl.c:1081)"}
+{"timestamp": "2026-04-20T15:02:59.274707", "channel": "email", "subject": "Test Email \u2014 SMTP Configuration Verified \u2705", "status": "failed", "detail": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Basic Constraints of CA cert not marked critical (_ssl.c:1081)"}
+{"timestamp": "2026-04-20T16:32:05.552123", "channel": "email", "subject": "\ud83d\udd2e Automated Inference Complete", "status": "failed", "detail": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Basic Constraints of CA cert not marked critical (_ssl.c:1081)"}
+{"timestamp": "2026-04-20T16:33:28.838542", "channel": "email", "subject": "Test Email \u2014 SMTP Configuration Verified \u2705", "status": "failed", "detail": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Basic Constraints of CA cert not marked critical (_ssl.c:1081)"}
+{"timestamp": "2026-04-20T16:33:59.623244", "channel": "email", "subject": "Test Email \u2014 SMTP Configuration Verified \u2705", "status": "failed", "detail": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Basic Constraints of CA cert not marked critical (_ssl.c:1081)"}
+{"timestamp": "2026-04-20T16:49:36.233704", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "failed", "detail": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Basic Constraints of CA cert not marked critical (_ssl.c:1081)"}
+{"timestamp": "2026-04-20T16:49:36.910621", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-20T16:49:39.171323", "channel": "email", "subject": "ML Pipeline Success", "status": "failed", "detail": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Basic Constraints of CA cert not marked critical (_ssl.c:1081)"}
+{"timestamp": "2026-04-20T18:24:16.521863", "channel": "email", "subject": "\ud83d\udd2e Automated Inference Complete", "status": "failed", "detail": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Basic Constraints of CA cert not marked critical (_ssl.c:1081)"}
+{"timestamp": "2026-04-20T18:25:02.830929", "channel": "email", "subject": "Test Email \u2014 SMTP Configuration Verified \u2705", "status": "failed", "detail": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Basic Constraints of CA cert not marked critical (_ssl.c:1081)"}
+{"timestamp": "2026-04-20T18:25:33.265044", "channel": "email", "subject": "Test Email \u2014 SMTP Configuration Verified \u2705", "status": "failed", "detail": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Basic Constraints of CA cert not marked critical (_ssl.c:1081)"}
+{"timestamp": "2026-04-20T18:26:49.949401", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "failed", "detail": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Basic Constraints of CA cert not marked critical (_ssl.c:1081)"}
+{"timestamp": "2026-04-20T18:26:51.063672", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-20T18:26:53.806755", "channel": "email", "subject": "ML Pipeline Success", "status": "failed", "detail": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Basic Constraints of CA cert not marked critical (_ssl.c:1081)"}
+{"timestamp": "2026-04-20T18:37:33.344769", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "failed", "detail": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Basic Constraints of CA cert not marked critical (_ssl.c:1081)"}
+{"timestamp": "2026-04-20T18:37:34.415716", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-20T18:37:37.359651", "channel": "email", "subject": "ML Pipeline Success", "status": "failed", "detail": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Basic Constraints of CA cert not marked critical (_ssl.c:1081)"}
+{"timestamp": "2026-04-20T19:00:12.292777", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "failed", "detail": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Basic Constraints of CA cert not marked critical (_ssl.c:1081)"}
+{"timestamp": "2026-04-20T19:00:13.612911", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-20T19:00:17.598559", "channel": "email", "subject": "ML Pipeline Success", "status": "failed", "detail": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Basic Constraints of CA cert not marked critical (_ssl.c:1081)"}
+{"timestamp": "2026-04-20T19:10:15.451128", "channel": "email", "subject": "Test Email \u2014 SMTP Configuration Verified \u2705", "status": "failed", "detail": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Basic Constraints of CA cert not marked critical (_ssl.c:1081)"}
+{"timestamp": "2026-04-20T19:12:00.408781", "channel": "email", "subject": "Test Email \u2014 SMTP Configuration Verified \u2705", "status": "failed", "detail": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Basic Constraints of CA cert not marked critical (_ssl.c:1081)"}
+{"timestamp": "2026-04-20T19:12:01.034706", "channel": "email", "subject": "Test Email \u2014 SMTP Configuration Verified \u2705", "status": "failed", "detail": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Basic Constraints of CA cert not marked critical (_ssl.c:1081)"}
+{"timestamp": "2026-04-20T19:17:33.339445", "channel": "email", "subject": "Verification Test", "status": "failed", "detail": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Basic Constraints of CA cert not marked critical (_ssl.c:1081)"}
+{"timestamp": "2026-04-20T19:24:43.225698", "channel": "email", "subject": "Final SSL Fix Verification", "status": "failed", "detail": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Basic Constraints of CA cert not marked critical (_ssl.c:1081)"}
+{"timestamp": "2026-04-20T19:26:16.880268", "channel": "email", "subject": "FINAL Radical Fix Verification", "status": "failed", "detail": "'EmailMultiAlternatives' object has no attribute 'get_all'"}
+{"timestamp": "2026-04-20T19:26:33.866397", "channel": "email", "subject": "FINAL Radical Fix Verification 2", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T18:49:35.458947", "channel": "email", "subject": "Test Email \u2014 SMTP Configuration Verified \u2705", "status": "failed", "detail": "[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)"}
+{"timestamp": "2026-04-20T19:52:30.716584", "channel": "email", "subject": "Test Email \u2014 SMTP Configuration Verified \u2705", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T19:56:50.915293", "channel": "email", "subject": "\ud83d\udd2e Automated Inference Complete", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T19:58:42.873484", "channel": "email", "subject": "Test Email \u2014 SMTP Configuration Verified \u2705", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T19:59:26.586549", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-20T19:59:28.336558", "channel": "email", "subject": "Data Drift Detected \u2014 transition", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T19:59:28.338369", "channel": "all", "subject": "Data Drift Detected \u2014 transition", "status": "dispatched", "detail": "level=warning"}
+{"timestamp": "2026-04-20T19:59:28.589829", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-20T19:59:30.192365", "channel": "email", "subject": "Data Drift Detected \u2014 interieur", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T19:59:30.194306", "channel": "all", "subject": "Data Drift Detected \u2014 interieur", "status": "dispatched", "detail": "level=warning"}
+{"timestamp": "2026-04-20T20:01:13.203815", "channel": "email", "subject": "\ud83d\udd2e Automated Inference Complete", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T20:03:00.739665", "channel": "email", "subject": "Test Email \u2014 SMTP Configuration Verified \u2705", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T20:03:01.067130", "channel": "email", "subject": "Test Email \u2014 SMTP Configuration Verified \u2705", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T20:31:30.032307", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T20:31:30.049657", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-20T20:31:31.657063", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T20:31:31.658971", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-20T20:32:59.185527", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T20:32:59.212131", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-20T20:33:01.760437", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T20:33:01.767888", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-20T20:34:27.092674", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T20:34:27.108875", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-20T20:34:28.794379", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T20:34:28.801347", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-20T20:48:22.508685", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T20:48:22.522008", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-20T20:48:24.307798", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T20:48:24.311052", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-20T20:51:44.855814", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T20:51:44.895264", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-20T20:51:46.618337", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T20:51:46.626196", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-20T20:57:04.138560", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T20:57:04.158978", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-20T20:57:05.889761", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T20:57:05.896333", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-20T20:58:13.213691", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T20:58:13.234961", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-20T20:58:14.880890", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T20:58:14.883722", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-20T20:59:19.563981", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T20:59:19.591946", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-20T20:59:21.501543", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T20:59:21.505881", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-20T21:01:18.203434", "channel": "email", "subject": "\ud83d\udd2e Automated Inference Complete", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T21:02:56.958082", "channel": "email", "subject": "Test Email \u2014 SMTP Configuration Verified \u2705", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T21:02:58.905611", "channel": "email", "subject": "Test Email \u2014 SMTP Configuration Verified \u2705", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T21:03:13.727301", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T21:03:13.754820", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-20T21:03:15.683835", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T21:03:15.693523", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-20T21:09:14.891823", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T21:09:14.905903", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-20T21:09:16.682649", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T21:09:16.684688", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-20T21:14:24.636606", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T21:14:24.651305", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-20T21:14:26.204017", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T21:14:26.231831", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-20T21:19:35.694960", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T21:19:35.708847", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-20T21:19:37.574818", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T21:19:37.578499", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-20T21:24:52.536127", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T21:24:52.559189", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-20T21:24:54.408530", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T21:24:54.430624", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-20T21:30:25.759532", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T21:30:25.783885", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-20T21:30:27.811255", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T21:30:27.818999", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-20T21:39:43.456541", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T21:39:43.481486", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-20T21:39:45.265281", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T21:39:45.277199", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-20T21:45:30.460339", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T21:45:30.485242", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-20T21:45:32.293405", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T21:45:32.300404", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-20T21:49:17.972301", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T21:49:17.987932", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-20T21:49:19.799362", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T21:49:19.802200", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-20T21:00:25.400340", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T21:00:25.409175", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-20T21:00:26.989390", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T21:00:27.003073", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-20T21:01:08.026096", "channel": "email", "subject": "\ud83d\udd2e Automated Inference Complete", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T21:02:55.624687", "channel": "email", "subject": "Test Email \u2014 SMTP Configuration Verified \u2705", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T21:02:57.629123", "channel": "email", "subject": "Test Email \u2014 SMTP Configuration Verified \u2705", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T21:06:37.447582", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T21:06:37.449810", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-20T21:06:38.884851", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T21:06:38.890038", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-20T21:08:08.751371", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T21:08:08.757630", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-20T21:08:10.308227", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T21:08:10.310341", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-20T21:24:03.954194", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T21:24:03.956517", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-20T21:24:05.358874", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T21:24:05.360313", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-20T21:34:18.153301", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T21:34:18.155576", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-20T21:34:19.806971", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T21:34:19.809189", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-20T21:38:24.583188", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T21:38:24.585446", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-20T21:38:26.268583", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T21:38:26.270365", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-20T21:40:42.380151", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T21:40:42.382484", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-20T21:40:43.975397", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T21:40:43.977165", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-20T21:47:06.840795", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T21:47:06.842893", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-20T21:47:08.311486", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T21:47:08.313143", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-20T21:55:55.209676", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T21:55:55.211631", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-20T21:55:56.612891", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T21:55:56.614812", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-20T21:59:42.972357", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T21:59:42.976677", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-20T21:59:44.509350", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T21:59:44.511868", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-20T22:01:03.510808", "channel": "email", "subject": "\ud83d\udd2e Automated Inference Complete", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T22:02:57.199496", "channel": "email", "subject": "Test Email \u2014 SMTP Configuration Verified \u2705", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T22:02:57.597413", "channel": "email", "subject": "Test Email \u2014 SMTP Configuration Verified \u2705", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T22:06:09.418559", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T22:06:09.420919", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-20T22:06:10.860840", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T22:06:10.868044", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-20T22:08:59.494142", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T22:08:59.497155", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-20T22:09:00.919133", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T22:09:00.921590", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-20T22:09:30.053209", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T22:09:30.056216", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-20T22:09:31.498616", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T22:09:31.502969", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-20T22:09:51.785185", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T22:09:51.787892", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-20T22:09:54.565862", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T22:09:54.567311", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-20T22:22:19.574823", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T22:22:19.578753", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-20T22:22:21.174428", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T22:22:21.176460", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-20T22:23:30.016413", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T22:23:30.019304", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-20T22:23:31.680749", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T22:23:31.684697", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-20T22:27:16.331211", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T22:27:16.334443", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-20T22:27:17.836601", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T22:27:17.839447", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-20T22:36:22.933257", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T22:36:22.936670", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-20T22:36:24.511604", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T22:36:24.513587", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-20T22:37:51.316978", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T22:37:51.318999", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-20T22:37:52.972220", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T22:37:52.981230", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-20T22:39:25.686043", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T22:39:25.688599", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-20T22:39:27.560732", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T22:39:27.562836", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-20T22:43:44.077307", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T22:43:44.081429", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-20T22:43:45.440940", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T22:43:45.444442", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-20T22:44:08.113297", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T22:44:08.119307", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-20T22:44:09.670341", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T22:44:09.672946", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-20T22:54:28.137297", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T22:54:28.139296", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-20T22:54:29.689974", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T22:54:29.691738", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-20T23:01:07.657320", "channel": "email", "subject": "\ud83d\udd2e Automated Inference Complete", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T23:02:55.547731", "channel": "email", "subject": "Test Email \u2014 SMTP Configuration Verified \u2705", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T23:02:57.496239", "channel": "email", "subject": "Test Email \u2014 SMTP Configuration Verified \u2705", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T23:11:48.719374", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T23:11:48.724633", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-20T23:11:51.875046", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T23:11:51.877665", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-20T23:12:49.198585", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T23:12:49.201182", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-20T23:12:50.847301", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T23:12:50.858451", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-20T23:14:43.263372", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T23:14:43.267446", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-20T23:14:44.850444", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T23:14:44.852635", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-20T23:15:13.066579", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T23:15:13.069051", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-20T23:15:14.433148", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T23:15:14.444597", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-20T23:20:19.831860", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T23:20:19.837798", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-20T23:20:22.283412", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T23:20:22.285080", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-20T23:23:11.901263", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T23:23:11.903213", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-20T23:23:14.137753", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T23:23:14.139550", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-20T23:24:47.738234", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T23:24:47.740750", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-20T23:24:51.105398", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T23:24:51.110510", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-20T23:26:06.470940", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T23:26:06.480946", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-20T23:26:08.320563", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T23:26:08.323207", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-20T23:47:17.965006", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T23:47:17.989805", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-20T23:47:36.674445", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T23:47:36.687052", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-20T23:54:09.550136", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T23:54:09.558323", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-20T23:54:10.909400", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T23:54:10.914026", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-20T23:55:34.333761", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T23:55:34.339474", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-20T23:55:36.006672", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T23:55:36.009779", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-20T23:57:02.585428", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T23:57:02.605167", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-20T23:57:04.314332", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T23:57:04.321900", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-20T23:59:26.415266", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T23:59:26.421293", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-20T23:59:29.375775", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-20T23:59:29.414123", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-21T00:01:09.562971", "channel": "email", "subject": "\ud83d\udd2e Automated Inference Complete", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-21T00:02:58.038267", "channel": "email", "subject": "Test Email \u2014 SMTP Configuration Verified \u2705", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-21T00:03:01.576532", "channel": "email", "subject": "Test Email \u2014 SMTP Configuration Verified \u2705", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-21T08:18:19.619238", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-21T08:18:19.632403", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-21T08:18:20.781480", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-21T08:18:20.784184", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-21T08:18:46.460708", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-21T08:18:46.477300", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-21T08:18:47.653762", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-21T08:18:47.657950", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-21T08:29:12.986816", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-21T08:29:12.991554", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-21T08:29:14.087260", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-21T08:29:14.090312", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-21T08:31:50.918352", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-21T08:31:50.925334", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-21T08:31:52.114465", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-21T08:31:52.129345", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-21T12:12:47.924535", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-21T12:12:47.985966", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-21T12:12:50.603205", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-21T12:12:50.608738", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-21T11:12:56.740186", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-21T11:12:56.767336", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-21T11:12:58.292174", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-21T11:12:58.310436", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-25T19:00:23.731244", "channel": "email", "subject": "\ud83d\udd2e Automated Inference Complete", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-25T19:02:04.186024", "channel": "email", "subject": "Test Email \u2014 SMTP Configuration Verified \u2705", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-25T19:02:47.588699", "channel": "email", "subject": "Test Email \u2014 SMTP Configuration Verified \u2705", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-25T19:13:08.572235", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-25T19:13:08.582437", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-25T19:13:10.222221", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-25T19:13:10.237382", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-25T19:14:00.904953", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-25T19:14:00.920398", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-25T19:14:02.610039", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-25T19:14:02.616546", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-25T19:17:50.008126", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-25T19:17:50.016113", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-25T19:17:51.578873", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-25T19:17:51.585069", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-25T19:20:57.259763", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-25T19:20:57.268082", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-25T19:20:59.192985", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-25T19:20:59.200717", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-25T19:22:13.470691", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-25T19:22:13.478522", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-25T19:22:15.008151", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-25T19:22:15.015310", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-25T19:23:06.032723", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-25T19:23:06.040860", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-25T19:23:07.557980", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-25T19:23:07.569310", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-25T19:23:40.366996", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-25T19:23:40.384745", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-25T19:23:46.990432", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-25T19:23:47.001448", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-25T19:33:44.343555", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-25T19:33:44.351488", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-25T19:33:46.051115", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-25T19:33:46.058714", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-25T19:34:35.537947", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-25T19:34:35.549757", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-25T19:34:39.055444", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-25T19:34:39.072172", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-25T19:39:26.489781", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-25T19:39:26.506334", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-25T19:39:28.142917", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-25T19:39:28.158159", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-25T19:43:14.755232", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-25T19:43:14.787684", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-25T19:43:16.401012", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-25T19:43:16.416915", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T01:52:52.632092", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "failed", "detail": "[Errno -2] Name or service not known"}
+{"timestamp": "2026-04-26T01:52:52.881882", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T01:52:53.052173", "channel": "email", "subject": "ML Pipeline Success", "status": "failed", "detail": "[Errno -2] Name or service not known"}
+{"timestamp": "2026-04-26T06:55:05.434126", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T06:55:05.437735", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T06:55:06.906806", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T06:55:06.927124", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T06:57:35.196028", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T06:57:35.230905", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T06:57:36.588525", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T06:57:36.591224", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T06:59:12.449463", "channel": "email", "subject": "\ud83d\udd2e Automated Inference Complete", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T07:00:10.650330", "channel": "email", "subject": "\ud83d\udd2e Automated Inference Complete", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T07:01:05.553007", "channel": "email", "subject": "Test Email \u2014 SMTP Configuration Verified \u2705", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T07:01:46.943922", "channel": "email", "subject": "Test Email \u2014 SMTP Configuration Verified \u2705", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T07:02:03.642918", "channel": "email", "subject": "Test Email \u2014 SMTP Configuration Verified \u2705", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T07:02:18.669304", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T07:02:18.671967", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T07:02:20.121280", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T07:02:20.127728", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T07:02:45.570928", "channel": "email", "subject": "Test Email \u2014 SMTP Configuration Verified \u2705", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T07:05:31.177170", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T07:05:31.181243", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T07:05:32.636207", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T07:05:32.639418", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T07:09:42.535571", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T07:09:42.541827", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T07:09:44.006669", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T07:09:44.011362", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T07:10:39.439154", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T07:10:39.481604", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T07:10:41.118784", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T07:10:41.141739", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T07:13:21.109816", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T07:13:21.117127", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T07:13:22.450080", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T07:13:22.458813", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T07:13:51.535073", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T07:13:51.537837", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T07:13:53.673625", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T07:13:53.681739", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T07:14:27.349566", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T07:14:27.359772", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T07:14:28.887832", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T07:14:28.890116", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T07:23:24.046777", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T07:23:24.050317", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T07:23:25.486624", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T07:23:25.488828", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T07:29:12.102784", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T07:29:12.106649", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T07:29:13.524334", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T07:29:13.527140", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T07:32:19.954748", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T07:32:19.958739", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T07:32:21.324297", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T07:32:21.325647", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T07:37:00.285236", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T07:37:00.287288", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T07:37:01.662325", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T07:37:01.663764", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T07:40:18.694083", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T07:40:18.699277", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T07:40:20.046191", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T07:40:20.047728", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T07:48:34.586768", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T07:48:34.588693", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T07:48:36.100805", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T07:48:36.102182", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T07:55:27.485112", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T07:55:27.495131", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T07:55:29.832140", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T07:55:29.833886", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T07:58:37.763127", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T07:58:37.766948", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T07:58:40.194018", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T07:58:40.197101", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T07:59:51.842916", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T07:59:51.845142", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T07:59:53.331525", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T07:59:53.334723", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T08:00:11.547183", "channel": "email", "subject": "\ud83d\udd2e Automated Inference Complete", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T08:02:04.393765", "channel": "email", "subject": "Test Email \u2014 SMTP Configuration Verified \u2705", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T08:02:45.645483", "channel": "email", "subject": "Test Email \u2014 SMTP Configuration Verified \u2705", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T08:08:07.406108", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T08:08:07.410599", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T08:08:08.843408", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T08:08:08.846137", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T08:08:12.677696", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T08:08:12.679595", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T08:08:15.101418", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T08:08:15.103091", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T08:14:33.641269", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T08:14:33.651090", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T08:14:34.955514", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T08:14:34.956840", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T08:18:45.634239", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T08:18:45.637923", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T08:18:46.927852", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T08:18:46.930532", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T08:22:53.397426", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T08:22:53.400470", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T08:22:54.931422", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T08:22:54.932940", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T08:30:31.949658", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T08:30:31.951967", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T08:30:33.486289", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T08:30:33.487616", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T08:30:59.905156", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T08:30:59.907168", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T08:31:01.293932", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T08:31:01.295453", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T08:38:13.508553", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T08:38:13.515640", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T08:38:15.112805", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T08:38:15.114306", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T08:43:50.795902", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T08:43:50.801885", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T08:43:52.137194", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T08:43:52.146517", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T08:45:12.626986", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T08:45:12.630774", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T08:45:14.146778", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T08:45:14.149330", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T08:53:52.055034", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T08:53:52.060583", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T08:53:53.456206", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T08:53:53.458561", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T08:54:11.432534", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T08:54:11.434490", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T08:54:13.034368", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T08:54:13.035848", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T09:00:09.155227", "channel": "email", "subject": "\ud83d\udd2e Automated Inference Complete", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T09:02:03.712275", "channel": "email", "subject": "Test Email \u2014 SMTP Configuration Verified \u2705", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T09:02:45.518394", "channel": "email", "subject": "Test Email \u2014 SMTP Configuration Verified \u2705", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T09:05:38.686138", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T09:05:38.718277", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T09:05:40.098703", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T09:05:40.101156", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T09:05:58.665895", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T09:05:58.669250", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T09:06:00.038176", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T09:06:00.040997", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T09:09:44.599024", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T09:09:44.613979", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T09:09:46.101117", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T09:09:46.114072", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T09:14:39.928123", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T09:14:39.930976", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T09:14:41.693427", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T09:14:41.695191", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T09:19:45.213096", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T09:19:45.216492", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T09:19:46.809461", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T09:19:46.811839", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T09:25:11.942110", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T09:25:11.945625", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T09:25:14.174940", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T09:25:14.176380", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T09:29:36.598540", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T09:29:36.601217", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T09:29:38.820998", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T09:29:38.822742", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T09:32:15.618240", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T09:32:15.620102", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T09:32:17.063348", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T09:32:17.067687", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T09:39:05.063251", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T09:39:05.066726", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T09:39:06.531157", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T09:39:06.535450", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T09:44:16.586941", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T09:44:16.588717", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T09:44:17.970907", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T09:44:17.977937", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T09:44:23.507633", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T09:44:23.509428", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T09:44:24.905880", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T09:44:24.907460", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T09:51:43.787904", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T09:51:43.790941", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T09:51:45.394436", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T09:51:45.400375", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T10:00:09.802366", "channel": "email", "subject": "\ud83d\udd2e Automated Inference Complete", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T10:01:17.311662", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T10:01:17.314722", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T10:01:18.835354", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T10:01:18.843727", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T10:02:03.610380", "channel": "email", "subject": "Test Email \u2014 SMTP Configuration Verified \u2705", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T10:02:45.875975", "channel": "email", "subject": "Test Email \u2014 SMTP Configuration Verified \u2705", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T10:03:13.238095", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T10:03:13.239823", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T10:03:14.676785", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T10:03:14.678217", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T10:04:17.719174", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T10:04:17.722426", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T10:04:20.010996", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T10:04:20.012911", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T10:07:11.797909", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T10:07:11.799984", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T10:07:13.404494", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T10:07:13.407862", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T10:15:53.881657", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T10:15:53.889024", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T10:15:55.509171", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T10:15:55.521775", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T10:16:36.102227", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T10:16:36.104109", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T10:16:37.633051", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T10:16:37.634446", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T10:25:54.733974", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T10:25:54.738034", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T10:25:57.740725", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T10:25:57.742804", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T10:26:03.023528", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T10:26:03.026274", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T10:26:04.454601", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T10:26:04.459854", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T10:29:44.110316", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T10:29:44.112289", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T10:29:45.472147", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T10:29:45.473885", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T10:39:53.702581", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T10:39:53.708128", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T10:39:55.188760", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T10:39:55.190579", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T10:43:28.125995", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T10:43:28.129608", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T10:43:29.585034", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T10:43:29.588136", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T10:46:16.313374", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T10:46:16.315552", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T10:46:17.719804", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T10:46:17.721192", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T10:53:03.347116", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T10:53:03.348986", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T10:53:04.621205", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T10:53:04.622663", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T10:54:15.417512", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T10:54:15.419802", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T10:54:16.849589", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T10:54:16.856016", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T11:00:10.557273", "channel": "email", "subject": "\ud83d\udd2e Automated Inference Complete", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T11:02:03.578302", "channel": "email", "subject": "Test Email \u2014 SMTP Configuration Verified \u2705", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T11:02:45.591365", "channel": "email", "subject": "Test Email \u2014 SMTP Configuration Verified \u2705", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T11:08:10.395612", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T11:08:10.399119", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T11:08:11.845798", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T11:08:11.848344", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T11:08:13.087393", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T11:08:13.089577", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T11:08:14.611551", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T11:08:14.613461", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T11:09:00.084687", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T11:09:00.086694", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T11:09:01.510940", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T11:09:01.517018", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T11:11:00.503882", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T11:11:00.505713", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T11:11:01.920499", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T11:11:01.921886", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T15:02:19.461995", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T15:02:19.472842", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T15:02:21.029118", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T15:02:21.033377", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T15:02:36.098824", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T15:02:36.131409", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T15:02:37.689174", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T15:02:37.709757", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T15:14:21.313132", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T15:14:21.329603", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T15:14:23.051031", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T15:14:23.054843", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T15:30:09.749237", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T15:30:09.765513", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T15:30:11.320335", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T15:30:11.330447", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T15:35:05.734230", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T15:35:05.738037", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T15:35:07.761892", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T15:35:07.765762", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T15:39:11.329218", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T15:39:11.337269", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T15:39:13.002959", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T15:39:13.009112", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T15:41:10.347898", "channel": "email", "subject": "\ud83d\udd2e Automated Inference Complete", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T15:42:51.362726", "channel": "email", "subject": "Test Email \u2014 SMTP Configuration Verified \u2705", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T15:43:05.781218", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T15:43:05.791397", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T15:43:08.221057", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T15:43:08.231142", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T15:43:32.977249", "channel": "email", "subject": "Test Email \u2014 SMTP Configuration Verified \u2705", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T15:44:03.793530", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T15:44:03.800786", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T15:44:05.252866", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T15:44:05.258312", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T15:50:57.420944", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T15:50:57.424693", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T15:50:59.247361", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T15:50:59.260644", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T15:54:48.729747", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T15:54:48.739152", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T15:54:50.357014", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T15:54:50.362507", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T16:00:24.777193", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T16:00:24.785230", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T16:00:25.893100", "channel": "email", "subject": "\ud83d\udd2e Automated Inference Complete", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T16:00:26.459857", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T16:00:26.466204", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T16:02:04.038775", "channel": "email", "subject": "Test Email \u2014 SMTP Configuration Verified \u2705", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T16:02:45.858903", "channel": "email", "subject": "Test Email \u2014 SMTP Configuration Verified \u2705", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T16:03:35.617943", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T16:03:35.624969", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T16:03:37.620572", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T16:03:37.628407", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T16:06:30.321520", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T16:06:30.373651", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T16:06:32.741341", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T16:06:32.762073", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T16:07:02.644327", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T16:07:02.654472", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T16:07:04.260219", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T16:07:04.267501", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T16:07:30.695358", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T16:07:30.706610", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T16:07:32.345540", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T16:07:32.350129", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T16:10:45.707547", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T16:10:45.716610", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T16:10:47.615229", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T16:10:47.619831", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T16:15:36.314323", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T16:15:36.326516", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T16:15:38.567681", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T16:15:38.578634", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T16:26:14.303712", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T16:26:14.313858", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T16:26:15.868128", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T16:26:15.875739", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T16:29:12.423515", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T16:29:12.436640", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T16:29:14.198451", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T16:29:14.201608", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T16:30:37.788774", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T16:30:37.797636", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T16:30:39.356882", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T16:30:39.437700", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T16:38:35.417989", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T16:38:35.465091", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T16:38:37.107647", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T16:38:37.156563", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T16:42:15.865071", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T16:42:15.900480", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T16:42:17.537692", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T16:42:17.552783", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T16:44:46.384311", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T16:44:46.391681", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T16:44:47.884394", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T16:44:47.893670", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T16:49:06.868717", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T16:49:06.874139", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T16:49:09.203215", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T16:49:09.209400", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T16:52:05.959467", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T16:52:05.978180", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T16:52:08.044572", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T16:52:08.054287", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T16:57:31.832777", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T16:57:31.836217", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T16:57:33.277436", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T16:57:33.280411", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T17:00:17.706388", "channel": "email", "subject": "\ud83d\udd2e Automated Inference Complete", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T17:00:25.902955", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T17:00:27.398742", "channel": "email", "subject": "Data Drift Detected \u2014 transport", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T17:00:27.402942", "channel": "all", "subject": "Data Drift Detected \u2014 transport", "status": "dispatched", "detail": "level=warning"}
+{"timestamp": "2026-04-26T17:00:28.035448", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T17:00:29.689269", "channel": "email", "subject": "Data Drift Detected \u2014 transition", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T17:00:29.707814", "channel": "all", "subject": "Data Drift Detected \u2014 transition", "status": "dispatched", "detail": "level=warning"}
+{"timestamp": "2026-04-26T17:00:30.167737", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T17:00:31.889450", "channel": "email", "subject": "Data Drift Detected \u2014 interieur", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T17:00:31.891663", "channel": "all", "subject": "Data Drift Detected \u2014 interieur", "status": "dispatched", "detail": "level=warning"}
+{"timestamp": "2026-04-26T17:02:03.626975", "channel": "email", "subject": "Test Email \u2014 SMTP Configuration Verified \u2705", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T17:02:45.845563", "channel": "email", "subject": "Test Email \u2014 SMTP Configuration Verified \u2705", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T17:04:15.685451", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T17:04:15.688164", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T17:04:17.331516", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T17:04:17.349499", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T17:04:55.884643", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T17:04:55.892741", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T17:04:57.397083", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T17:04:57.401651", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T17:05:02.240161", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T17:05:02.246579", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T17:05:03.660439", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T17:05:03.662363", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T17:10:29.947897", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T17:10:29.953825", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T17:10:31.803466", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T17:10:31.816071", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T17:20:57.455605", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T17:20:57.542691", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T17:20:59.318410", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T17:20:59.320811", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T17:21:11.880832", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T17:21:11.885932", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T17:21:13.635067", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T17:21:13.675046", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T17:24:34.793054", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T17:24:34.863026", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T17:24:36.570136", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T17:24:36.571995", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T17:25:54.450637", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T17:25:54.456669", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T17:25:56.012498", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T17:25:56.025267", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T17:34:06.580851", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T17:34:06.729770", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T17:34:08.752970", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T17:34:08.798799", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T17:37:08.579322", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T17:37:08.587617", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T17:37:10.287140", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T17:37:10.291147", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T17:39:53.930583", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T17:39:54.029918", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T17:39:55.779959", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T17:39:55.879397", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T17:47:52.508375", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T17:47:52.512096", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T17:47:54.029390", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T17:47:54.032661", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T17:47:59.371913", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T17:47:59.380816", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T17:48:02.648923", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T17:48:02.650529", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T17:55:56.255640", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T17:55:56.261573", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T17:55:57.660798", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T17:55:57.662277", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T17:56:21.697580", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T17:56:21.700376", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T17:56:23.098791", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T17:56:23.100200", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T18:00:14.521720", "channel": "email", "subject": "\ud83d\udd2e Automated Inference Complete", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T18:02:03.665230", "channel": "email", "subject": "Test Email \u2014 SMTP Configuration Verified \u2705", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T18:02:46.074329", "channel": "email", "subject": "Test Email \u2014 SMTP Configuration Verified \u2705", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T18:12:35.662678", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T18:12:35.681105", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T18:12:37.267696", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T18:12:37.276467", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T18:13:31.562103", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T18:13:31.569247", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T18:13:34.166802", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T18:13:34.178180", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T18:20:10.788791", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T18:20:10.803801", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T18:20:12.303625", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T18:20:12.313440", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T18:31:14.754530", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T18:31:14.765864", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T18:31:16.295066", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T18:31:16.302804", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T18:32:31.964391", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T18:32:31.974825", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T18:32:33.413365", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T18:32:33.424884", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T18:32:39.342063", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T18:32:39.350749", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T18:32:40.866957", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T18:32:40.873563", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T18:34:32.606116", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T18:34:32.611823", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T18:34:34.364290", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T18:34:34.369648", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T18:39:48.462948", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T18:39:48.471426", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T18:39:50.468555", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T18:39:50.496358", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T18:41:56.843022", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T18:41:56.849963", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T18:41:58.552975", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T18:41:58.558359", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T18:44:49.481992", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T18:44:49.505948", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T18:44:50.971749", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T18:44:50.982357", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T18:49:53.398648", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T18:49:53.411358", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T18:49:54.866495", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T18:49:54.869376", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T19:00:27.312939", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T19:00:29.248970", "channel": "email", "subject": "Data Drift Detected \u2014 transport", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T19:00:29.253341", "channel": "all", "subject": "Data Drift Detected \u2014 transport", "status": "dispatched", "detail": "level=warning"}
+{"timestamp": "2026-04-26T19:00:30.540249", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T19:00:32.362060", "channel": "email", "subject": "Data Drift Detected \u2014 transition", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T19:00:32.374874", "channel": "all", "subject": "Data Drift Detected \u2014 transition", "status": "dispatched", "detail": "level=warning"}
+{"timestamp": "2026-04-26T19:00:33.797165", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T19:00:35.354970", "channel": "email", "subject": "Data Drift Detected \u2014 interieur", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T19:00:35.370338", "channel": "all", "subject": "Data Drift Detected \u2014 interieur", "status": "dispatched", "detail": "level=warning"}
+{"timestamp": "2026-04-26T19:00:43.749753", "channel": "email", "subject": "\ud83d\udd2e Automated Inference Complete", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T19:02:05.864389", "channel": "email", "subject": "Test Email \u2014 SMTP Configuration Verified \u2705", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T19:02:45.881445", "channel": "email", "subject": "Test Email \u2014 SMTP Configuration Verified \u2705", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T19:04:06.092538", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T19:04:06.105364", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T19:04:07.677235", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T19:04:07.683862", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T19:08:44.204864", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T19:08:44.215506", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T19:08:45.770335", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T19:08:45.775232", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T19:13:12.400678", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T19:13:12.405355", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T19:13:13.899493", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T19:13:13.911902", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}
+{"timestamp": "2026-04-26T19:13:45.273199", "channel": "email", "subject": "\u2705 ML Pipeline Report \u2014 4/4 Ministries OK", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T19:13:45.320916", "channel": "slack", "subject": "alert", "status": "skipped", "detail": "No SLACK_WEBHOOK_URL"}
+{"timestamp": "2026-04-26T19:13:46.951153", "channel": "email", "subject": "ML Pipeline Success", "status": "sent", "detail": "To: ['emna.awini.work@gmail.com']"}
+{"timestamp": "2026-04-26T19:13:46.955674", "channel": "all", "subject": "ML Pipeline Success", "status": "dispatched", "detail": "level=success"}

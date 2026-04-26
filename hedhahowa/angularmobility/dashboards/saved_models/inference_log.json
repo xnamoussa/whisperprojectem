@@ -1,0 +1,647 @@
+{
+    "pipeline_type": "inference",
+    "timestamp": "2026-04-26T19:00:02.292093",
+    "ministries": [
+        "transport",
+        "transition",
+        "interieur",
+        "amenagement"
+    ],
+    "predictions": {
+        "transport": {
+            "status": "success",
+            "data": {
+                "classification_GradientBoosting": {
+                    "count": 200,
+                    "positive_pct": 54.0,
+                    "sample": [
+                        0,
+                        1,
+                        1,
+                        1,
+                        0,
+                        1,
+                        1,
+                        1,
+                        0,
+                        1
+                    ]
+                },
+                "classification_LogisticRegression": {
+                    "count": 200,
+                    "positive_pct": 54.0,
+                    "sample": [
+                        0,
+                        1,
+                        1,
+                        1,
+                        0,
+                        1,
+                        1,
+                        1,
+                        0,
+                        1
+                    ]
+                },
+                "classification_RandomForestClassifier": {
+                    "count": 200,
+                    "positive_pct": 54.5,
+                    "sample": [
+                        0,
+                        1,
+                        1,
+                        1,
+                        0,
+                        1,
+                        1,
+                        1,
+                        0,
+                        1
+                    ]
+                },
+                "regression_Lasso": {
+                    "count": 200,
+                    "mean": 113.76,
+                    "std": 66.03,
+                    "sample": [
+                        83.47,
+                        149.09,
+                        175.51,
+                        181.93,
+                        3.56,
+                        154.94,
+                        172.8,
+                        170.12,
+                        62.97,
+                        123.18
+                    ]
+                },
+                "regression_RandomForestRegressor": {
+                    "count": 200,
+                    "mean": 113.64,
+                    "std": 65.98,
+                    "sample": [
+                        83.5,
+                        151.41,
+                        174.64,
+                        184.7,
+                        2.08,
+                        157.09,
+                        172.37,
+                        169.97,
+                        60.06,
+                        123.48
+                    ]
+                },
+                "regression_Ridge": {
+                    "count": 200,
+                    "mean": 113.97,
+                    "std": 66.64,
+                    "sample": [
+                        87.01,
+                        144.91,
+                        174.99,
+                        177.12,
+                        12.77,
+                        153.43,
+                        175.76,
+                        169.26,
+                        61.75,
+                        123.23
+                    ]
+                },
+                "regression_XGBoostRegressor": {
+                    "count": 200,
+                    "mean": 113.65,
+                    "std": 66.01,
+                    "sample": [
+                        83.64,
+                        149.59,
+                        176.99,
+                        179.98,
+                        5.34,
+                        155.96,
+                        173.46,
+                        168.32,
+                        61.05,
+                        123.98
+                    ]
+                },
+                "forecast_ARIMA": {
+                    "horizon": 12,
+                    "values": [
+                        146.28,
+                        146.72,
+                        146.46,
+                        146.62,
+                        146.52,
+                        146.58,
+                        146.54,
+                        146.56,
+                        146.55,
+                        146.56,
+                        146.56,
+                        146.56
+                    ]
+                },
+                "forecast_SARIMA": {
+                    "horizon": 12,
+                    "values": [
+                        151.7,
+                        153.09,
+                        159.0,
+                        161.37,
+                        161.51,
+                        159.06,
+                        152.85,
+                        151.53,
+                        142.85,
+                        147.56,
+                        146.16,
+                        152.16
+                    ]
+                },
+                "forecast_XGBoost TS": {
+                    "note": "Model loaded but no forecast method"
+                }
+            }
+        },
+        "transition": {
+            "status": "success",
+            "data": {
+                "classification_GradientBoosting": {
+                    "count": 200,
+                    "positive_pct": 45.0,
+                    "sample": [
+                        1,
+                        0,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        0,
+                        1,
+                        1
+                    ]
+                },
+                "classification_LogisticRegression": {
+                    "count": 200,
+                    "positive_pct": 46.0,
+                    "sample": [
+                        1,
+                        0,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        0,
+                        1,
+                        1
+                    ]
+                },
+                "classification_RandomForestClassifier": {
+                    "count": 200,
+                    "positive_pct": 45.5,
+                    "sample": [
+                        1,
+                        0,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        0,
+                        1,
+                        1
+                    ]
+                },
+                "regression_Lasso": {
+                    "count": 200,
+                    "mean": 111.29,
+                    "std": 63.13,
+                    "sample": [
+                        115.88,
+                        73.19,
+                        70.44,
+                        180.42,
+                        102.09,
+                        131.74,
+                        68.85,
+                        26.39,
+                        174.76,
+                        132.77
+                    ]
+                },
+                "regression_RandomForestRegressor": {
+                    "count": 200,
+                    "mean": 110.76,
+                    "std": 63.3,
+                    "sample": [
+                        125.89,
+                        74.35,
+                        69.02,
+                        179.5,
+                        100.32,
+                        129.32,
+                        66.44,
+                        26.4,
+                        170.17,
+                        131.12
+                    ]
+                },
+                "regression_Ridge": {
+                    "count": 200,
+                    "mean": 111.04,
+                    "std": 63.33,
+                    "sample": [
+                        111.11,
+                        70.56,
+                        70.54,
+                        176.54,
+                        102.18,
+                        130.45,
+                        68.6,
+                        27.7,
+                        174.64,
+                        128.07
+                    ]
+                },
+                "regression_XGBoostRegressor": {
+                    "count": 200,
+                    "mean": 110.95,
+                    "std": 63.43,
+                    "sample": [
+                        121.03,
+                        71.37,
+                        71.12,
+                        179.41,
+                        96.91,
+                        136.13,
+                        66.33,
+                        28.0,
+                        174.97,
+                        134.14
+                    ]
+                },
+                "forecast_ARIMA": {
+                    "horizon": 12,
+                    "values": [
+                        146.77,
+                        147.32,
+                        146.95,
+                        147.2,
+                        147.03,
+                        147.14,
+                        147.07,
+                        147.12,
+                        147.08,
+                        147.11,
+                        147.09,
+                        147.1
+                    ]
+                },
+                "forecast_SARIMA": {
+                    "horizon": 12,
+                    "values": [
+                        151.13,
+                        155.5,
+                        157.79,
+                        160.83,
+                        157.97,
+                        155.86,
+                        151.34,
+                        151.4,
+                        146.09,
+                        146.67,
+                        147.42,
+                        150.42
+                    ]
+                },
+                "forecast_XGBoost TS": {
+                    "note": "Model loaded but no forecast method"
+                }
+            }
+        },
+        "interieur": {
+            "status": "success",
+            "data": {
+                "classification_GradientBoosting": {
+                    "count": 200,
+                    "positive_pct": 52.0,
+                    "sample": [
+                        1,
+                        1,
+                        1,
+                        1,
+                        0,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                "classification_LogisticRegression": {
+                    "count": 200,
+                    "positive_pct": 52.5,
+                    "sample": [
+                        1,
+                        1,
+                        1,
+                        1,
+                        0,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                "classification_RandomForestClassifier": {
+                    "count": 200,
+                    "positive_pct": 53.0,
+                    "sample": [
+                        1,
+                        1,
+                        1,
+                        1,
+                        0,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                "regression_Lasso": {
+                    "count": 200,
+                    "mean": 118.04,
+                    "std": 63.98,
+                    "sample": [
+                        134.99,
+                        145.07,
+                        170.83,
+                        218.96,
+                        16.45,
+                        150.59,
+                        160.31,
+                        138.54,
+                        182.3,
+                        133.41
+                    ]
+                },
+                "regression_RandomForestRegressor": {
+                    "count": 200,
+                    "mean": 117.87,
+                    "std": 64.31,
+                    "sample": [
+                        130.78,
+                        146.75,
+                        168.94,
+                        217.16,
+                        17.03,
+                        149.05,
+                        161.08,
+                        130.05,
+                        182.35,
+                        128.77
+                    ]
+                },
+                "regression_Ridge": {
+                    "count": 200,
+                    "mean": 118.12,
+                    "std": 64.33,
+                    "sample": [
+                        137.48,
+                        139.43,
+                        173.3,
+                        223.73,
+                        17.08,
+                        150.12,
+                        162.09,
+                        144.61,
+                        182.99,
+                        133.83
+                    ]
+                },
+                "regression_XGBoostRegressor": {
+                    "count": 200,
+                    "mean": 117.88,
+                    "std": 64.28,
+                    "sample": [
+                        132.31,
+                        146.99,
+                        168.07,
+                        216.82,
+                        17.49,
+                        148.71,
+                        161.47,
+                        135.51,
+                        180.71,
+                        131.4
+                    ]
+                },
+                "forecast_ARIMA": {
+                    "horizon": 12,
+                    "values": [
+                        146.6,
+                        147.73,
+                        147.11,
+                        147.45,
+                        147.26,
+                        147.37,
+                        147.31,
+                        147.34,
+                        147.32,
+                        147.33,
+                        147.33,
+                        147.33
+                    ]
+                },
+                "forecast_SARIMA": {
+                    "horizon": 12,
+                    "values": [
+                        148.89,
+                        156.26,
+                        160.52,
+                        156.47,
+                        156.41,
+                        155.42,
+                        154.23,
+                        151.45,
+                        149.51,
+                        148.82,
+                        146.64,
+                        153.59
+                    ]
+                },
+                "forecast_XGBoost TS": {
+                    "note": "Model loaded but no forecast method"
+                }
+            }
+        },
+        "amenagement": {
+            "status": "success",
+            "data": {
+                "classification_GradientBoosting": {
+                    "count": 200,
+                    "positive_pct": 46.0,
+                    "sample": [
+                        0,
+                        1,
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                "classification_LogisticRegression": {
+                    "count": 200,
+                    "positive_pct": 46.5,
+                    "sample": [
+                        0,
+                        1,
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                "classification_RandomForestClassifier": {
+                    "count": 200,
+                    "positive_pct": 47.5,
+                    "sample": [
+                        0,
+                        1,
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                "regression_Lasso": {
+                    "count": 200,
+                    "mean": 113.69,
+                    "std": 65.31,
+                    "sample": [
+                        21.81,
+                        176.32,
+                        130.52,
+                        1.98,
+                        71.4,
+                        97.35,
+                        61.57,
+                        188.85,
+                        224.59,
+                        164.21
+                    ]
+                },
+                "regression_RandomForestRegressor": {
+                    "count": 200,
+                    "mean": 113.92,
+                    "std": 65.54,
+                    "sample": [
+                        22.51,
+                        174.85,
+                        129.84,
+                        1.47,
+                        73.67,
+                        102.14,
+                        66.79,
+                        187.08,
+                        227.97,
+                        162.09
+                    ]
+                },
+                "regression_Ridge": {
+                    "count": 200,
+                    "mean": 113.49,
+                    "std": 65.87,
+                    "sample": [
+                        14.16,
+                        173.25,
+                        129.07,
+                        -3.15,
+                        74.1,
+                        99.92,
+                        56.4,
+                        192.75,
+                        224.95,
+                        159.1
+                    ]
+                },
+                "regression_XGBoostRegressor": {
+                    "count": 200,
+                    "mean": 113.92,
+                    "std": 66.03,
+                    "sample": [
+                        24.1,
+                        174.6,
+                        128.7,
+                        1.44,
+                        72.5,
+                        105.81,
+                        67.58,
+                        189.16,
+                        230.7,
+                        163.08
+                    ]
+                },
+                "forecast_ARIMA": {
+                    "horizon": 12,
+                    "values": [
+                        140.6,
+                        140.77,
+                        140.61,
+                        140.77,
+                        140.61,
+                        140.76,
+                        140.62,
+                        140.76,
+                        140.62,
+                        140.75,
+                        140.63,
+                        140.75
+                    ]
+                },
+                "forecast_SARIMA": {
+                    "horizon": 12,
+                    "values": [
+                        152.19,
+                        155.55,
+                        159.11,
+                        162.04,
+                        162.24,
+                        156.49,
+                        154.67,
+                        149.66,
+                        147.34,
+                        146.47,
+                        147.16,
+                        148.23
+                    ]
+                },
+                "forecast_XGBoost TS": {
+                    "note": "Model loaded but no forecast method"
+                }
+            }
+        }
+    },
+    "total_predictions": 5600,
+    "storage": "inference_log.json",
+    "duration_seconds": 39.778627
+}
