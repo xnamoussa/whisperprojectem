@@ -48,6 +48,11 @@ export class DashboardService {
     });
   }
 
+  runIndustrialPrediction(data: any) {
+    // Calling the containerized FastAPI service on port 8001
+    return this.http.post<any>('http://localhost:8001/predict', data);
+  }
+
   exportPrediction(ministry: string, format: 'pdf' | 'excel', payload: any) {
     return this.http.post(`${this.apiBase}/dashboard/${ministry}/predictions/export/?format=${format}`, payload, {
       responseType: 'blob',

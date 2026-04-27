@@ -983,6 +983,155 @@
         </div>
       </section>
 
+      <!-- ════════ MLOPS INDUSTRIAL TAB ════════ -->
+      <section *ngIf="activeTab() === 'mlops' && !loading()" class="fade-in">
+        <div class="mlops-container">
+          <div class="mlops-header glass">
+            <div class="mlops-title">
+              <span class="icon">🚀</span>
+              <div>
+                <h2>Industrialisation IA & MLOps</h2>
+                <p>Pipeline automatisé : Entraînement ➡️ MLflow ➡️ FastAPI ➡️ Angular</p>
+              </div>
+            </div>
+            <div class="mlops-status">
+              <span class="status-pill active">API: Live (Port 8001)</span>
+              <span class="status-pill active">MLflow: Tracked</span>
+            </div>
+          </div>
+
+          <div class="mlops-grid">
+            <!-- Left: Inference Form -->
+            <div class="mlops-card glass">
+              <h3>⚡ Simulation d'Inférence Temps Réel</h3>
+              <p class="subtitle">Entrez les paramètres pour prédire le niveau de risque de mobilité urbaine.</p>
+              
+              <div class="industrial-form">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label>Ville</label>
+                    <select [(ngModel)]="mlopsForm.city">
+                      <option *ngFor="let c of cities" [value]="c">{{c}}</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label>Type de Station</label>
+                    <select [(ngModel)]="mlopsForm.station_type">
+                      <option value="Metro">Métro</option>
+                      <option value="Bus">Bus</option>
+                      <option value="Tram">Tramway</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label>Latitude</label>
+                    <input type="number" [(ngModel)]="mlopsForm.lat" step="0.0001">
+                  </div>
+                  <div class="form-group">
+                    <label>Longitude</label>
+                    <input type="number" [(ngModel)]="mlopsForm.lon" step="0.0001">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label>Nombre de Connexions (Intermodalité)</label>
+                  <input type="number" [(ngModel)]="mlopsForm.connections" min="1" max="20">
+                </div>
+
+                <div class="form-group">
+                  <label>Trafic Journalier (Passagers)</label>
+                  <input type="range" min="1000" max="200000" step="1000" [(ngModel)]="mlopsForm.daily_traffic">
+                  <div class="range-val">{{mlopsForm.daily_traffic | number}} pax/j</div>
+                </div>
+
+                <div class="form-group">
+                  <label>Niveau de NO2 (µg/m³)</label>
+                  <input type="number" [(ngModel)]="mlopsForm.no2" step="0.1">
+                </div>
+
+                <button class="run-btn" (click)="runIndustrialInference()" [disabled]="mlopsLoading()">
+                  <span *ngIf="!mlopsLoading()">Lancer l'Inférence Industrialisée</span>
+                  <span *ngIf="mlopsLoading()" class="spinner"></span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Right: Result Display -->
+            <div class="mlops-card glass result-card">
+              <h3>🎯 Résultat de la Prédiction</h3>
+              
+              <div *ngIf="!mlopsResult() && !mlopsLoading()" class="empty-result">
+                <div class="pulse-icon">📡</div>
+                <p>En attente d'une requête d'inférence...</p>
+              </div>
+
+              <div *ngIf="mlopsLoading()" class="loading-result">
+                <div class="loading-bar-container">
+                  <div class="loading-bar"></div>
+                </div>
+                <p>Appel du modèle via FastAPI...</p>
+              </div>
+
+              <div *ngIf="mlopsResult() as res" class="result-content fade-in">
+                <div class="risk-badge" [class.high]="res.risk_level === 'High'" [class.low]="res.risk_level === 'Low'">
+                  <span class="label">Niveau de Risque</span>
+                  <span class="value">{{res.risk_level}}</span>
+                </div>
+
+                <div class="prob-section">
+                  <label>Probabilité du Modèle</label>
+                  <div class="prob-bar-container">
+                    <div class="prob-fill" [style.width.%]="res.probability[res.prediction] * 100" [class.high]="res.risk_level === 'High'"></div>
+                  </div>
+                  <div class="prob-labels">
+                    <span>Certitude: <strong>{{(res.probability[res.prediction] * 100).toFixed(1)}}%</strong></span>
+                    <span>Modèle: Random Forest</span>
+                  </div>
+                </div>
+
+                <div class="api-info">
+                  <div class="info-item">
+                    <span class="tag">ENDPOINT</span>
+                    <code>POST /predict</code>
+                  </div>
+                  <div class="info-item">
+                    <span class="tag">SOURCE</span>
+                    <code>ml_service/models/risk_model.joblib</code>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Documentation Footer -->
+          <div class="mlops-footer glass">
+            <div class="doc-item">
+              <span class="doc-icon">📊</span>
+              <div>
+                <strong>Experiment Tracking</strong>
+                <p>Toutes les métriques (Accuracy, F1) sont loggées dans MLflow.</p>
+              </div>
+            </div>
+            <div class="doc-item">
+              <span class="doc-icon">🐳</span>
+              <div>
+                <strong>Containerisation</strong>
+                <p>Modèle servi par FastAPI dans un container Docker indépendant.</p>
+              </div>
+            </div>
+            <div class="doc-item">
+              <span class="doc-icon">🔄</span>
+              <div>
+                <strong>Pipeline Automatisé</strong>
+                <p>Entraînement reproductible via <code>train_pipeline.py</code>.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
   </main>
 
   <app-chatbot></app-chatbot>

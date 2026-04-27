@@ -1,0 +1,75 @@
+================================================================================
+SASA MOBILITY - WEEK S12 MLOPS VALIDATION GUIDE
+================================================================================
+
+This guide explicitly answers each of the 7 validation criteria requested by 
+your teacher. Use this to demonstrate your work.
+
+--------------------------------------------------------------------------------
+1. EXPERIMENT TRACKING (MLflow)
+--------------------------------------------------------------------------------
+- WHERE TO FIND IT: Open http://localhost:5000 in your browser, select 
+  "Urban_Mobility_Risk_Prediction" on the left, and click the "Runs" tab.
+- EXPLANATION: We implemented MLflow to track every training execution. 
+  You can see at least two runs logged with their specific hyperparameters 
+  (n_estimators, max_depth) and evaluation metrics (Accuracy, F1 Score). 
+  Clicking a run shows the "Artifacts" section where the physical model is saved.
+
+--------------------------------------------------------------------------------
+2. AUTOMATED TRAINING PIPELINE
+--------------------------------------------------------------------------------
+- WHERE TO FIND IT: Open the file `ml_service/train_pipeline.py`.
+- EXPLANATION: This script represents our end-to-end reproducible pipeline. 
+  Without manual intervention, it automatically generates/loads data, scales 
+  numeric values, encodes categorical values (preprocessing), trains a Random 
+  Forest classifier, evaluates the metrics, and saves the final model to both 
+  MLflow and the local disk.
+
+--------------------------------------------------------------------------------
+3. MODEL MANAGEMENT
+--------------------------------------------------------------------------------
+- WHERE TO FIND IT: Check the `ml_service/models/` and `ml_service/mlruns/` folders.
+- EXPLANATION: Every time the pipeline runs, a new versioned folder is created 
+  inside `mlruns/` keeping previous versions completely accessible via MLflow. 
+  The "best" or latest production model is explicitly exported to 
+  `models/risk_model.joblib` for the API to consume.
+
+--------------------------------------------------------------------------------
+4. MODEL SERVING (API)
+--------------------------------------------------------------------------------
+- WHERE TO FIND IT: Open http://localhost:8001/docs in your browser.
+- EXPLANATION: We built a functional FastAPI service that loads the saved model. 
+  The `/predict` endpoint accepts a JSON payload of urban mobility data (city, 
+  traffic, NO2 levels, etc.) and returns a predicted risk level (High/Low) 
+  along with the model's confidence probability. You can test it directly on 
+  the /docs page.
+
+--------------------------------------------------------------------------------
+5. CONTAINERIZATION
+--------------------------------------------------------------------------------
+- WHERE TO FIND IT: Open the `docker-compose.yml` file in the root folder.
+- EXPLANATION: The entire architecture is fully containerized. We have 
+  independent Docker services for the Backend, Frontend, MLflow server, and 
+  the FastAPI Model Serving API. They communicate seamlessly over a shared 
+  Docker network, ensuring the app runs flawlessly anywhere.
+
+--------------------------------------------------------------------------------
+6. CODE QUALITY
+--------------------------------------------------------------------------------
+- WHERE TO FIND IT: Across the `ml_service/` folder.
+- EXPLANATION: The code is highly modular. The ML training (`train_pipeline.py`) 
+  is strictly separated from the API serving (`main.py`). The API uses 
+  Pydantic models (`PredictionInput`) to strictly validate incoming data types, 
+  preventing major runtime errors and keeping the code clean and structured.
+
+--------------------------------------------------------------------------------
+7. WEB APP INTEGRATION
+--------------------------------------------------------------------------------
+- WHERE TO FIND IT: Open the Angular App at http://localhost:4200. Go to the 
+  Dashboard and click the "IA Industrialisée" tab (Rocket/Globe Icon).
+- EXPLANATION: We built a dedicated UI for the MLOps inference. When a user 
+  adjusts the sliders (like Daily Traffic or NO2) and clicks the run button, 
+  the Angular app sends an HTTP request to our FastAPI service. The API queries 
+  the Random Forest model and passes the prediction back to the UI, proving 
+  the full end-to-end pipeline works flawlessly.
+================================================================================
