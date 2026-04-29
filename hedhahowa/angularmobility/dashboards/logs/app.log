@@ -13035,3 +13035,8 @@ INFO 2026-04-21 09:25:35,046 log 24500 35304 "POST /api/dashboard/automation/ret
 INFO 2026-04-21 09:30:35,058 log 24500 20988 "POST /api/dashboard/automation/retrain/ HTTP/1.1" 200 212
 INFO 2026-04-21 12:12:39,593 log 24500 38004 "POST /api/dashboard/automation/retrain/ HTTP/1.1" 200 212
 WARNING 2026-04-26 22:42:15,094 log 77 126925702869760 Unauthorized: /api/auth/login/
+WARNING 2026-04-28 08:18:25,766 log 83 130043838391040 Unauthorized: /api/auth/login/
+WARNING 2026-04-28 08:18:59,453 log 83 130043838391040 Unauthorized: /api/auth/login/
+WARNING 2026-04-28 08:19:12,650 log 83 130043838391040 Unauthorized: /api/auth/login/
+WARNING 2026-04-28 08:19:59,931 log 84 130043838391040 Unauthorized: /api/auth/login/
+WARNING 2026-04-28 11:00:45,723 log 84 130043838391040 Unauthorized: /api/auth/me/
