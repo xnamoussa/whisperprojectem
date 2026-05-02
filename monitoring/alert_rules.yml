@@ -1,0 +1,38 @@
+groups:
+- name: ml_monitoring_alerts
+  rules:
+  - alert: HighLatency
+    expr: django_http_requests_latency_seconds_by_view_method_bucket{le="0.5"} / django_http_requests_latency_seconds_by_view_method_count < 0.5
+    for: 1m
+    labels:
+      severity: warning
+    annotations:
+      summary: "High Latency detected on {{ $labels.view }}"
+      description: "Average latency is above 500ms for more than 1 minute."
+
+  - alert: HighErrorRate
+    expr: rate(django_http_responses_total_by_status_view_method{status=~"5.."}[5m]) / rate(django_http_responses_total_by_status_view_method[5m]) > 0.05
+    for: 2m
+    labels:
+      severity: critical
+    annotations:
+      summary: "High Error Rate on {{ $labels.view }}"
+      description: "Error rate is above 5% for the last 2 minutes."
+
+  - alert: AccuracyDegradation
+    expr: ml_model_accuracy < 0.8
+    for: 5m
+    labels:
+      severity: critical
+    annotations:
+      summary: "Model accuracy drop for {{ $labels.ministry }}"
+      description: "Accuracy of {{ $labels.model_name }} is below 80%."
+
+  - alert: DataDriftDetected
+    expr: ml_data_drift_score > 0.2
+    for: 1m
+    labels:
+      severity: warning
+    annotations:
+      summary: "Data drift detected in {{ $labels.ministry }}"
+      description: "Feature {{ $labels.feature }} has drifted more than 20%."
