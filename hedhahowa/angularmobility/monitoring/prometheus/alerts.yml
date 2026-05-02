@@ -1,0 +1,47 @@
+groups:
+  - name: mobility-s13-alerts
+    rules:
+      - alert: MobilityHighLatency
+        expr: histogram_quantile(0.95, sum(rate(mobility_api_request_latency_seconds_bucket[2m])) by (le)) > 0.75
+        for: 1m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High API latency detected"
+          description: "P95 request latency is above 0.75s for more than 1 minute."
+
+      - alert: MobilityHighErrorRate
+        expr: (sum(rate(mobility_api_errors_total[2m])) / sum(rate(mobility_api_requests_total[2m]))) > 0.05
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "High API error rate"
+          description: "API error rate is above 5% for more than 1 minute."
+
+      - alert: MobilityAccuracyDegradation
+        expr: mobility_accuracy_degradation > 0
+        for: 30s
+        labels:
+          severity: critical
+        annotations:
+          summary: "Model accuracy degradation"
+          description: "Accuracy has dropped by more than 5% from baseline."
+
+      - alert: MobilityConfidenceDegradation
+        expr: mobility_confidence_degradation > 0
+        for: 30s
+        labels:
+          severity: warning
+        annotations:
+          summary: "Model confidence degradation"
+          description: "Prediction confidence has dropped below baseline threshold."
+
+      - alert: MobilityDataDriftDetected
+        expr: mobility_data_drift_detected > 0
+        for: 30s
+        labels:
+          severity: warning
+        annotations:
+          summary: "Data drift detected"
+          description: "Incoming feature distribution shifted beyond drift threshold."

@@ -1,0 +1,509 @@
+================================================================================
+SASA MOBILITY - WEEK S13 MONITORING VALIDATION GUIDE (UPDATED)
+================================================================================
+
+This guide explains every S13 requirement:
+- WHAT we implemented and what it does
+- WHERE to find it in the code
+- HOW to test and prove it works
+
+================================================================================
+1. PROMETHEUS MONITORING (/metrics + SCRAPING)
+================================================================================
+
+WHAT IT DOES:
+  Every request that hits the FastAPI ML service is automatically instrumented.
+  A custom HTTP middleware captures method, endpoint, status code, and duration
+  for each request, then updates Prometheus counters and histograms in memory.
+  The /metrics endpoint serializes all metrics into the Prometheus text format
+  and serves them on demand. Prometheus scrapes this endpoint every 10 seconds.
+
+WHERE TO FIND IT:
+  - `ml_service/main.py`
+      Lines 41-56: HTTP middleware that instruments every route automatically.
+      Lines 99-102: The /metrics GET endpoint.
+  - `ml_service/monitoring.py`
+      Lines 8-106: All metric definitions (Counters, Gauges, Histograms).
+      Lines 153-157: update_request_metrics() called by the middleware.
+  - `monitoring/prometheus/prometheus.yml`
+      scrape_interval: 10s
+      target: ml-api:8000 (internal Docker hostname)
+  - `docker-compose.yml`
+      Lines 90-102: Prometheus container with volume mounts for config + alerts.
+
+METRICS EXPOSED:
+  - mobility_api_requests_total        (Counter, labels: method/endpoint/status)
+  - mobility_api_request_latency_seconds (Histogram, labels: method/endpoint)
+  - mobility_api_errors_total          (Counter, labels: endpoint/status_code)
+  - mobility_model_loaded              (Gauge: 1=loaded, 0=not found)
+  - mobility_predictions_total         (Counter, labels: risk_level)
+  - mobility_prediction_confidence     (Histogram)
+  - mobility_prediction_confidence_avg (Gauge: rolling average)
+  - mobility_data_missing_values       (Gauge)
+  - mobility_data_freshness_seconds    (Gauge)
+  - mobility_data_drift_detected       (Gauge: 1/0 flag)
+  - mobility_data_drift_features_count (Gauge: number of drifted features)
+  - mobility_accuracy_baseline         (Gauge: 0.90)
+  - mobility_accuracy_current          (Gauge)
+  - mobility_accuracy_degradation      (Gauge: 1/0 flag)
+  - mobility_latency_baseline_seconds  (Gauge: 0.35)
+  - mobility_confidence_baseline       (Gauge: 0.80)
+  - mobility_confidence_degradation    (Gauge: 1/0 flag)
+  - mobility_simulated_traffic_mode    (Gauge: simulation switch)
+  - mobility_simulated_error_mode      (Gauge: simulation switch)
+  - mobility_simulated_drift_mode      (Gauge: simulation switch)
+
+HOW TO TEST IT:
+  1) Start all services:
+       docker-compose up -d --build
+  2) Open Prometheus UI:
+       http://localhost:9090
+  3) Check scraping target is UP:
+       Status -> Targets -> job name "mobility-ml-api" -> State: UP
+  4) View raw metrics text:
+       http://localhost:8001/metrics
+       Scroll to see all "mobility_" prefixed metrics.
+  5) Run a PromQL query:
+       sum(rate(mobility_api_requests_total[1m]))
+       -> Should show 0 when idle, spikes during simulation.
+  6) Send a test prediction to generate metrics:
+       curl -X POST http://localhost:8001/predict \
+         -H "Content-Type: application/json" \
+         -d "{\"city\":\"Paris\",\"station_type\":\"Metro\",\"lat\":48.8,\"lon\":2.3,
+              \"connections\":5,\"daily_traffic\":45000,\"no2\":36.0}"
+       Then reload /metrics and check counters incremented.
+
+================================================================================
+2. GRAFANA DASHBOARD (8 PANELS - FULL STORY)
+================================================================================
+
+WHAT IT DOES:
+  Grafana is auto-provisioned with no manual setup required. On startup it:
+    - loads Prometheus as its default datasource (via provisioning)
+    - loads the S13 dashboard JSON automatically (via provisioning)
+    - refreshes every 10 seconds (same as Prometheus scrape interval)
+  The dashboard tells a production story left to right, top to bottom:
+    "Is traffic rising?" -> "Is the API still fast?" -> "Are errors increasing?"
+    -> "Is the model still healthy?" -> "Is the data drifting?"
+
+WHERE TO FIND IT:
+  - `monitoring/grafana/provisioning/datasources/prometheus.yml`
+      Auto-registers Prometheus at http://prometheus:9090 as default datasource.
+  - `monitoring/grafana/provisioning/dashboards/dashboard.yml`
+      Tells Grafana to load all JSON files from /var/lib/grafana/dashboards.
+  - `monitoring/grafana/dashboards/mobility_s13_dashboard.json`
+      The full dashboard definition (8 panels, version 2).
+  - `docker-compose.yml`
+      Lines 104-118: Grafana container, volumes, admin credentials.
+
+PANELS IN THE DASHBOARD:
+  Panel 1 - Traffic: Requests Per Second
+    Query: sum(rate(mobility_api_requests_total[1m]))
+    Type: timeseries
+    Story: "How much traffic is hitting our API right now?"
+
+  Panel 2 - Performance: P95 Latency (seconds)
+    Query: histogram_quantile(0.95, sum(rate(..._bucket[2m])) by (le))
+    Type: stat with threshold (green < 0.75s, red >= 0.75s)
+    Story: "Is the API responding fast enough?"
+
+  Panel 3 - Stability: Error Rate
+    Query: sum(rate(mobility_api_errors_total[2m])) / sum(rate(mobility_api_requests_total[2m]))
+    Type: timeseries (unit: percentunit)
+    Story: "Is the API returning errors?"
+
+  Panel 4 - Model Health: Confidence vs Baseline
+    Queries: mobility_prediction_confidence_avg + mobility_confidence_baseline
+    Type: timeseries (two lines: actual vs baseline)
+    Story: "Is the model still confident in its predictions?"
+
+  Panel 5 - Data Health: Missing Values & Freshness
+    Queries: mobility_data_missing_values + mobility_data_freshness_seconds
+    Type: timeseries
+    Story: "Is the incoming data clean and recent?"
+
+  Panel 6 - Detection Flags: Drift & Degradation
+    Queries: drift_detected + accuracy_degradation + confidence_degradation
+    Type: timeseries (binary 0/1 flags)
+    Story: "Has any automated alarm been triggered?"
+
+  Panel 7 - Model Health: Accuracy vs Baseline  [ADDED]
+    Queries: mobility_accuracy_baseline (green dashed) + mobility_accuracy_current (orange)
+    Type: timeseries (unit: percentunit, range 0-1)
+    Story: "Has model accuracy fallen below the 90% reference line?"
+
+  Panel 8 - Data Health: Drifted Features Count  [ADDED]
+    Query: mobility_data_drift_features_count
+    Type: stat with color thresholds (green=0, yellow=1-2, red=3)
+    Story: "How many input features are currently out of distribution?"
+
+HOW TO TEST IT:
+  1) Open Grafana:
+       http://localhost:3000
+       Login: admin / admin
+  2) Navigate to: Dashboards -> MLOps -> Mobility MLOps S13 Dashboard
+  3) Verify all 8 panels load with no errors.
+  4) Run a simulation scenario (see section 5).
+  5) Watch panels update in real time (auto-refresh every 10s).
+  6) Panel 7 demo: force an accuracy drop:
+       curl -X POST http://localhost:8001/monitoring/baseline \
+         -H "Content-Type: application/json" \
+         -d "{\"accuracy_current\": 0.80}"
+       -> Panel 7 should show orange line dip below green baseline.
+       -> Panel 6 "accuracy degradation" flag should flip to 1.
+
+================================================================================
+3. DRIFT & DEGRADATION DETECTION
+================================================================================
+
+WHAT IT DOES:
+  Every call to /predict runs three detection checks automatically:
+
+  A) DATA DRIFT DETECTION (evaluate_drift):
+     Compares the incoming feature values against a stored baseline profile:
+       - daily_traffic baseline: 45,000
+       - no2 baseline: 35.0
+       - connections baseline: 5.0
+     If any feature deviates by more than 30% relative to its baseline,
+     it is counted as "drifted". The total drifted count and a binary flag
+     (0/1) are both exposed as Prometheus metrics.
+
+  B) CONFIDENCE DEGRADATION:
+     After each prediction, the model's confidence score (max probability)
+     is compared to the confidence baseline (0.80). If confidence < 0.80,
+     the flag mobility_confidence_degradation is set to 1.
+
+  C) ACCURACY DEGRADATION:
+     Compared via the /monitoring/baseline endpoint. If the posted
+     accuracy_current is more than 5% below accuracy_baseline (0.90),
+     mobility_accuracy_degradation is set to 1.
+
+WHERE TO FIND IT:
+  - `ml_service/monitoring.py`
+      Lines 117-121: FEATURE_BASELINES dictionary (adjustable thresholds).
+      Lines 181-194: evaluate_drift() - threshold-based feature comparison.
+      Lines 160-178: update_prediction_metrics() - confidence check.
+      Lines 216-225: set_accuracy_current() - accuracy degradation logic.
+  - `ml_service/main.py`
+      Lines 131-149: evaluate_drift() called inside /predict on every request.
+      Lines 105-115: /monitoring/baseline endpoint.
+
+HOW TO TEST IT:
+  1) Test data drift manually:
+       curl -X POST http://localhost:8001/predict \
+         -H "Content-Type: application/json" \
+         -d "{\"city\":\"Paris\",\"station_type\":\"Metro\",\"lat\":48.8,\"lon\":2.3,
+              \"connections\":30,\"daily_traffic\":200000,\"no2\":180.0}"
+       Response will include: "drift_detected": true, "drifted_features_count": 3
+  2) Check metric in Prometheus:
+       mobility_data_drift_detected   -> should be 1
+       mobility_data_drift_features_count -> should be 3
+  3) Test accuracy degradation:
+       curl -X POST http://localhost:8001/monitoring/baseline \
+         -H "Content-Type: application/json" \
+         -d "{\"accuracy_current\": 0.80}"
+       Response: {"accuracy_degradation": true}
+  4) Check metric:
+       mobility_accuracy_degradation -> should be 1
+  5) Test confidence degradation:
+       Send a prediction with ambiguous features (50/50 prediction).
+       mobility_confidence_degradation -> flips to 1 if confidence < 0.80
+
+================================================================================
+4. ALERTING SYSTEM (5 PROMETHEUS ALERT RULES)
+================================================================================
+
+WHAT IT DOES:
+  Five alert rules are loaded by Prometheus from alerts.yml at startup.
+  These rules are evaluated every 10 seconds against live metric values.
+  When a threshold is breached for the required duration, the alert transitions:
+    inactive -> pending -> firing
+  Firing alerts are visible in the Prometheus Alerts UI.
+
+WHERE TO FIND IT:
+  - `monitoring/prometheus/alerts.yml`
+      Contains all 5 alert rule definitions.
+  - `monitoring/prometheus/prometheus.yml`
+      Line 5-6: rule_files directive loads /etc/prometheus/alerts.yml
+
+ALERT RULES:
+  1) MobilityHighLatency (severity: warning)
+     Condition: P95 latency > 0.75s for more than 1 minute.
+     PromQL: histogram_quantile(0.95, sum(rate(..._bucket[2m])) by (le)) > 0.75
+     Triggers during: high traffic simulation with slow responses.
+
+  2) MobilityHighErrorRate (severity: critical)
+     Condition: Error rate > 5% of all requests for more than 1 minute.
+     PromQL: sum(rate(errors[2m])) / sum(rate(requests[2m])) > 0.05
+     Triggers during: API errors simulation.
+
+  3) MobilityAccuracyDegradation (severity: critical)
+     Condition: mobility_accuracy_degradation > 0 for 30 seconds.
+     Triggers when: accuracy_current drops more than 5% below baseline.
+
+  4) MobilityConfidenceDegradation (severity: warning)
+     Condition: mobility_confidence_degradation > 0 for 30 seconds.
+     Triggers when: model confidence falls below 0.80 threshold.
+
+  5) MobilityDataDriftDetected (severity: warning)
+     Condition: mobility_data_drift_detected > 0 for 30 seconds.
+     Triggers during: model drift simulation with extreme feature values.
+
+HOW TO TEST IT:
+  1) Open Prometheus Alerts page:
+       http://localhost:9090/alerts
+       All 5 rules should show as "inactive" when idle.
+  2) Run model drift simulation (see section 5):
+       python ml_service/simulate_incidents.py --scenario model_drift --count 150
+       -> Within 30 seconds: MobilityDataDriftDetected -> pending -> firing
+  3) Run API errors simulation:
+       python ml_service/simulate_incidents.py --scenario api_errors --count 80
+       -> MobilityHighErrorRate -> pending -> firing
+  4) Force accuracy drop:
+       curl -X POST http://localhost:8001/monitoring/baseline \
+         -H "Content-Type: application/json" \
+         -d "{\"accuracy_current\": 0.80}"
+       -> Within 30 seconds: MobilityAccuracyDegradation -> pending -> firing
+  5) Show each alert firing in Prometheus UI and cross-check in Grafana Panel 6.
+
+================================================================================
+5. SIMULATION SCENARIOS (MANDATORY - 3 SCENARIOS)
+================================================================================
+
+WHAT IT DOES:
+  The simulate_incidents.py script automates three mandatory production incidents.
+  Each scenario:
+    1) Sets simulation mode flags via /monitoring/simulation-mode endpoint
+    2) Sends a configured burst of HTTP requests to the API
+    3) Uses time.sleep(0.05) between requests so Grafana shows a real curve,
+       not an instantaneous spike that would be invisible at 10s resolution
+    4) Resets simulation flags to 0 when finished
+
+WHERE TO FIND IT:
+  - `ml_service/simulate_incidents.py`
+      simulate_high_traffic()  - 200 normal-ish requests with slight variation
+      simulate_api_errors()    - sends intentionally malformed payloads
+      simulate_model_drift()   - sends extreme OOD (out-of-distribution) values
+  - `ml_service/main.py`
+      Lines 159-165: /monitoring/simulation-mode endpoint sets Gauge flags.
+
+HOW TO TEST IT:
+  Run from the project root directory (with docker-compose services running):
+
+  SCENARIO A - High Traffic:
+    python ml_service/simulate_incidents.py --scenario high_traffic --count 250
+    Observe in Grafana:
+      - Panel 1 (Traffic): request rate spikes visibly
+      - Panel 2 (Latency): P95 may increase under load
+      - Console: prints progress every 25 requests
+    Observe in Prometheus: sum(rate(mobility_api_requests_total[1m])) rises
+
+  SCENARIO B - API Errors:
+    python ml_service/simulate_incidents.py --scenario api_errors --count 80
+    Observe in Grafana:
+      - Panel 3 (Error Rate): visible error spike
+      - Panel 6 (Flags): if rate > 5% for 1m, MobilityHighErrorRate fires
+    Observe in Prometheus: rate(mobility_api_errors_total[2m]) rises
+    Log evidence: ml_service/logs/ml_api.log will show HTTP 422 errors
+
+  SCENARIO C - Model Drift:
+    python ml_service/simulate_incidents.py --scenario model_drift --count 150
+    Payload used: daily_traffic=120000-240000, no2=90-200, connections=18-50
+    (all 3 features are >30% above their baseline values)
+    Observe in Grafana:
+      - Panel 6: drift_detected flips to 1
+      - Panel 8: drifted_features_count shows 3 (red)
+      - Panel 7: accuracy degradation may trigger
+    Observe in Prometheus:
+      mobility_data_drift_detected -> 1
+      mobility_data_drift_features_count -> 3
+    Log evidence (ml_service/logs/ml_api.log):
+      WARNING - DATA DRIFT DETECTED - 3 feature(s) shifted beyond threshold.
+                RETRAINING TRIGGER: consider scheduling a new training run.
+      INFO    - ANOMALY - drift payload values: daily_traffic=..., no2=..., connections=...
+
+================================================================================
+6. OBSERVABILITY (METRICS + LOGS)
+================================================================================
+
+WHAT IT DOES:
+  Observability is split into two complementary layers:
+    METRICS = what is happening (quantitative, time-series, alertable)
+    LOGS    = why it is happening (qualitative, event-driven, contextual)
+
+  The ML API now writes structured logs to BOTH stdout (Docker logs)
+  AND a rotating log file, so logs persist across container restarts.
+
+WHERE TO FIND IT:
+  Metrics:
+    - http://localhost:8001/metrics   (raw Prometheus text)
+    - http://localhost:9090           (Prometheus query UI)
+    - http://localhost:3000           (Grafana dashboard)
+
+  ML API Logs (NEW):
+    - ml_service/logs/ml_api.log
+      Rotating file, max 5MB per file, 3 backups kept.
+      Written by: ml_service/main.py (RotatingFileHandler)
+
+  Django Application Logs (existing):
+    - dashboards/logs/app.log
+    - dashboards/logs/ml_engine.log
+    - dashboards/logs/notifications.log
+
+LOG EVENTS RECORDED IN ml_api.log:
+  - Startup: model loaded / not found
+  - Every drift detection: DATA DRIFT DETECTED warning with feature count
+  - Every drift: RETRAINING TRIGGER log entry
+  - Every drift: ANOMALY log with exact payload values
+  - HTTP errors: logged by Uvicorn (non-200 status codes)
+
+WHERE TO FIND THE LOGGING SETUP:
+  - `ml_service/main.py`
+      Lines 27-41: RotatingFileHandler setup + StreamHandler
+      The logger name is "mobility_ml_api"
+      Lines 140-149: RETRAINING TRIGGER + ANOMALY log events inside /predict
+
+HOW TO TEST IT:
+  1) Run model drift simulation:
+       python ml_service/simulate_incidents.py --scenario model_drift --count 50
+  2) Open the log file:
+       cat ml_service/logs/ml_api.log
+       (on Windows: type ml_service\logs\ml_api.log)
+  3) You should see entries like:
+       WARNING - mobility_ml_api - DATA DRIFT DETECTED - 3 feature(s)...
+                 RETRAINING TRIGGER: consider scheduling a new training run.
+       INFO    - mobility_ml_api - ANOMALY - drift payload values: ...
+  4) Run API errors scenario and show 422 Unprocessable Entity lines in the log.
+  5) Show that metrics (Grafana panels) and logs (ml_api.log) tell the same story:
+       Metrics = the drift flag is 1 in Panel 6
+       Logs    = the log says exactly which features drifted and why
+
+================================================================================
+7. BASELINE COMPARISON
+================================================================================
+
+WHAT IT DOES:
+  Three baselines are defined at service startup and exposed as Prometheus gauges:
+    - Accuracy baseline:  0.90  (90% - the F1-best model from train_pipeline.py)
+    - Latency baseline:   0.35s (350ms target for production inference)
+    - Confidence baseline: 0.80 (80% - minimum acceptable prediction confidence)
+
+  These are readable via environment variables and default to the values above.
+  Any time the current observed value deviates beyond a threshold, a degradation
+  flag gauge is set to 1, which triggers the corresponding Prometheus alert rule.
+
+WHERE TO FIND IT:
+  - `ml_service/monitoring.py`
+      Lines 111-114: Python variables holding baseline values.
+      Lines 124-146: initialize_baselines() called at FastAPI startup.
+      Lines 135-141: Sets all 3 baseline Gauge metrics.
+      Lines 140: Accuracy degradation flag logic (>5% drop = flag=1).
+      Lines 171: Confidence degradation check per prediction.
+  - `ml_service/main.py`
+      Lines 60-70: load_model() calls initialize_baselines() on startup.
+      Lines 85-96: /health endpoint returns baseline values.
+      Lines 105-115: /monitoring/baseline endpoint updates accuracy_current.
+
+BASELINES IN GRAFANA:
+  - Panel 4: green line = mobility_confidence_baseline (0.80)
+  - Panel 7: green dashed line = mobility_accuracy_baseline (0.90)
+
+HOW TO TEST IT:
+  1) Check current baselines:
+       http://localhost:8001/health
+       Expected response:
+         {"status":"healthy","model_loaded":true,
+          "baselines":{"accuracy":0.9,"latency_seconds":0.35,"confidence":0.8}}
+
+  2) Simulate accuracy degradation:
+       curl -X POST http://localhost:8001/monitoring/baseline \
+         -H "Content-Type: application/json" \
+         -d "{\"accuracy_current\": 0.83}"
+       Response: {"accuracy_degradation": false}  (0.90 - 0.83 = 0.07 > 0.05 -> TRUE)
+
+       Wait: the JSON will actually show true when drop > 0.05.
+
+  3) Confirm the metric in Prometheus:
+       mobility_accuracy_degradation -> 1
+
+  4) Confirm the alert fires:
+       http://localhost:9090/alerts
+       MobilityAccuracyDegradation -> pending -> firing
+
+  5) In Grafana Panel 7, the orange line (current) visibly drops below
+     the green dashed line (baseline), making the deviation obvious.
+
+================================================================================
+WEEK S13 DELIVERABLE CHECKLIST
+================================================================================
+
+[x] Prometheus monitoring working
+      /metrics endpoint on FastAPI, scraped every 10s, target UP in Prometheus
+
+[x] Grafana dashboard configured (8 panels)
+      Auto-provisioned from JSON, no manual setup needed
+      Traffic / Performance / Stability / Model Health / Data Health / Flags /
+      Accuracy vs Baseline / Drifted Features Count
+
+[x] Alerting rules configured (5 rules)
+      MobilityHighLatency / MobilityHighErrorRate / MobilityAccuracyDegradation /
+      MobilityConfidenceDegradation / MobilityDataDriftDetected
+
+[x] Drift/degradation detection logic implemented
+      Threshold-based, runs on every /predict call, 3 features monitored
+
+[x] Mandatory simulation scenarios implemented
+      high_traffic / api_errors / model_drift (with visible Grafana spikes)
+
+[x] Observability: metrics + structured logs
+      Logs written to ml_service/logs/ml_api.log (rotating, persistent)
+      Log events: errors, anomalies, retraining triggers
+
+[x] Baseline comparison detectable
+      accuracy 0.90 / latency 0.35s / confidence 0.80
+      Deviation > 5% triggers flag AND alert AND is visible in Grafana Panel 7
+
+================================================================================
+DEMO FLOW FOR TEACHER (5-10 MINUTES)
+================================================================================
+
+Step 1 - Start everything:
+  docker-compose up -d --build
+  Open three tabs:
+    - http://localhost:8001/docs  (FastAPI interactive docs)
+    - http://localhost:9090       (Prometheus)
+    - http://localhost:3000       (Grafana -> Mobility MLOps S13 Dashboard)
+
+Step 2 - Show idle baseline:
+  http://localhost:8001/health
+  Explain: "These are our baselines. Any deviation is tracked."
+
+Step 3 - High traffic scenario:
+  python ml_service/simulate_incidents.py --scenario high_traffic --count 250
+  Point to Grafana Panel 1: request rate curve rising.
+  Point to Grafana Panel 2: latency stat may turn red if P95 > 0.75s.
+
+Step 4 - API errors scenario:
+  python ml_service/simulate_incidents.py --scenario api_errors --count 80
+  Point to Grafana Panel 3: error rate spike.
+  Show Prometheus Alerts: MobilityHighErrorRate -> firing.
+
+Step 5 - Model drift scenario:
+  python ml_service/simulate_incidents.py --scenario model_drift --count 150
+  Point to Grafana Panel 6: drift_detected flag flips to 1.
+  Point to Grafana Panel 8: drifted features count = 3 (red).
+  Show Prometheus Alerts: MobilityDataDriftDetected -> firing.
+
+Step 6 - Show the logs:
+  type ml_service\logs\ml_api.log
+  Explain: "Metrics tell us WHAT happened. Logs tell us WHY."
+  Point to: "DATA DRIFT DETECTED - 3 features" and "RETRAINING TRIGGER" lines.
+
+Step 7 - Baseline deviation:
+  curl -X POST http://localhost:8001/monitoring/baseline \
+    -H "Content-Type: application/json" -d "{\"accuracy_current\":0.80}"
+  Point to Panel 7: orange line drops below green baseline.
+  Show alert: MobilityAccuracyDegradation -> firing.
+  Explain: "This simulates what happens after a model retrain with lower accuracy."
+
+================================================================================

@@ -24,7 +24,7 @@ def generate_data(n=DATA_SIZE):
     no2 = np.random.normal(35, 12, n)
     daily_traffic = np.random.exponential(40000, n) + 5000
     
-    # Introduce realistic correlation: pm25 rises with NO2 and Traffic
+  
     pm25 = 10 + (no2 * 0.4) + (daily_traffic / 15000) + np.random.normal(0, 3, n)
     
     df = pd.DataFrame({
@@ -38,7 +38,6 @@ def generate_data(n=DATA_SIZE):
         'no2': no2
     })
     
-    # Target: High Risk if PM2.5 > 25 (adjusted threshold for new distribution)
     df['hazard'] = (df['pm25'] > 28).astype(int)
     return df
 
@@ -55,7 +54,6 @@ def _load_real_data_from_warehouse():
         db_path = os.path.join(os.path.dirname(__file__), "..", "datawhehousebi (1).sql")
         conn = sqlite3.connect(db_path)
         
-        # 2. Execute SQL Query to join Fact and Dimension tables
         query = """
             SELECT 
                 f.col_traffic as daily_traffic, 
@@ -73,13 +71,12 @@ def _load_real_data_from_warehouse():
         print("📥 Extracting rows from fait_mobilite...")
         real_df = pd.read_sql_query(query, conn)
         conn.close()
-        
-        # If DB contains data, use it
+
         if len(real_df) > 0:
             return real_df
             
     except Exception as e:
-        # Fallback for development/presentation environment if DB file is locked
+
         pass
         
     return generate_data()
