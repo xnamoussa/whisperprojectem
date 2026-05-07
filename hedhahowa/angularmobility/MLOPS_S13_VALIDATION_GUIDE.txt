@@ -291,7 +291,7 @@ HOW TO TEST IT:
   Run from the project root directory (with docker-compose services running):
 
   SCENARIO A - High Traffic:
-    python ml_service/simulate_incidents.py --scenario high_traffic --count 250
+docker exec mobility-ml-api python simulate_incidents.py --scenario high_traffic --count 1250
     Observe in Grafana:
       - Panel 1 (Traffic): request rate spikes visibly
       - Panel 2 (Latency): P95 may increase under load
@@ -299,7 +299,7 @@ HOW TO TEST IT:
     Observe in Prometheus: sum(rate(mobility_api_requests_total[1m])) rises
 
   SCENARIO B - API Errors:
-    python ml_service/simulate_incidents.py --scenario api_errors --count 80
+  docker exec mobility-ml-api python simulate_incidents.py --scenario api_errors --count 640
     Observe in Grafana:
       - Panel 3 (Error Rate): visible error spike
       - Panel 6 (Flags): if rate > 5% for 1m, MobilityHighErrorRate fires
@@ -307,7 +307,7 @@ HOW TO TEST IT:
     Log evidence: ml_service/logs/ml_api.log will show HTTP 422 errors
 
   SCENARIO C - Model Drift:
-    python ml_service/simulate_incidents.py --scenario model_drift --count 150
+docker exec mobility-ml-api python simulate_incidents.py --scenario model_drift --count 350
     Payload used: daily_traffic=120000-240000, no2=90-200, connections=18-50
     (all 3 features are >30% above their baseline values)
     Observe in Grafana:

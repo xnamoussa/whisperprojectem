@@ -5,6 +5,8 @@ import logging.handlers
 
 import joblib
 import pandas as pd
+import mlflow
+import socket
 from fastapi import FastAPI, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import Response
@@ -71,18 +73,32 @@ async def prometheus_middleware(request: Request, call_next):
         )
 
 
+# --- MLflow Inference Tracking Setup ---
+def setup_mlflow():
+    tracking_uri = os.getenv("MLFLOW_TRACKING_URI", "http://mlflow:5000")
+    if "http://mlflow:" in tracking_uri:
+        try:
+            ip = socket.gethostbyname("mlflow")
+            tracking_uri = tracking_uri.replace("mlflow", ip)
+        except Exception:
+            pass
+    mlflow.set_tracking_uri(tracking_uri)
+    mlflow.set_experiment("Production_Inference_Monitoring")
+    logger.info(f"📊 MLflow Tracking initialized at {tracking_uri}")
+
 # Load model at startup
 @app.on_event("startup")
-def load_model():
+def startup_event():
     global model
     initialize_baselines()
+    setup_mlflow()
     if os.path.exists(MODEL_PATH):
         model = joblib.load(MODEL_PATH)
         mark_model_loaded(True)
-        print(f"✅ Model loaded from {MODEL_PATH}")
+        logger.info(f"✅ Model loaded from {MODEL_PATH}")
     else:
         mark_model_loaded(False)
-        print(f"❌ Model not found at {MODEL_PATH}")
+        logger.error(f"❌ Model not found at {MODEL_PATH}")
 
 class PredictionInput(BaseModel):
     city: str
@@ -163,6 +179,19 @@ def predict(input_data: PredictionInput):
                 float(input_data.no2),
                 int(input_data.connections),
             )
+            
+            # Log drift event to MLflow
+            try:
+                with mlflow.start_run(run_name=f"Drift_Detected_{int(time.time())}", nested=True):
+                    mlflow.set_tag("event_type", "data_drift")
+                    mlflow.log_metrics({
+                        "drifted_features_count": n_drifted,
+                        "daily_traffic": float(input_data.daily_traffic),
+                        "no2": float(input_data.no2),
+                        "connections": int(input_data.connections)
+                    })
+            except Exception as ml_err:
+                logger.error(f"Failed to log drift to MLflow: {ml_err}")
 
         update_prediction_metrics(
             risk_level=risk_level,

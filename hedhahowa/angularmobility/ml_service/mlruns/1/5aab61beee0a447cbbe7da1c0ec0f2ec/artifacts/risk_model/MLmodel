@@ -1,0 +1,20 @@
+artifact_path: risk_model
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.10.20
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.4.1.post1
+mlflow_version: 2.11.1
+model_size_bytes: 111784
+model_uuid: b8e9f95df69941998fec4e188f747355
+run_id: 5aab61beee0a447cbbe7da1c0ec0f2ec
+utc_time_created: '2026-05-07 11:35:14.774949'

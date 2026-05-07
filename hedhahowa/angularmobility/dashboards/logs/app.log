@@ -13040,3 +13040,4 @@ WARNING 2026-04-28 08:18:59,453 log 83 130043838391040 Unauthorized: /api/auth/l
 WARNING 2026-04-28 08:19:12,650 log 83 130043838391040 Unauthorized: /api/auth/login/
 WARNING 2026-04-28 08:19:59,931 log 84 130043838391040 Unauthorized: /api/auth/login/
 WARNING 2026-04-28 11:00:45,723 log 84 130043838391040 Unauthorized: /api/auth/me/
+WARNING 2026-05-05 10:07:05,384 log 75 125304524071680 Unauthorized: /api/auth/login/
