@@ -96,6 +96,9 @@ def simulate_model_drift(requests_count: int = 120):
         mlflow.set_tag("scenario", "model_drift")
         mlflow.log_param("requested_count", requests_count)
         
+        # Simulate accuracy drop during drift
+        requests.post(f"{API_BASE}/monitoring/baseline", json={"accuracy_current": 0.78}, timeout=5)
+        
         requests.post(f"{API_BASE}/monitoring/simulation-mode", json={"traffic": 0, "error": 0, "drift": 1}, timeout=5)
         drifts = 0
         for i in range(requests_count):
@@ -115,6 +118,7 @@ def simulate_model_drift(requests_count: int = 120):
         
         mlflow.log_metric("drift_detected_count", drifts)
         print("[model_drift] done")
+        requests.post(f"{API_BASE}/monitoring/baseline", json={"accuracy_current": 0.90}, timeout=5)
         requests.post(f"{API_BASE}/monitoring/simulation-mode", json={"traffic": 0, "error": 0, "drift": 0}, timeout=5)
 
 

@@ -1,0 +1,69 @@
+================================================================================
+PROMETHEUS QUERIES GUIDE - MLOPS WEEK S13 VALIDATION
+================================================================================
+This file contains the best queries to show in your Technique Video to prove 
+the monitoring and observability of your Urban Mobility ML System.
+
+LOCATION: Paste these into http://localhost:9090
+
+--------------------------------------------------------------------------------
+1. THE "RED FLAG" QUERIES (INCIDENT DETECTION)
+--------------------------------------------------------------------------------
+
+QUERY: sum(rate(mobility_api_errors_total[1m])) by (status_code)
+EXPLANATION: This is your "Hero Query" for the video. It shows the massive spike 
+of 422 errors you just simulated. It proves that the system captures failures 
+instantly.
+
+QUERY: sum(rate(mobility_api_requests_total[1m]))
+EXPLANATION: Shows the throughput (Requests Per Second). Use this during the 
+"High Traffic" simulation to show the system handling 250+ requests.
+
+--------------------------------------------------------------------------------
+2. THE "MLOPS SPECIALTY" QUERIES (DRIFT & CONFIDENCE)
+--------------------------------------------------------------------------------
+
+QUERY: mobility_data_drift_detected
+EXPLANATION: A binary flag (0 or 1). In your video, show it jumping to 1 when 
+you run the 'model_drift' scenario. This proves your system detects when 
+the input data (NO2, Traffic) no longer matches the training distribution.
+
+QUERY: mobility_data_drift_features_count
+EXPLANATION: Shows exactly HOW MANY features are drifting. (e.g., 3 means 
+Traffic, NO2, and Connections are all anomalous).
+
+QUERY: mobility_prediction_confidence_avg
+EXPLANATION: Shows the reliability of the model. If this value drops, it means 
+the model is "unsure" about its predictions.
+
+--------------------------------------------------------------------------------
+3. THE "PERFORMANCE" QUERIES (SLA & LATENCY)
+--------------------------------------------------------------------------------
+
+QUERY: histogram_quantile(0.95, sum(rate(mobility_api_request_latency_seconds_bucket[5m])) by (le))
+EXPLANATION: The P95 Latency. It tells the teacher: "95% of our users get a 
+prediction in less than X seconds." This is the industry standard for performance.
+
+QUERY: mobility_model_loaded
+EXPLANATION: Proves the FastAPI service has successfully initialized and 
+the .joblib model is in memory.
+
+--------------------------------------------------------------------------------
+4. THE "BUSINESS VALUE" QUERIES (INSIGHTS)
+--------------------------------------------------------------------------------
+
+QUERY: sum(mobility_predictions_total) by (risk_level)
+EXPLANATION: Shows the distribution of predictions. You can say: "Our system 
+is currently predicting mostly 'Low Risk' for the city of Paris."
+
+QUERY: (sum(mobility_predictions_total{risk_level="High"}) / sum(mobility_predictions_total)) * 100
+EXPLANATION: The percentage of High Risk predictions. Very visual for a 
+dashboard to show city-wide danger levels.
+
+--------------------------------------------------------------------------------
+HOW TO USE IN YOUR VIDEO:
+1. Start with the terminal showing the simulation running.
+2. Switch to Prometheus and run the 'Error Spike' query.
+3. Switch to the 'Data Drift' query to show the MLOps detection logic.
+4. Conclude by showing the 'P95 Latency' to prove the system is stable.
+================================================================================

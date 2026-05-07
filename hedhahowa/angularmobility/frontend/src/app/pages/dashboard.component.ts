@@ -137,6 +137,7 @@ export class DashboardComponent implements OnInit, AfterViewInit, OnDestroy {
   @ViewChild('nlpTrendCanvas') nlpTrendCanvas!: ElementRef<HTMLCanvasElement>;
   @ViewChild('acfCanvas') acfCanvas!: ElementRef<HTMLCanvasElement>;
   @ViewChild('beforeAfterCanvas') beforeAfterCanvas!: ElementRef<HTMLCanvasElement>;
+  @ViewChild('mainContent') mainContent!: ElementRef<HTMLElement>;
 
   private charts: any[] = [];
 
@@ -269,6 +270,7 @@ export class DashboardComponent implements OnInit, AfterViewInit, OnDestroy {
           this.lastRefresh.set(new Date());
           this.mlLoading.set(false);
           this.renderActiveCharts();
+          this.resetScroll();
         }, 500);
       },
       error: () => {
@@ -498,7 +500,14 @@ export class DashboardComponent implements OnInit, AfterViewInit, OnDestroy {
 
   setTab(tab: Tab) {
     this.activeTab.set(tab);
+    this.resetScroll();
     setTimeout(() => this.renderActiveCharts(), 50);
+  }
+
+  private resetScroll() {
+    if (this.mainContent?.nativeElement) {
+      this.mainContent.nativeElement.scrollTop = 0;
+    }
   }
 
   /* ── Instant Cluster K Switching (uses precomputed data) ── */
