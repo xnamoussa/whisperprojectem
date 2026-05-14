@@ -1,198 +1,252 @@
-# 🌍 Observatoire National des Mobilités et du Territoire
+🌍 Observatoire National des Mobilités et du Territoire
+🚀 AI-Powered Smart Mobility & Territorial Intelligence Platform
 
-## 📊 Tableau de Bord Décisionnel Multi-Ministères
 
----
 
-## 🎯 Objectif du projet
 
-Ce projet vise à concevoir un **tableau de bord stratégique centralisé** permettant à plusieurs ministères de suivre et piloter leurs indicateurs de performance en temps réel.
 
-Il offre une **vision unifiée, dynamique et interactive** des données liées à :
 
-* 🚆 la mobilité
-* 🚔 la sécurité
-* 🏛️ l’aménagement du territoire
-* 🌿 l’environnement
 
----
 
-## 🧠 Problématique
 
-Les données publiques présentent aujourd’hui plusieurs limites :
 
-* ❌ Dispersion entre différents systèmes
-* ❌ Difficulté de croisement des données
-* ❌ Faible exploitabilité pour une prise de décision rapide
 
-👉 Cela entraîne une **absence de vision globale et cohérente** pour les décideurs.
 
----
 
-## 💡 Solution proposée
 
-Mise en place d’un **dashboard centralisé sous Power BI** permettant :
 
-* ✔️ L’agrégation de données multi-domaines
-* ✔️ L’analyse croisée entre ministères
-* ✔️ La visualisation claire et intuitive des KPIs
-* ✔️ La détection d’anomalies et de tendances
-* ✔️ L’aide à la décision en temps réel
 
----
 
-## 🏛️ Ministères concernés
 
-| Ministère                | Rôle                              | KPIs clés                                |
-| ------------------------ | --------------------------------- | ---------------------------------------- |
-| 🚆 Transports            | Performance et fluidité du réseau | Ponctualité, congestion, satisfaction    |
-| 🚔 Intérieur             | Sécurité routière                 | Accidents, gravité, temps d’intervention |
-| 🏛️ Aménagement          | Équité territoriale               | Accessibilité, investissements           |
-| 🌿 Transition Écologique | Impact environnemental            | CO2, AQI, énergie                        |
+🧠 Project Vision
 
----
+The Mobility Analytics Platform is a next-generation national observatory designed to help ministries monitor, predict, simulate, and optimize territorial mobility through:
 
-## 🏗️ Architecture du projet
+📊 Unified cross-ministerial dashboards
+🤖 Artificial Intelligence & MLOps
+🌐 Neo4j graph analytics
+📡 Real-time event streaming
+🔥 Predictive anomaly detection
+🛰️ Territorial accessibility intelligence
+📈 Full observability stack
+🏛️ Ministries Involved
+Ministry	Strategic Role
+🚆 Transport	Traffic optimization & multimodal mobility
+🚔 Interior	Road safety & incident management
+🏛️ Territorial Planning	Accessibility & territorial equity
+🌿 Ecological Transition	Environmental sustainability
+🏗️ Global Architecture
+                             ┌────────────────────┐
+                             │   Angular Frontend │
+                             │ Premium Dashboard  │
+                             └─────────┬──────────┘
+                                       │
+                 ┌─────────────────────┼─────────────────────┐
+                 │                     │                     │
+        ┌────────▼────────┐   ┌────────▼────────┐   ┌────────▼────────┐
+        │ Django Backend  │   │    Neo4j DB    │   │    Power BI     │
+        │ REST APIs + JWT │   │ Graph Mobility │   │ Strategic KPIs  │
+        └────────┬────────┘   └────────┬────────┘   └─────────────────┘
+                 │                     │
+         ┌───────▼────────┐   ┌────────▼─────────┐
+         │ ML Engine      │   │ GTFS Import      │
+         │ AI Models      │   │ Routes & Stops   │
+         └───────┬────────┘   └────────┬─────────┘
+                 │                     │
+       ┌─────────▼─────────┐   ┌───────▼─────────┐
+       │ MLflow Tracking   │   │ Real-Time SSE   │
+       │ Versioning        │   │ Event Streaming │
+       └─────────┬─────────┘   └───────┬─────────┘
+                 │                     │
+          ┌──────▼───────┐     ┌──────▼───────┐
+          │ n8n Pipeline │     │ Grafana      │
+          │ Automation   │     │ Monitoring   │
+          └──────┬───────┘     └──────┬───────┘
+                 │                    │
+          ┌──────▼────────────────────▼──────┐
+          │         Prometheus               │
+          │ Infrastructure Observability     │
+          └──────────────────────────────────┘
+🤖 AI & Machine Learning Engine
+🧠 ML Model Families
+Category	Models	Purpose
+Classification	Random Forest, Logistic Regression	Risk prediction
+Regression	XGBoost, Ridge, Lasso	Traffic & CO2 forecasting
+Clustering	KMeans, DBSCAN, GMM	Territorial segmentation
+Time Series	SARIMA, XGBoost TS	Predictive mobility analytics
+⚙️ MLOps Infrastructure
+🔄 Automated Retraining
 
-```
-                ┌────────────────────────────┐
-                │       Power BI Dashboard   │
-                └────────────┬───────────────┘
-                             │
-        ┌────────────────────┼────────────────────┐
-        │                    │                    │
-   📊 Données          🧠 Modélisation        📈 Visualisation
- (MySQL / CSV)          (DAX / Python)          (Power BI)
-```
+The platform continuously retrains AI models using:
 
----
+⏰ Scheduled Cron Pipelines
+📡 Real-time streaming data
+🔍 Drift Detection
+🤖 Automatic inference generation
+📦 MLflow Integration
+Features
+✔️ Model versioning
+✔️ Experiment tracking
+✔️ Metrics history
+✔️ Performance comparison
+✔️ Artifact management
+🔁 n8n Automation Pipelines
+📌 Retraining Workflow
+Cron Trigger
+      ↓
+HTTP Request → Django API
+      ↓
+Model Retraining
+      ↓
+Validation & Metrics
+      ↓
+MLflow Logging
+      ↓
+Email / Slack Notification
+🧪 Drift Detection Workflow
+New Data
+    ↓
+Compare Historical Distribution
+    ↓
+Drift Detected?
+   ↙         ↘
+ YES          NO
+  ↓            ↓
+Auto-Retrain   Log Stability
+🌐 Neo4j Smart Mobility Engine
 
-## 📊 Indicateurs clés (KPIs)
+🚍 Multimodal Routing
+Dijkstra shortest path
+Quantified Path Patterns
+Spatial & temporal constraints
+Real-time path optimization
+🚨 Incident Detection
+Hidden traffic anomaly detection
+Propagation analysis through graph relationships
+Real-time SSE alerts
+Congestion propagation prediction
+🗺️ Territorial Accessibility
+Features
+Isochrone scoring
+Underserved zone detection
+Demand Responsive Transport (DRT)
+Accessibility heatmaps
+📦 Native GTFS Import
 
-### 🚆 Transports
+Supported files:
 
-* **Ponctualité** = Trajets à l’heure / Total (≥ 95%)
-* **Retard pondéré** = Σ(retard × passagers) (< 2 min)
-* **Congestion** = Moyenne trafic (< 30%)
-* **Satisfaction** ≥ 4
+stops.txt
+trips.txt
+stop_times.txt
 
-### 🚔 Intérieur
+Automatically transformed into:
 
-* Accidents / million de voyages (< 50)
-* Gravité (< 2)
-* Temps d’intervention (< 10 min)
-* Couverture caméra (≥ 75%)
+Neo4j Nodes
+Relationships
+Transport graph structures
+📡 Real-Time Streaming
+SSE (Server-Sent Events)
 
-### 🏛️ Aménagement
+The platform streams:
 
-* Équité spatiale (≥ 75)
-* Accessibilité PMR (≥ 80%)
-* Participation citoyenne (≥ 75%)
+Incident alerts
+Traffic anomalies
+Congestion evolution
+Critical disruptions
 
-### 🌿 Écologie
+in real-time directly to dashboards.
 
-* CO2 / trajet (< 50 g/km)
-* AQI (≤ 50)
-* Énergie verte (≥ 50%)
-* Mobilité durable (≥ 60%)
+🧪 Digital Twin Simulation
+🚧 Predictive Infrastructure Simulation
 
----
+The digital twin engine simulates:
 
-## 🗂️ Données utilisées
+Road closures
+Station shutdowns
+Massive disruptions
+Congestion spread
+Environmental impact
 
-| Type          | Exemples                         |
-| ------------- | -------------------------------- |
-| Géographiques | Régions, villes, coordonnées GPS |
-| Transport     | Trafic, retards                  |
-| Sécurité      | Accidents, interventions         |
-| Environnement | CO2, AQI                         |
-| Social        | Satisfaction, participation      |
+before real deployment.
 
-* 📅 **Période** : 2019 – 2025
-* 📦 **Volume** : ~500 lignes, 7 tables, 100+ colonnes
+📊 Observability Stack
+📈 Grafana Dashboards
 
----
+Monitor:
 
-## ⚙️ Fonctionnalités principales
+API latency
+CPU/RAM usage
+ML performance
+Active incidents
+Prediction throughput
+Data pipeline health
+🔥 Prometheus Monitoring
 
-### 🎛️ Filtres interactifs
+Prometheus continuously scrapes:
 
-* Période (année, saison)
-* Localisation (région, ville)
-* Type de transport
-* Niveau de performance
+Backend metrics
+Neo4j metrics
+ML engine metrics
+Container health
+SSE throughput
+🔐 Urbain Mobility — Secure Wi-Fi System
+🛡️ Secure Navigation Infrastructure
+wifi-secure/
+├── create_wifi.py
+├── wifi_server.js
+├── blocked.html
+└── wifi_config.json
+⚙️ Features
+🔒 Private secured Wi-Fi hotspot
+🌐 Controlled access gateway
+🚫 Unauthorized device blocking
+📡 Secure internal mobility network
+🛡️ Network isolation for critical services
+🚀 Launch System
+Automatic Launch
+start_secure.bat
+Manual Launch
+python create_wifi.py
+npm run dev
+node wifi-secure/wifi_server.js
+📊 Strategic KPIs
+Domain	KPI
+🚆 Transport	Congestion, punctuality
+🚔 Safety	Accidents, intervention time
+🌿 Ecology	CO2 emissions, AQI
+🏛️ Territory	Accessibility score
+🧭 Dashboard Navigation
+🏠 Home
+ ├── 🚆 Mobility
+ ├── 🚔 Security
+ ├── 🌿 Ecology
+ ├── 🏛️ Territorial Planning
+ ├── 🤖 AI Predictions
+ ├── 🌐 Neo4j Analytics
+ ├── 📡 Real-Time Monitoring
+ └── ⚙️ Infrastructure
+🚀 Key Added Value
+👨‍💼 Decision Makers
+Unified national vision
+Faster strategic decisions
+AI-assisted governance
+👥 Citizens
+Transparency
+Better mobility services
+Improved accessibility
+🏢 Administration
+Automated operations
+Resource optimization
+Predictive territorial management
+📌 Conclusion
 
-### 📈 Visualisations
+The Mobility Analytics Platform transforms fragmented public data into a unified intelligent ecosystem powered by:
 
-* 🗺️ Carte géographique
-* 📊 Évolution temporelle
-* 🔥 Heatmap des accidents
-* 📉 Analyse de corrélation
-* 🎯 Jauges KPI
-* 📡 Radar multi-critères
+🤖 Artificial Intelligence
+🌐 Neo4j Graph Analytics
+📈 MLOps Automation
+📡 Real-Time Monitoring
+🔥 Predictive Simulation
+🛡️ Secure Infrastructure
 
----
-
-## 🧪 Analyses possibles
-
-* ✔️ Impact des travaux sur la congestion
-* ✔️ Corrélation trafic ↔ pollution
-* ✔️ Identification des zones à risque
-* ✔️ Évaluation de l’efficacité des investissements
-
----
-
-## 🚀 Valeur ajoutée
-
-### 👨‍💼 Pour les décideurs
-
-* Vision globale et centralisée
-* Prise de décision rapide basée sur les données
-* Détection proactive des anomalies
-
-### 👥 Pour les citoyens
-
-* Transparence accrue
-* Accès à l’information
-* Participation renforcée
-
-### 🏢 Pour l’administration
-
-* Gain de temps
-* Optimisation des ressources
-* Suivi des performances
-
----
-
-## 🛠️ Technologies utilisées
-
-| Outil      | Rôle                   |
-| ---------- | ---------------------- |
-| Power BI   | Visualisation          |
-| MySQL      | Stockage des données   |
-| DAX        | Calcul des indicateurs |
-| Python / R | Analyse avancée        |
-
----
-
-## 🧭 Navigation du dashboard
-
-```
-🏠 Accueil
-   ├── 🚆 Transports
-   ├── 🚔 Intérieur
-   ├── 🏛️ Aménagement
-   └── 🌿 Écologie
-```
-
----
-
-## 📌 Conclusion
-
-Ce projet constitue une **plateforme décisionnelle complète** permettant :
-
-* ✔️ Une gestion intelligente du territoire
-* ✔️ Une meilleure coordination inter-ministérielle
-* ✔️ Une transition vers une gouvernance pilotée par la donnée
-
----
+to enable data-driven governance for the smart territories of tomorrow.
