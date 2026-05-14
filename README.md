@@ -1,5 +1,56 @@
-🌍 Observatoire National des Mobilités et du Territoire
-🚀 AI-Powered Smart Mobility & Territorial Intelligence Platform
+# 🌍 Observatoire National des Mobilités et du Territoire
+
+**🚀 AI-Powered Smart Mobility & Territorial Intelligence Platform**
+
+![Hero Banner](https://via.placeholder.com/1200x400/0A2540/00D4FF?text=Observatoire+National+des+Mobilités+et+du+Territoire)
+
+> Une plateforme intelligente unifiée pour monitorer, prédire, simuler et optimiser la mobilité territoriale à l'échelle nationale.
+
+---
+
+## 🧠 Vision du Projet
+
+L'**Observatoire National des Mobilités** est un observatoire de nouvelle génération conçu pour aider les ministères à transformer des données fragmentées en **intelligence territoriale actionable** grâce à l'IA, l'analyse de graphes et la simulation prédictive.
+
+### 🎯 Objectifs Stratégiques
+- **Tableaux de bord interministériels unifiés**
+- **Intelligence Artificielle & MLOps avancés**
+- **Analyse de graphes Neo4j**
+- **Détection d'anomalies en temps réel**
+- **Intelligence d'accessibilité territoriale**
+- **Jumeau numérique (Digital Twin)**
+
+---
+
+## 🏛️ Ministères Impliqués
+
+| Ministère              | Rôle Stratégique                          |
+|------------------------|-------------------------------------------|
+| **🚆 Transports**     | Optimisation du trafic & mobilité multimodale |
+| **🚔 Intérieur**      | Sécurité routière & gestion des incidents |
+| **🏛️ Aménagement du Territoire** | Accessibilité & équité territoriale |
+| **🌿 Transition Écologique** | Durabilité environnementale & émissions |
+
+---
+
+## 🏗️ Architecture Globale
+
+![Architecture Diagram](https://via.placeholder.com/1200x600/1A2333/00FFAA?text=Architecture+Globale+-+Observatoire+Mobilités)
+
+```mermaid
+flowchart TD
+    A[🌐 Angular Frontend\nPremium Dashboard] --> B[Django Backend\nREST APIs + JWT]
+    A --> C[Power BI\nKPIs Stratégiques]
+    B <--> D[Neo4j\nGraph Mobility]
+    B <--> E[ML Engine\nAI Models]
+    E <--> F[MLflow\nTracking & Versioning]
+    D <--> G[GTFS Import\nRoutes & Stops]
+    B <--> H[SSE Real-Time\nEvent Streaming]
+    H <--> I[Grafana + Prometheus\nObservabilité]
+    E <--> J[n8n\nAutomation Pipelines]
+
+🤖 Moteur d'Intelligence Artificielle
+🧠 Familles de Modèles ML
 
 
 
@@ -18,235 +69,152 @@
 
 
 
-🧠 Project Vision
 
-The Mobility Analytics Platform is a next-generation national observatory designed to help ministries monitor, predict, simulate, and optimize territorial mobility through:
 
-📊 Unified cross-ministerial dashboards
-🤖 Artificial Intelligence & MLOps
-🌐 Neo4j graph analytics
-📡 Real-time event streaming
-🔥 Predictive anomaly detection
-🛰️ Territorial accessibility intelligence
-📈 Full observability stack
-🏛️ Ministries Involved
-Ministry	Strategic Role
-🚆 Transport	Traffic optimization & multimodal mobility
-🚔 Interior	Road safety & incident management
-🏛️ Territorial Planning	Accessibility & territorial equity
-🌿 Ecological Transition	Environmental sustainability
-🏗️ Global Architecture
-                             ┌────────────────────┐
-                             │   Angular Frontend │
-                             │ Premium Dashboard  │
-                             └─────────┬──────────┘
-                                       │
-                 ┌─────────────────────┼─────────────────────┐
-                 │                     │                     │
-        ┌────────▼────────┐   ┌────────▼────────┐   ┌────────▼────────┐
-        │ Django Backend  │   │    Neo4j DB    │   │    Power BI     │
-        │ REST APIs + JWT │   │ Graph Mobility │   │ Strategic KPIs  │
-        └────────┬────────┘   └────────┬────────┘   └─────────────────┘
-                 │                     │
-         ┌───────▼────────┐   ┌────────▼─────────┐
-         │ ML Engine      │   │ GTFS Import      │
-         │ AI Models      │   │ Routes & Stops   │
-         └───────┬────────┘   └────────┬─────────┘
-                 │                     │
-       ┌─────────▼─────────┐   ┌───────▼─────────┐
-       │ MLflow Tracking   │   │ Real-Time SSE   │
-       │ Versioning        │   │ Event Streaming │
-       └─────────┬─────────┘   └───────┬─────────┘
-                 │                     │
-          ┌──────▼───────┐     ┌──────▼───────┐
-          │ n8n Pipeline │     │ Grafana      │
-          │ Automation   │     │ Monitoring   │
-          └──────┬───────┘     └──────┬───────┘
-                 │                    │
-          ┌──────▼────────────────────▼──────┐
-          │         Prometheus               │
-          │ Infrastructure Observability     │
-          └──────────────────────────────────┘
-🤖 AI & Machine Learning Engine
-🧠 ML Model Families
-Category	Models	Purpose
-Classification	Random Forest, Logistic Regression	Risk prediction
-Regression	XGBoost, Ridge, Lasso	Traffic & CO2 forecasting
-Clustering	KMeans, DBSCAN, GMM	Territorial segmentation
-Time Series	SARIMA, XGBoost TS	Predictive mobility analytics
-⚙️ MLOps Infrastructure
-🔄 Automated Retraining
 
-The platform continuously retrains AI models using:
 
-⏰ Scheduled Cron Pipelines
-📡 Real-time streaming data
-🔍 Drift Detection
-🤖 Automatic inference generation
-📦 MLflow Integration
-Features
-✔️ Model versioning
-✔️ Experiment tracking
-✔️ Metrics history
-✔️ Performance comparison
-✔️ Artifact management
-🔁 n8n Automation Pipelines
-📌 Retraining Workflow
-Cron Trigger
-      ↓
-HTTP Request → Django API
-      ↓
-Model Retraining
-      ↓
-Validation & Metrics
-      ↓
-MLflow Logging
-      ↓
-Email / Slack Notification
-🧪 Drift Detection Workflow
-New Data
-    ↓
-Compare Historical Distribution
-    ↓
-Drift Detected?
-   ↙         ↘
- YES          NO
-  ↓            ↓
-Auto-Retrain   Log Stability
-🌐 Neo4j Smart Mobility Engine
 
-🚍 Multimodal Routing
-Dijkstra shortest path
-Quantified Path Patterns
-Spatial & temporal constraints
-Real-time path optimization
-🚨 Incident Detection
-Hidden traffic anomaly detection
-Propagation analysis through graph relationships
-Real-time SSE alerts
-Congestion propagation prediction
-🗺️ Territorial Accessibility
-Features
-Isochrone scoring
-Underserved zone detection
-Demand Responsive Transport (DRT)
-Accessibility heatmaps
-📦 Native GTFS Import
 
-Supported files:
 
-stops.txt
-trips.txt
-stop_times.txt
 
-Automatically transformed into:
 
-Neo4j Nodes
-Relationships
-Transport graph structures
-📡 Real-Time Streaming
-SSE (Server-Sent Events)
 
-The platform streams:
 
-Incident alerts
-Traffic anomalies
-Congestion evolution
-Critical disruptions
 
-in real-time directly to dashboards.
+CatégorieModèlesUsage PrincipalClassificationRandom Forest, Logistic RegressionPrédiction de risquesRégressionXGBoost, Ridge, LassoPrévision trafic & émissions CO₂ClusteringKMeans, DBSCAN, GMMSegmentation territorialeTime SeriesSARIMA, XGBoost TSAnalyse prédictive de mobilité
+⚙️ Infrastructure MLOps
 
-🧪 Digital Twin Simulation
-🚧 Predictive Infrastructure Simulation
+Retraining automatique via Cron + Drift Detection
+MLflow complet (versioning, tracking, comparaison)
+Pipelines n8n pour l'automatisation
 
-The digital twin engine simulates:
+<img src="https://via.placeholder.com/800x400/2C3E50/1ABC9C?text=MLOps+Retraining+&#x26;+Drift+Detection" alt="MLOps Workflow">
 
-Road closures
-Station shutdowns
-Massive disruptions
-Congestion spread
-Environmental impact
+🌐 Moteur Neo4j Smart Mobility
+Fonctionnalités Clés :
 
-before real deployment.
+🛣️ Routage Multimodal (Dijkstra + contraintes spatio-temporelles)
+🚨 Détection d'Incidents & propagation dans le graphe
+🗺️ Accessibilité Territoriale (Isochrones, zones mal desservies, DRT)
+Import GTFS automatique (stops, trips, stop_times → Graphe Neo4j)
 
-📊 Observability Stack
-📈 Grafana Dashboards
+<img src="https://via.placeholder.com/900x500/4B0082/FFFFFF?text=Neo4j+Mobility+Graph+-+R%C3%A9seau+Multimodal" alt="Neo4j Graph Visualization">
 
-Monitor:
+🧪 Jumeau Numérique & Simulations Prédictives
+Simulation de :
 
-API latency
-CPU/RAM usage
-ML performance
-Active incidents
-Prediction throughput
-Data pipeline health
-🔥 Prometheus Monitoring
+Fermetures de routes / gares
+Disruptions massives
+Propagation des congestions
+Impacts environnementaux
 
-Prometheus continuously scrapes:
 
-Backend metrics
-Neo4j metrics
-ML engine metrics
-Container health
-SSE throughput
-🔐 Urbain Mobility — Secure Wi-Fi System
-🛡️ Secure Navigation Infrastructure
-wifi-secure/
+📊 Stack d'Observabilité
+
+Grafana : Dashboards temps réel (latence, ML, incidents)
+Prometheus : Métriques infrastructure & applicatives
+SSE : Alertes en temps réel vers les tableaux de bord
+
+<img src="https://via.placeholder.com/900x450/0F202F/00BFFF?text=Grafana+Monitoring+Dashboard" alt="Grafana Dashboard">
+
+🔐 Système Wi-Fi Sécurisé Urbain
+Bashwifi-secure/
 ├── create_wifi.py
 ├── wifi_server.js
 ├── blocked.html
 └── wifi_config.json
-⚙️ Features
-🔒 Private secured Wi-Fi hotspot
-🌐 Controlled access gateway
-🚫 Unauthorized device blocking
-📡 Secure internal mobility network
-🛡️ Network isolation for critical services
-🚀 Launch System
-Automatic Launch
-start_secure.bat
-Manual Launch
+Fonctionnalités : Hotspot sécurisé, contrôle d'accès, isolation réseau.
+
+📈 KPIs Stratégiques
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+DomaineKPIs Principaux🚆 TransportTaux de congestion, Ponctualité🚔 SécuritéAccidents, Temps d'intervention🌿 ÉcologieÉmissions CO₂, Indice AQI🏛️ TerritoireScore d'accessibilité
+
+🧭 Navigation du Dashboard
+text🏠 Accueil
+├── 🚆 Mobilité
+├── 🚔 Sécurité
+├── 🌿 Écologie
+├── 🏛️ Aménagement du Territoire
+├── 🤖 Prédictions IA
+├── 🌐 Analytics Neo4j
+├── 📡 Monitoring Temps Réel
+└── ⚙️ Infrastructure
+
+✨ Valeur Ajoutée
+👨‍💼 Décideurs Publics
+
+Vision nationale unifiée
+Décisions stratégiques accélérées
+Gouvernance assistée par IA
+
+👥 Citoyens
+
+Transparence totale
+Services de mobilité améliorés
+Meilleure accessibilité
+
+🏢 Administration
+
+Automatisation des opérations
+Optimisation des ressources
+Gestion prédictive du territoire
+
+
+📸 Captures d'Écran
+<img src="https://via.placeholder.com/800x500/1E3A8A/60A5FA?text=Dashboard+Principal+-+Vue+Globale" alt="Dashboard Principal">
+<img src="https://via.placeholder.com/800x500/166534/4ADE80?text=Carte+d%27Accessibilit%C3%A9+Isochrone" alt="Carte Isochrone">
+<img src="https://via.placeholder.com/800x500/7F1D1D/F87171?text=D%C3%A9tection+d%27Anomalies+IA" alt="Détection Anomalies">
+(Remplacez ces placeholders par vos vraies captures une fois le frontend déployé)
+
+🚀 Pour Commencer
+Bash# Cloner le repo
+git clone https://github.com/votre-org/observatoire-mobilites.git
+cd observatoire-mobilites
+
+# Lancer le Wi-Fi sécurisé
+cd wifi-secure
 python create_wifi.py
 npm run dev
-node wifi-secure/wifi_server.js
-📊 Strategic KPIs
-Domain	KPI
-🚆 Transport	Congestion, punctuality
-🚔 Safety	Accidents, intervention time
-🌿 Ecology	CO2 emissions, AQI
-🏛️ Territory	Accessibility score
-🧭 Dashboard Navigation
-🏠 Home
- ├── 🚆 Mobility
- ├── 🚔 Security
- ├── 🌿 Ecology
- ├── 🏛️ Territorial Planning
- ├── 🤖 AI Predictions
- ├── 🌐 Neo4j Analytics
- ├── 📡 Real-Time Monitoring
- └── ⚙️ Infrastructure
-🚀 Key Added Value
-👨‍💼 Decision Makers
-Unified national vision
-Faster strategic decisions
-AI-assisted governance
-👥 Citizens
-Transparency
-Better mobility services
-Improved accessibility
-🏢 Administration
-Automated operations
-Resource optimization
-Predictive territorial management
-📌 Conclusion
 
-The Mobility Analytics Platform transforms fragmented public data into a unified intelligent ecosystem powered by:
+🔗 Technologies Principales
+Angular • Django • Neo4j • Python • XGBoost • MLflow • n8n • Grafana • Prometheus • GTFS
 
-🤖 Artificial Intelligence
-🌐 Neo4j Graph Analytics
-📈 MLOps Automation
-📡 Real-Time Monitoring
-🔥 Predictive Simulation
-🛡️ Secure Infrastructure
+Made with ❤️ for smarter French territories
 
-to enable data-driven governance for the smart territories of tomorrow.
+Ce README est prêt à être copié-collé sur GitHub. Pour un rendu encore plus premium, hébergez vos images sur imgur.com, GitHub ou un CDN et remplacez les placeholders.
+text**Conseils pour le rendre encore plus esthétique :**
+
+1. **Images personnalisées** : Utilisez Grok Imagine, Midjourney ou Figma pour créer :
+   - Un hero banner moderne avec carte de France + réseau de transport lumineux
+   - Des screenshots mockups du dashboard Angular
+   - Visualisations Neo4j stylisées
+
+2. Ajoutez des **badges** en haut (GitHub Actions, Python, etc.)
+
+3. Utilisez **Mermaid** pour tous les diagrammes (plus propre que l'ASCII original).
+
+Voulez-vous que je génère des prompts détaillés pour créer les images avec Grok Imagine ou que je raffine une
