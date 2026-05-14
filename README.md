@@ -186,6 +186,8 @@ Neo4j 5.x
 Docker (optionnel)
 
 🔗 Technologies Principales
+<img width="1906" height="842" alt="690856575_860022219716526_8323994533816562916_n" src="https://github.com/user-attachments/assets/38278fcc-3425-463d-990f-86755fb9f6dd" />
+
 <p align="center"> <img src="https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white" /> <img src="https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white" /> <img src="https://img.shields.io/badge/Neo4j-008CC1?style=for-the-badge&logo=neo4j&logoColor=white" /> <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" /> <img src="https://img.shields.io/badge/XGBoost-FF6F00?style=for-the-badge&logo=xgboost&logoColor=white" /> <img src="https://img.shields.io/badge/MLflow-0194E2?style=for-the-badge&logo=mlflow&logoColor=white" /> <img src="https://img.shields.io/badge/n8n-1E6F5C?style=for-the-badge&logo=n8n&logoColor=white" /> <img src="https://img.shields.io/badge/Grafana-F46800?style=for-the-badge&logo=grafana&logoColor=white" /> <img src="https://img.shields.io/badge/Prometheus-E6522C?style=for-the-badge&logo=prometheus&logoColor=white" /> <img src="https://img.shields.io/badge/GTFS-28A745?style=for-the-badge&logo=gtfs&logoColor=white" /> </p>
 📄 License
 MIT © Observatoire National des Mobilités
