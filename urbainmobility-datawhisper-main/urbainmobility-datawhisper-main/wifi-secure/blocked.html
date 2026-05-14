@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>⛔ Accès Refusé — Urbain Mobility</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{min-height:100vh;display:flex;align-items:center;justify-content:center;background:#080810;font-family:'Inter',system-ui,sans-serif;color:#fff;overflow:hidden}
+        
+        /* Animated background */
+        .bg-grid{position:fixed;inset:0;background-image:linear-gradient(rgba(196,170,130,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(196,170,130,.03) 1px,transparent 1px);background-size:60px 60px;z-index:0}
+        .bg-glow{position:fixed;width:600px;height:600px;border-radius:50%;filter:blur(120px);opacity:.15;z-index:0}
+        .bg-glow.a{top:-200px;left:-100px;background:#c4aa82}
+        .bg-glow.b{bottom:-200px;right:-100px;background:#8b6d42}
+        .bg-glow.c{top:50%;left:50%;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(255,50,50,.3),transparent);width:400px;height:400px}
+
+        .container{position:relative;z-index:2;text-align:center;max-width:680px;padding:3rem 2rem}
+        
+        /* Shield animation */
+        .shield-wrap{position:relative;width:140px;height:140px;margin:0 auto 2.5rem}
+        .shield-ring{position:absolute;inset:0;border:2px solid rgba(255,60,60,.3);border-radius:50%;animation:ringPulse 3s ease-in-out infinite}
+        .shield-ring:nth-child(2){inset:-10px;border-color:rgba(255,60,60,.15);animation-delay:.5s}
+        .shield-ring:nth-child(3){inset:-20px;border-color:rgba(255,60,60,.08);animation-delay:1s}
+        @keyframes ringPulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.05);opacity:.5}}
+        .shield-icon{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:4.5rem;animation:breathe 2s ease-in-out infinite}
+        @keyframes breathe{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+
+        h1{font-size:2.4rem;font-weight:800;margin-bottom:.8rem;background:linear-gradient(135deg,#ff6b6b,#ff4757);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+        .subtitle{color:rgba(255,255,255,.5);font-size:1.1rem;line-height:1.7;margin-bottom:2rem;font-weight:300}
+        
+        /* Wi-Fi card */
+        .wifi-card{background:rgba(196,170,130,.06);border:1px solid rgba(196,170,130,.15);border-radius:20px;padding:2rem;margin:2rem 0;backdrop-filter:blur(10px)}
+        .wifi-card-title{font-size:.85rem;text-transform:uppercase;letter-spacing:3px;color:rgba(196,170,130,.6);margin-bottom:1.2rem;font-weight:600}
+        .wifi-ssid{font-size:1.8rem;font-weight:700;background:linear-gradient(135deg,#c4aa82,#e8d8c4);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:1rem;display:flex;align-items:center;justify-content:center;gap:.6rem}
+        .wifi-ssid .icon{-webkit-text-fill-color:#c4aa82;font-size:1.4rem}
+        
+        .key-row{display:flex;align-items:center;justify-content:center;gap:.8rem;margin-top:1rem}
+        .key-label{color:rgba(255,255,255,.4);font-size:.9rem}
+        .key-value{font-family:'JetBrains Mono',monospace;background:rgba(255,165,0,.08);border:1px solid rgba(255,165,0,.2);padding:.5rem 1.2rem;border-radius:10px;color:#ffa500;font-size:1rem;letter-spacing:1px;cursor:pointer;transition:all .3s}
+        .key-value:hover{background:rgba(255,165,0,.15);transform:scale(1.03)}
+        .key-value.copied{border-color:#4ecdc4;color:#4ecdc4}
+        
+        /* Steps */
+        .steps{display:flex;flex-direction:column;gap:.8rem;margin:2rem 0;text-align:left}
+        .step{display:flex;align-items:center;gap:1rem;padding:.8rem 1rem;background:rgba(255,255,255,.02);border-radius:12px;border:1px solid rgba(255,255,255,.05);transition:all .3s}
+        .step:hover{background:rgba(255,255,255,.05);border-color:rgba(196,170,130,.2)}
+        .step-num{width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,rgba(196,170,130,.15),rgba(196,170,130,.05));display:flex;align-items:center;justify-content:center;font-size:.8rem;font-weight:700;color:#c4aa82;flex-shrink:0}
+        .step-text{color:rgba(255,255,255,.6);font-size:.95rem}
+        .step-text strong{color:rgba(255,255,255,.85)}
+        
+        /* Retry button */
+        .retry-btn{margin-top:2rem;padding:14px 40px;border:2px solid rgba(196,170,130,.4);background:transparent;color:#c4aa82;border-radius:50px;cursor:pointer;font-size:1.05rem;font-weight:600;font-family:'Inter',sans-serif;transition:all .4s;position:relative;overflow:hidden}
+        .retry-btn::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(196,170,130,.1),rgba(196,170,130,.05));opacity:0;transition:opacity .4s}
+        .retry-btn:hover{border-color:#c4aa82;transform:translateY(-2px);box-shadow:0 10px 30px rgba(196,170,130,.15)}
+        .retry-btn:hover::before{opacity:1}
+        .retry-btn span{position:relative;z-index:1}
+        
+        .status{margin-top:1.5rem;font-size:.8rem;color:rgba(255,255,255,.2)}
+        .status .dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:#ff4757;margin-right:6px;animation:blink 1.5s infinite}
+        @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+        
+        /* Particles */
+        .particle{position:fixed;width:2px;height:2px;background:rgba(196,170,130,.3);border-radius:50%;z-index:1;animation:float linear infinite}
+        @keyframes float{0%{transform:translateY(100vh) scale(0);opacity:0}10%{opacity:1}90%{opacity:1}100%{transform:translateY(-100px) scale(1);opacity:0}}
+
+        @media(max-width:600px){
+            .container{padding:2rem 1.2rem}
+            h1{font-size:1.8rem}
+            .wifi-ssid{font-size:1.4rem}
+            .shield-wrap{width:100px;height:100px}
+            .shield-icon{font-size:3rem}
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-grid"></div>
+    <div class="bg-glow a"></div>
+    <div class="bg-glow b"></div>
+    <div class="bg-glow c"></div>
+    
+    <div class="container">
+        <div class="shield-wrap">
+            <div class="shield-ring"></div>
+            <div class="shield-ring"></div>
+            <div class="shield-ring"></div>
+            <div class="shield-icon">🛡️</div>
+        </div>
+        
+        <h1>Accès Refusé</h1>
+        <p class="subtitle">Ce site est protégé par une restriction réseau.<br>Seuls les appareils connectés au Wi-Fi autorisé peuvent y accéder.</p>
+        
+        <div class="wifi-card">
+            <div class="wifi-card-title">Réseau Wi-Fi Requis</div>
+            <div class="wifi-ssid"><span class="icon">📡</span> <span id="ssidDisplay">{{SSID}}</span></div>
+            <div class="key-row">
+                <span class="key-label">Mot de passe :</span>
+                <span class="key-value" id="keyValue" onclick="copyKey()" title="Cliquer pour copier">{{KEY}}</span>
+            </div>
+        </div>
+        
+        <div class="steps">
+            <div class="step">
+                <div class="step-num">1</div>
+                <div class="step-text">Ouvrez les <strong>Paramètres Wi-Fi</strong> de votre appareil</div>
+            </div>
+            <div class="step">
+                <div class="step-num">2</div>
+                <div class="step-text">Connectez-vous au réseau <strong id="ssidStep">{{SSID}}</strong></div>
+            </div>
+            <div class="step">
+                <div class="step-num">3</div>
+                <div class="step-text"><strong>Rafraîchissez</strong> cette page ou cliquez le bouton ci-dessous</div>
+            </div>
+        </div>
+        
+        <button class="retry-btn" onclick="location.reload()"><span>🔄 Réessayer la connexion</span></button>
+        
+        <div class="status">
+            <span class="dot"></span> Wi-Fi actuel : <span id="currentWifi">{{CURRENT_SSID}}</span>
+        </div>
+    </div>
+
+    <script>
+        // Copy password
+        function copyKey(){
+            const el=document.getElementById('keyValue');
+            navigator.clipboard.writeText(el.textContent).then(()=>{
+                el.classList.add('copied');
+                const orig=el.textContent;
+                el.textContent='✓ Copié !';
+                setTimeout(()=>{el.textContent=orig;el.classList.remove('copied')},1500);
+            });
+        }
+        // Floating particles
+        function createParticles(){
+            for(let i=0;i<20;i++){
+                const p=document.createElement('div');
+                p.className='particle';
+                p.style.left=Math.random()*100+'vw';
+                p.style.animationDuration=(8+Math.random()*12)+'s';
+                p.style.animationDelay=Math.random()*10+'s';
+                p.style.width=p.style.height=(1+Math.random()*3)+'px';
+                document.body.appendChild(p);
+            }
+        }
+        createParticles();
+        // Auto-check every 10s
+        setInterval(async()=>{
+            try{
+                const r=await fetch('/api/wifi-check');
+                const d=await r.json();
+                document.getElementById('currentWifi').textContent=d.currentSSID||'Non connecté';
+                if(d.allowed)location.reload();
+            }catch(e){}
+        },10000);
+    </script>
+</body>
+</html>
